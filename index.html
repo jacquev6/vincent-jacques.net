@@ -1,0 +1,45 @@
+---
+---
+
+<h1>Things I do</h1>
+
+<div class="row">
+{% for project in site.data.projects %}
+  {% assign project_url = project.name | prepend:"/" %}
+
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <h2><a href="{{ project_url }}">{{ project.name }}</a></h2>
+    {{ project.description | markdownify }}
+    {% for image in project.images %}
+    <p class="text-center"><a href="{{ project_url }}"><img class="img-responsive" src="{{ image }}" alt="{{ project.name }}" width="250"></a>
+    {% endfor %}
+  </div>
+  {% assign idx2 = forloop.index | modulo:2 %}
+  {% assign idx3 = forloop.index | modulo:3 %}
+  {% assign idx4 = forloop.index | modulo:4 %}
+  {% if idx2 == 0 %}
+  <div class="clearfix visible-sm-block"></div>
+  {% endif %}
+  {% if idx3 == 0 %}
+  <div class="clearfix visible-md-block"></div>
+  {% endif %}
+  {% if idx4 == 0 %}
+  <div class="clearfix visible-lg-block"></div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<h1>Things I like</h1>
+
+{% for cat in site.data.likes %}
+<h2>{{ cat.name }}</h2>
+
+<div class="row">
+  {% for thing in cat.things %}
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+    <h3><a href="{{ thing.url }}">{{ thing.name }}</a></h3>
+    <p class="text-center"><a href="{{ thing.url }}"><img class="img-responsive" src="{{ thing.image }}" alt="{{ thing.name }}" width="160"></a>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}

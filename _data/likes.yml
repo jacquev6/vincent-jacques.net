@@ -1,0 +1,28 @@
+- name: Things that fly
+  things:
+    - name: Air Command Water Rockets
+      image: AirCommandRockets.jpg
+      url: http://www.aircommandrockets.com/
+    - name: Flite Test
+      image: http://forum.flitetest.com/attachment.php?attachmentid=14261&d=1382598041&thumb=1
+      url: http://flitetest.com/
+    - name: Ministar
+      image: http://www.guixmodel.fr/images/stories/virtuemart/product/ministar_3_axes%202.jpg
+      url: http://www.guixmodel.fr/modelisme/avions/polyclub-epp/ministar/pack-combo-ministar-3-axes-detail
+    - name: Blade Helis
+      image: http://www.bladehelis.com/Content/Images/Header/logo_wTag.png
+      url: http://www.bladehelis.com/
+    - name: Bind & fly
+      image: http://www.bindnfly.com/Content/Images/cornerLogo.png
+      url: http://www.bindnfly.com/
+- name: Things that build
+  things:
+    - name: Bioloid
+      image: http://www.robotis.com/img/img_ko/main/logo_top2.jpg
+      url: http://www.robotis.com/xe/BIOLOID_main_en
+    - name: Geomag
+      image: http://www.geomagworld.com/media/7/463/logo_geomag.gif
+      url: http://www.geomagworld.com
+    - name: Neobilles
+      image: http://neobilles.com/img/logo.jpg
+      url: http://neobilles.com

@@ -1,0 +1,17 @@
+- name: PyGithub
+  description: Python library to use the GitHub API v3
+  images:
+   - https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png
+   - https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png
+- name: MiniParse
+  images: http://dyn.vincent-jacques.net/miniparse/draw?grammar=factor+%3D+integer+%7C+%27(%27%2C+expr%2C+%27)%27%3B%0D%0A%0D%0Ainteger+%3D+%5B+%27-%27+%5D%2C+digit%2C+%7B+digit+%7D%3B%0D%0A
+  description: Simple Python parsing library... and more
+- name: DrawTurksHead
+  images: http://dyn.vincent-jacques.net/turkshead?bights=7&amp;leads=4&amp;line_width=22&amp;inner_radius=30&amp;width=250&amp;height=250
+  description: Draw... Turk's head knots
+- name: IpMap
+  description: Browsable map of the IP address space inspired by xkcd
+  images: /IpMap.png
+- name: MarblesCollide
+  images: http://img.youtube.com/vi/9y4D8cbrjJ0/0.jpg
+  description: Simulate elastic collisions between marbles

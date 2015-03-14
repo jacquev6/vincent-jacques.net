@@ -1,0 +1,21 @@
+safe: true
+future: false
+markdown: kramdown
+permalink: pretty
+timezone: Europe/Paris
+
+defaults:
+  - scope:
+      path: "" # All
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: "" # All
+    values:
+      layout: standard
+
+collections:
+  projects:
+    output: true
+    permalink: /:path/

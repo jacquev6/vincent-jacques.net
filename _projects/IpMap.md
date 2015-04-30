@@ -1,9 +1,6 @@
 ---
-github_name: IpMap
+title: IpMap
 ---
-
-IpMap
-=====
 
 This is a browsable map showing geographic locations of to IPv4 addresses. It was inspired by [xkcd 195, Map of the Internet](http://xkcd.com/195).
 

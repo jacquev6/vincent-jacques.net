@@ -1,9 +1,6 @@
 ---
-github_name: MarblesCollide
+title: MarblesCollide
 ---
-
-MarblesCollide
-==============
 
 Just one video for the moment.
 

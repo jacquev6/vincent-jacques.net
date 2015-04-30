@@ -1,9 +1,6 @@
 ---
-github_name: DrawTurksHead
+title: DrawTurksHead
 ---
-
-DrawTurksHead
-=============
 
 Let's draw [Turk's head knots](https://en.wikipedia.org/wiki/Turk%27s_head_knot).
 

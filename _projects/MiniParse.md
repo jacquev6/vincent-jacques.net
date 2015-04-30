@@ -1,9 +1,6 @@
 ---
-github_name: MiniParse
+title: MiniParse
 ---
-
-MiniParse
-=========
 
 <form id="form">
 <label for="grammar">EBNF Grammar:</label><br>

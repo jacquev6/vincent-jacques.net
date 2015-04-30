@@ -1,6 +1,19 @@
 ---
 ---
 
+{% if site.posts.size > 0 %}
+<h1>Things I write</h1>
+
+<ul>
+{% for post in site.posts %}
+  <li>
+    {{ post.date | date: "%b %-d, %Y" }} <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
 <h1>Things I do</h1>
 
 <div class="row">

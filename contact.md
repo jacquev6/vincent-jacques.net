@@ -1,8 +1,6 @@
 ---
+title: Contact
 ---
-
-Contact
-=======
 
 * email: <vincent@vincent-jacques.net>
 

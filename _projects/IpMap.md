@@ -16,7 +16,7 @@ For technical details and hacking, see [IpMap on Github](http://github.com/jacqu
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="https://raw.githubusercontent.com/jacquev6/IpMap/master/src/hilbert.js"></script>
 <script type="text/javascript" src="https://raw.githubusercontent.com/jacquev6/IpMap/master/src/color.js"></script>
-<script type="text/javascript" src="http://static.vincent-jacques.net/IpMap/ip_data.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/jacquev6/IpMap/data/ip_data.js"></script>
 <script type="text/javascript" src="https://raw.githubusercontent.com/jacquev6/IpMap/master/src/ip_map.js"></script>
 <script type="text/javascript">
     function parseQueryString(search) {

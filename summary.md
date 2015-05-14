@@ -39,20 +39,22 @@ projects:
 ({{ project.language }}) <span id="{{ project.name }}_desc"><del>{{ project.name }}'s description</del></span>.
 <a id="{{ project.name }}_home" href="/"><del>{{ project.name }}'s homepage</a>.
 
-[![](/GitHub-Mark-16px.png)](http://github.com/jacquev6/{{ project.name }})
-[![](https://img.shields.io/travis/jacquev6/{{ project.name }}/master.svg?label=travis)](https://travis-ci.org/jacquev6/{{ project.name }})
-[![](https://img.shields.io/coveralls/jacquev6/{{ project.name }}/master.svg?label=coveralls)](https://coveralls.io/r/jacquev6/{{ project.name }})
-[![](https://img.shields.io/codeclimate/github/jacquev6/{{ project.name }}.svg?label=codeclimate)](https://codeclimate.com/github/jacquev6/{{ project.name }})
-[![](https://img.shields.io/scrutinizer/g/jacquev6/{{ project.name }}.svg?label=scrutinizer)](https://scrutinizer-ci.com/g/jacquev6/{{ project.name }})
-{% if project.language == "Python" %}<a href="http://jacquev6.github.io/{{ project.name }}"><img id="{{ project.name }}_ghpages" src="https://img.shields.io/badge/github_pages-unknown-lightgrey.svg" /></a>
-<a href="http://pythonhosted.org/{{ project.name }}"><img id="{{ project.name }}_pythonhosted" src="https://img.shields.io/badge/pythonhosted-unknown-lightgrey.svg" /></a>
-[![](https://img.shields.io/pypi/dm/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
-[![](https://img.shields.io/pypi/l/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
-[![](https://img.shields.io/pypi/v/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
-{% endif %}[![](https://img.shields.io/github/issues/jacquev6/{{ project.name }}.svg)](https://github.com/jacquev6/{{ project.name }}/issues)
-[![](https://badge.waffle.io/jacquev6/{{ project.name }}.png?label=ready&title=ready)](https://waffle.io/jacquev6/{{ project.name }})
-[![](https://img.shields.io/github/forks/jacquev6/{{ project.name }}.svg)](https://github.com/jacquev6/{{ project.name }}/network)
-[![](https://img.shields.io/github/stars/jacquev6/{{ project.name }}.svg)](https://github.com/jacquev6/{{ project.name }}/stargazers)
+[![github](/GitHub-Mark-16px.png)](http://github.com/jacquev6/{{ project.name }})
+[![travis](https://img.shields.io/travis/jacquev6/{{ project.name }}/master.svg?label=travis)](https://travis-ci.org/jacquev6/{{ project.name }})
+[![coveralls](https://img.shields.io/coveralls/jacquev6/{{ project.name }}/master.svg?label=coveralls)](https://coveralls.io/r/jacquev6/{{ project.name }})
+[![codeclimate](https://img.shields.io/codeclimate/github/jacquev6/{{ project.name }}.svg?label=codeclimate)](https://codeclimate.com/github/jacquev6/{{ project.name }})
+[![scrutinizer](https://img.shields.io/scrutinizer/g/jacquev6/{{ project.name }}.svg?label=scrutinizer)](https://scrutinizer-ci.com/g/jacquev6/{{ project.name }})
+{% if project.language == "Python" %}<a href="http://jacquev6.github.io/{{ project.name }}"><img alt="ghpages" id="{{ project.name }}_ghpages" src="https://img.shields.io/badge/github_pages-unknown-lightgrey.svg" /></a>
+<a href="http://pythonhosted.org/{{ project.name }}"><img alt="pythonhosted" id="{{ project.name }}_pythonhosted" src="https://img.shields.io/badge/pythonhosted-unknown-lightgrey.svg" /></a>
+[![python versions](https://pypip.in/py_versions/{{ project.name }}/badge.svg)](https://pypi.python.org/pypi/{{ project.name }})
+[![status](https://pypip.in/status/{{ project.name }}/badge.svg)](https://pypi.python.org/pypi/{{ project.name }})
+[![downloads/month](https://img.shields.io/pypi/dm/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
+[![license](https://img.shields.io/pypi/l/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
+[![version](https://img.shields.io/pypi/v/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
+{% endif %}[![issues](https://img.shields.io/github/issues/jacquev6/{{ project.name }}.svg)](https://github.com/jacquev6/{{ project.name }}/issues)
+[![waffle.io](https://badge.waffle.io/jacquev6/{{ project.name }}.png?label=ready&title=ready)](https://waffle.io/jacquev6/{{ project.name }})
+[![forks](https://img.shields.io/github/forks/jacquev6/{{ project.name }}.svg)](https://github.com/jacquev6/{{ project.name }}/network)
+[![stars](https://img.shields.io/github/stars/jacquev6/{{ project.name }}.svg)](https://github.com/jacquev6/{{ project.name }}/stargazers)
 
 {% endfor %}
 

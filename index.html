@@ -14,17 +14,25 @@
 
 {% endif %}
 
+<h1>Things I initiated</h1>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <h2><a href="http://github.com/PyGithub/PyGithub/">PyGithub</a></h2>
+    <p>Python library wrapping the GitHub API v3</p>
+  </div>
+</div>
+
+
 <h1>Things I do</h1>
 
 <div class="row">
 {% for project in site.data.projects %}
-  {% assign project_url = project.name | prepend:"/" %}
-
   <div class="col-sm-6 col-md-4 col-lg-3">
-    <h2><a href="{{ project_url }}">{{ project.name }}</a></h2>
+    <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
     {{ project.description | markdownify }}
     {% for image in project.images %}
-    <p class="text-center"><a href="{{ project_url }}"><img class="img-responsive" src="{{ image }}" alt="{{ project.name }}" width="250"></a>
+    <p class="text-center"><a href="{{ project.url }}"><img class="img-responsive" src="{{ image }}" alt="{{ project.name }}" width="250"></a>
     {% endfor %}
   </div>
   {% assign idx2 = forloop.index | modulo:2 %}

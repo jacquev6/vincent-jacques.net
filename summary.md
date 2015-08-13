@@ -1,6 +1,8 @@
 ---
 title: Summary
 projects:
+  - name: Pynamixel
+    language: Python
   - name: LowVoltage
     language: Python
   - name: variadic

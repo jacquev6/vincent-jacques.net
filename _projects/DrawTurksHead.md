@@ -4,6 +4,8 @@ title: DrawTurksHead
 
 Let's draw [Turk's head knots](https://en.wikipedia.org/wiki/Turk%27s_head_knot).
 
+Here is the [documentation of the Python package](http://pythonhosted.org/DrawTurksHead/).
+
 <form id="form">
 <label for="bights">Number of bights:</label>&nbsp;<select id="bights" name="bights"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option selected>7</option><option>8</option><option>9</option><option>10</option></select>
 <label for="leads">Number of leads:</label>&nbsp;<select id="leads" name="leads"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>

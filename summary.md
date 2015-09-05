@@ -48,8 +48,8 @@ projects:
 [![scrutinizer](https://img.shields.io/scrutinizer/g/jacquev6/{{ project.name }}.svg?label=scrutinizer)](https://scrutinizer-ci.com/g/jacquev6/{{ project.name }})
 {% if project.language == "Python" %}<a href="http://jacquev6.github.io/{{ project.name }}"><img alt="ghpages" id="{{ project.name }}_ghpages" src="https://img.shields.io/badge/github_pages-unknown-lightgrey.svg" /></a>
 <a href="http://pythonhosted.org/{{ project.name }}"><img alt="pythonhosted" id="{{ project.name }}_pythonhosted" src="https://img.shields.io/badge/pythonhosted-unknown-lightgrey.svg" /></a>
-[![python versions](https://pypip.in/py_versions/{{ project.name }}/badge.svg)](https://pypi.python.org/pypi/{{ project.name }})
-[![status](https://pypip.in/status/{{ project.name }}/badge.svg)](https://pypi.python.org/pypi/{{ project.name }})
+[![python versions](https://img.shields.io/pypi/pyversions/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
+[![status](https://img.shields.io/pypi/status/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
 [![downloads/month](https://img.shields.io/pypi/dm/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
 [![license](https://img.shields.io/pypi/l/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})
 [![version](https://img.shields.io/pypi/v/{{ project.name }}.svg)](https://pypi.python.org/pypi/{{ project.name }})

@@ -19,8 +19,6 @@ projects:
     language: Python
   - name: RecursiveDocument
     language: Python
-  - name: AnotherPyGraphvizAgain
-    language: Python
   - name: IpMap
     language: Javascript
   - name: QuadProgMm

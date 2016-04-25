@@ -21,8 +21,5 @@
       image: http://www.robotis.com/img/img_ko/main/logo_top2.jpg
       url: http://www.robotis.com/xe/BIOLOID_main_en
     - name: Geomag
-      image: http://www.geomagworld.com/media/7/463/logo_geomag.gif
+      image: http://www.geomagworld.com/app/images/logo.png
       url: http://www.geomagworld.com
-    - name: Neobilles
-      image: http://neobilles.com/img/logo.jpg
-      url: http://neobilles.com

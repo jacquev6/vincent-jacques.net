@@ -6,16 +6,9 @@ timezone: Europe/Paris
 
 defaults:
   - scope:
-      path: "" # All
-      type: projects
-    values:
-      layout: project
-  - scope:
       path: ""
     values:
       layout: standard
 
 collections:
   projects:
-    output: true
-    permalink: /:path/

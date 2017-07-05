@@ -1,29 +1,20 @@
 ---
 title: DrawTurksHead
+display_order: 100
 ---
+[DrawTurksHead](http://jacquev6.github.io/DrawTurksHead/) is a [Python](https://www.python.org/)&nbsp;(2.7) library to draw [Turk’s head knots](http://en.wikipedia.org/wiki/Turk%27s_head_knot).
+An [interactive demo](http://jacquev6.github.io/DrawTurksHead/demo.html) is available.
 
-Let's draw [Turk's head knots](https://en.wikipedia.org/wiki/Turk%27s_head_knot).
+<div class="text-center">
+<img class="img-fluid" src="http://dyn.vincent-jacques.net/turkshead?leads=4&bights=7&line_width=20&inner_radius=25&width=270&height=270">
+</div>
 
-Here is the [documentation of the Python package](http://pythonhosted.org/DrawTurksHead/).
+Its core functionality is written in [C++](https://isocpp.org/) and exposed as a Python library using [Boost.Python](http://www.boost.org/doc/libs/release/libs/python/).
+A Python callback for computing the colors is called from the C++ code.
+This required two-way integration of C++ and Python code.
+Drawings are made using [Cairo](https://www.cairographics.org/).
+The Cairo context is created in Python using [PyCairo](https://cairographics.org/pycairo/) and passed to the C++ layer.
+The C++ code uses [Cairomm](https://www.cairographics.org/cairomm/) to do the actual drawing.
 
-<form id="form">
-<label for="bights">Number of bights:</label>&nbsp;<select id="bights" name="bights"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option selected>7</option><option>8</option><option>9</option><option>10</option></select>
-<label for="leads">Number of leads:</label>&nbsp;<select id="leads" name="leads"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
-<label for="line_width">Line width (pixels):</label>&nbsp;<select id="line_width" name="line_width"><option>12</option><option>18</option><option>25</option><option>35</option><option selected>50</option><option>70</option></select>
-<label for="inner_radius">Inner radius (pixels):</label>&nbsp;<select id="inner_radius" name="inner_radius"><option>50</option><option>75</option><option selected>100</option><option>150</option></select>
-</form>
-
-<img id="turkshead" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="A Turk's head knot" class="img-responsive"/>
-
-<script type="text/javascript">
-    function updateImage() {
-        $('#turkshead').attr('src', 'http://dyn.vincent-jacques.net/turkshead?' + $("#form").serialize());
-    }
-
-    $('#bights').change(updateImage);
-    $('#leads').change(updateImage);
-    $('#line_width').change(updateImage);
-    $('#inner_radius').change(updateImage);
-
-    updateImage();
-</script>
+DrawTurksHead's [documentation](http://jacquev6.github.io/DrawTurksHead/) is built with [Sphinx](http://www.sphinx-doc.org/) and the [Alabaster](https://alabaster.readthedocs.io/) theme.
+The [algorithm](http://jacquev6.github.io/DrawTurksHead/algorithm.html) is documented using [MathJax](https://www.mathjax.org/).

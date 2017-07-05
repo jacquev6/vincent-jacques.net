@@ -1,66 +1,23 @@
 ---
 ---
 
-{% if site.posts.size > 0 %}
-<h1>Things I write</h1>
+<!-- @todo <h1>Blog</h1> Use topics from "future" branch and MinimalExamples project -->
 
-<ul>
-{% for post in site.posts %}
-  <li>
-    {{ post.date | date: "%b %-d, %Y" }} <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+<h1>Portfolio</h1>
 
-{% endif %}
-
-<h1>Things I initiated</h1>
+<div class="row"><div class="col">
+  <p>Most of my projects are hosted on <a href="https://github.com/jacquev6">GitHub</a> and have continuous build on <a href="https://travis-ci.org/jacquev6">Travis CI</a>.</p>
+  <p>My Python projects are distributed on the <a href="https://pypi.python.org/pypi?%3Aaction=search&amp;term=jacquev6&amp;submit=search">Python package index</a></p>
+</div></div>
 
 <div class="row">
-  <div class="col-sm-6 col-md-4 col-lg-3">
-    <h2><a href="http://github.com/PyGithub/PyGithub/">PyGithub</a></h2>
-    <p>Python library wrapping the GitHub API v3</p>
+{% assign projects = site.projects | where_exp: "project", "project.display_order" | sort: "display_order" %}
+{% for project in projects %}
+  <div class="col-md-6 col-lg-4">
+    <h2>{{ project.title }}</h2>
+    {{ project.content }}
   </div>
-</div>
-
-
-<h1>Things I do</h1>
-
-<div class="row">
-{% for project in site.data.projects %}
-  <div class="col-sm-6 col-md-4 col-lg-3">
-    <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
-    {{ project.description | markdownify }}
-    {% for image in project.images %}
-    <p class="text-center"><a href="{{ project.url }}"><img class="img-responsive" src="{{ image }}" alt="{{ project.name }}" width="250"></a>
-    {% endfor %}
-  </div>
-  {% assign idx2 = forloop.index | modulo:2 %}
-  {% assign idx3 = forloop.index | modulo:3 %}
-  {% assign idx4 = forloop.index | modulo:4 %}
-  {% if idx2 == 0 %}
-  <div class="clearfix visible-sm-block"></div>
-  {% endif %}
-  {% if idx3 == 0 %}
-  <div class="clearfix visible-md-block"></div>
-  {% endif %}
-  {% if idx4 == 0 %}
-  <div class="clearfix visible-lg-block"></div>
-  {% endif %}
 {% endfor %}
 </div>
 
-<h1>Things I like</h1>
-
-{% for cat in site.data.likes %}
-<h2>{{ cat.name }}</h2>
-
-<div class="row">
-  {% for thing in cat.things %}
-  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-    <h3><a href="{{ thing.url }}">{{ thing.name }}</a></h3>
-    <p class="text-center"><a href="{{ thing.url }}"><img class="img-responsive" src="{{ thing.image }}" alt="{{ thing.name }}" width="160"></a>
-  </div>
-  {% endfor %}
-</div>
-{% endfor %}
+<!-- @todo <h1>Résumé</h1> Can we create résumé from .md, make a pdf and a html version? -->

@@ -2,7 +2,7 @@
 title: DrawTurksHead
 display_order: 100
 ---
-[DrawTurksHead](http://jacquev6.github.io/DrawTurksHead/) is a [Python](https://www.python.org/)&nbsp;(2.7) library to draw [Turk’s head knots](http://en.wikipedia.org/wiki/Turk%27s_head_knot).
+[DrawTurksHead](http://jacquev6.github.io/DrawTurksHead/) is a [Python](https://www.python.org/) library to draw [Turk’s head knots](http://en.wikipedia.org/wiki/Turk%27s_head_knot).
 An [interactive demo](http://jacquev6.github.io/DrawTurksHead/demo.html) is available.
 
 <div class="text-center">

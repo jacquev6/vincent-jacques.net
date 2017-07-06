@@ -1,6 +1,6 @@
 ---
 title: vincent-jacques.net
-display_order: 500
+display_order: 700
 ---
 The static part of this website is built using [Jekyll](https://jekyllrb.com/) and [Bootstrap](https://v4-alpha.getbootstrap.com/).
 It's hosted on [GitHub Pages](https://pages.github.com/).

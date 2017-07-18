@@ -16,5 +16,4 @@ Drawings are made using [Cairo](https://www.cairographics.org/).
 The Cairo context is created in Python using [PyCairo](https://cairographics.org/pycairo/) and passed to the C++ layer.
 The C++ code uses [Cairomm](https://www.cairographics.org/cairomm/) to do the actual drawing.
 
-DrawTurksHead's [documentation](http://jacquev6.github.io/DrawTurksHead/) is built with [Sphinx](http://www.sphinx-doc.org/) and the [Alabaster](https://alabaster.readthedocs.io/) theme.
 The [algorithm](http://jacquev6.github.io/DrawTurksHead/algorithm.html) is documented using [MathJax](https://www.mathjax.org/).

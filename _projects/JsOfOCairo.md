@@ -1,6 +1,6 @@
 ---
 title: JsOfOCairo
-display_order: 650
+display_order: 800
 ---
 [JsOfOCairo](http://github.com/jacquev6/JsOfOCairo/) is a [OCaml](http://ocaml.org/) library to reuse Cairo-based drawing code in web browsers.
 

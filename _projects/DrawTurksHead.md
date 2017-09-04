@@ -6,7 +6,7 @@ display_order: 200
 An [interactive demo](http://jacquev6.github.io/DrawTurksHead/demo.html) is available.
 
 <div class="text-center">
-<img class="img-fluid" src="http://dyn.vincent-jacques.net/turkshead?leads=4&bights=7&line_width=20&inner_radius=25&width=270&height=270">
+<img class="img-fluid" src="http://dyn.vincent-jacques.net/turkshead?leads=4&bights=5&line_width=20&inner_radius=25&width=270&height=270">
 </div>
 
 Its core functionality is written in [C++](https://isocpp.org/) and exposed as a Python library using [Boost.Python](http://www.boost.org/doc/libs/release/libs/python/).

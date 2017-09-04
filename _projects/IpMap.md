@@ -1,6 +1,10 @@
 ---
 title: IpMap
 display_order: 500
+tags:
+    - javascript
+    - visual
+    - web
 ---
 [IpMap](https://github.com/jacquev6/IpMap/) is a browsable map of the IPv4 address space inspired by [xkcd 195, Map of the Internet](http://xkcd.com/195/).
 An [interactive demo](http://jacquev6.github.io/IpMap/) is available.

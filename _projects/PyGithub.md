@@ -1,6 +1,9 @@
 ---
 title: PyGithub
 display_order: 100
+tags:
+    - python
+    - library
 ---
 [PyGithub](https://github.com/PyGithub/PyGithub) is a [Python](https://www.python.org/) client library for the [GitHub REST API v3](https://developer.github.com/v3/).
 It's widely used (1300+ stars on GitHub) and now maintained by the community.

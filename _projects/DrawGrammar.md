@@ -1,6 +1,11 @@
 ---
 title: DrawGrammar
 display_order: 300
+tags:
+    - ocaml
+    - visual
+    - web
+    - program
 ---
 [DrawGrammar](https://github.com/jacquev6/DrawGrammar/) is a tool to draw [railroad diagrams](https://en.wikipedia.org/wiki/Syntax_diagram) of an [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) grammar.
 It is available as an [interactive demo](https://jacquev6.github.io/DrawGrammar/) and as a command-line tool.

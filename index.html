@@ -5,18 +5,46 @@
 
 <h1>Portfolio</h1>
 
+{% assign projects = site.projects | where_exp: "project", "project.display_order" | sort: "display_order" %}
+
+{% assign rawtags = "" %}
+{% for project in projects %}
+  {% assign ttags = project.tags | join:'|' | append:'|' %}
+  {% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+{% assign tags = "" %}
+{% for tag in rawtags %}
+  {% if tag != "" %}
+    {% if tags == "" %}
+      {% assign tags = tag | split:'|' %}
+    {% endif %}
+    {% unless tags contains tag %}
+      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
 <div class="row"><div class="col">
   <p>Most of my projects are hosted on <a href="https://github.com/jacquev6">GitHub</a> and have continuous build on <a href="https://travis-ci.org/jacquev6">Travis CI</a>.</p>
   <p>My <a href="https://www.python.org/">Python</a> projects are documented using <a href="http://www.sphinx-doc.org/">Sphinx</a> and the <a href="https://alabaster.readthedocs.io/">Alabaster</a> theme.
     They are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>.</p>
   <p>My <a href="http://ocaml.org/">OCaml</a> projects are documented using Sphinx as well and a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml">Sphinx extension for OCaml</a>.
     They are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a>.</p>
+
+  {% for tag in tags %}
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_{{ tag }}"> {{ tag }}
+    </label>
+  </div>
+  {% endfor %}
+
 </div></div>
 
 <div class="row">
-{% assign projects = site.projects | where_exp: "project", "project.display_order" | sort: "display_order" %}
 {% for project in projects %}
-  <div class="col-md-6 col-lg-4">
+  <div class="col-md-6 col-lg-4 project{% for tag in project.tags %} tag_{{ tag }}{% endfor %}">
     <h2>{{ project.title }}</h2>
     {{ project.content }}
   </div>
@@ -24,3 +52,20 @@
 </div>
 
 <!-- @todo <h1>Resume</h1> Can we create resume from .md, make a pdf and a html version? -->
+
+<script>
+  var tags = [{% for tag in tags %}"{{ tag }}",{% endfor %}];
+  $(function() {
+    $(".tag_checkbox").on("change", function() {
+      var checked = $(".tag_checkbox:checked");
+      if(checked.length) {
+        $(".project").hide();
+        checked.each(function(_, checkbox) {
+          $($(checkbox).data("tag_class")).show();
+        });
+      } else {
+        $(".project").show();
+      }
+    });
+  });
+</script>

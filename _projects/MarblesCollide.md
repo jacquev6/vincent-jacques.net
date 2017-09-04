@@ -1,6 +1,10 @@
 ---
 title: MarblesCollide
 display_order: 400
+tags:
+    - cpp
+    - visual
+    - program
 ---
 [MarblesCollide](https://github.com/jacquev6/MarblesCollide) is an [event-based simulation](https://en.wikipedia.org/wiki/Discrete_event_simulation) of [elastic collisions](https://en.wikipedia.org/wiki/Elastic_collision) between two-dimensional disks ("[marbles](https://en.wikipedia.org/wiki/Marble_(toy))").
 

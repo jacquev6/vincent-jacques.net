@@ -1,6 +1,9 @@
 ---
 title: ActionTree
 display_order: 600
+tags:
+    - python
+    - library
 ---
 [ActionTree](http://jacquev6.github.io/ActionTree/) is a [Python](https://www.python.org/) library to execute (long) actions in parallel, respecting dependencies between those actions.
 

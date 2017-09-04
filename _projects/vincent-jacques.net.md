@@ -2,7 +2,7 @@
 title: vincent-jacques.net
 display_order: 10000
 ---
-The [static part](http://github.com/jacquev6/vincent-jacques.net) of this website is built using [Jekyll](https://jekyllrb.com/) and [Bootstrap](https://v4-alpha.getbootstrap.com/).
+The [static part](http://github.com/jacquev6/vincent-jacques.net) of this website is built using [Jekyll](https://jekyllrb.com/) and [Bootstrap](https://getbootstrap.com/).
 It's hosted on [GitHub Pages](https://pages.github.com/).
 
 The server side of the dynamic part (demos for some projects) uses [Django](https://www.djangoproject.com/).

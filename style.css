@@ -27,6 +27,10 @@ body {
     color: white;
 }
 
+.header-links p {
+    margin: 0;
+}
+
 .head-foot a {
     color: white;
 }

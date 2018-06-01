@@ -68,3 +68,7 @@ h2 {
     background-color: #{{ page.primary.darker }};
     color: white;
 }
+
+#content a {
+    color: #{{ page.primary.darkest }};
+}

@@ -4,8 +4,7 @@ set -o errexit
 
 PROJECT_ROOT=$(pwd)
 
-SERVE=false
-GENERATE=true
+JEKYLL_COMMAND=build
 
 SHOW_IN_BROWSER=false
 function show_in_browser {
@@ -25,8 +24,7 @@ do
       SHOW_IN_BROWSER=true
       ;;
     -s|--serve)
-      SERVE=true
-      GENERATE=false
+      JEKYLL_COMMAND="serve --livereload"
       ;;
     *)
       echo "Unknown parameter passed: $1"
@@ -35,15 +33,8 @@ do
   shift
 done
 
-if $GENERATE
-then
-  jekyll build --destination docs
-fi
 
-if $SERVE
-then
-  jekyll serve --livereload --destination docs
-fi
+jekyll $JEKYLL_COMMAND --destination docs
 
 echo
 echo "Development cycle OK"

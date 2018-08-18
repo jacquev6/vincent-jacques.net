@@ -14,3 +14,7 @@ An [interactive demo](http://jacquev6.github.io/IpMap/) is available.
 </div>
 
 It's implemented in HTML5 and JavaScript, purely on the client side, using [jQuery](http://jquery.com/) and [jquery-mousewheel](https://github.com/jquery/jquery-mousewheel).
+
+I've recently acquired more knowledge of the JavaScript language and ecosystem.
+I think this project would deserve some work to improve its code quality and maintainability.
+But I keep it here because it's still working software.

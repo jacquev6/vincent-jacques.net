@@ -1,63 +1,25 @@
-body {
-    background-color: #9CB2E4;
-}
+body { background-color: #9CB2E4; }
 
-.head-foot {
-    background-color: #2E457B;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+.head-foot { background-color: #2E457B; margin-top: 15px; margin-bottom: 15px; }
 
-.head-foot p {
-    color: white;
-}
+.head-foot p { color: white; }
 
-.header-links p {
-    margin: 0;
-}
+.header-links p { margin: 0; }
 
-.head-foot a {
-    color: white;
-}
+.head-foot a { color: white; }
 
-#header {
-    background-image: url("/banner.png");
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    min-height: 150px;
-}
+#header { background-image: url("/banner.png"); background-position: bottom right; background-repeat: no-repeat; min-height: 150px; }
 
-#vjnet {
-    font-size: 40px;
-}
+#vjnet { font-size: 40px; }
 
-#citation {
-    margin-left: 5em;
-    margin-bottom: 0;
-}
+#citation { margin-left: 5em; margin-bottom: 0; }
 
-#citation-origin {
-    margin-left: 10em;
-    margin-top: 0;
-}
+#citation-origin { margin-left: 10em; margin-top: 0; }
 
-#content {
-    background-color: white;
-    border: solid 2px #DFB562;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
+#content { background-color: white; border: solid 2px #DFB562; padding-top: 15px; padding-bottom: 15px; }
 
-h1 {
-    background-color: #2E457B;
-    color: white;
-}
+h1 { background-color: #2E457B; color: white; }
 
-h2 {
-    background-color: #495B83;
-    color: white;
-}
+h2 { background-color: #495B83; color: white; }
 
-#content a {
-    color: #2E457B;
-}
+#content a { color: #2E457B; }

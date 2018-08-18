@@ -1,24 +1,23 @@
 ---
-layout: none
-primary:
-  darkest: 2E457B
-  darker: 495B83
-  base: 4B6195
-  lighter: 9CB2E4
-  lightest: BEC9E4
-complementary:
-  darkest: B88F3D
-  darker: C3A364
-  base: DFB562
-  lighter: F7DAA0
-  lightest: F7E8C9
 ---
+
+$color_primary_base: #4B6195;
+$color_primary_darkest: #2E457B;
+$color_primary_darker: #495B83;
+$color_primary_lighter: #9CB2E4;
+$color_primary_lightest: #BEC9E4;
+$color_complementary_base: #DFB562;
+$color_complementary_darkest: #B88F3D;
+$color_complementary_darker: #C3A364;
+$color_complementary_lighter: #F7DAA0;
+$color_complementary_lightest: #F7E8C9;
+
 body {
-    background-color: #{{ page.primary.lighter }};
+    background-color: $color_primary_lighter;
 }
 
 .head-foot {
-    background-color: #{{ page.primary.darkest }};
+    background-color: $color_primary_darkest;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -58,21 +57,21 @@ body {
 
 #content {
     background-color: white;
-    border: solid 2px #{{ page.complementary.base }};
+    border: solid 2px $color_complementary_base;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 h1 {
-    background-color: #{{ page.primary.darkest }};
+    background-color: $color_primary_darkest;
     color: white;
 }
 
 h2 {
-    background-color: #{{ page.primary.darker }};
+    background-color: $color_primary_darker;
     color: white;
 }
 
 #content a {
-    color: #{{ page.primary.darkest }};
+    color: $color_primary_darkest;
 }

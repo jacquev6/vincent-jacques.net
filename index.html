@@ -6,12 +6,12 @@
 <div class="row"><div class="col">
   <h1>Portfolio</h1>
 
-{% assign projects = site.projects | where_exp: "project", "project.display_order" | sort: "display_order" %}
+{% assign projects = site.projects | sort: "display_order" %}
 
 {% assign rawtags = "" %}
 {% for project in projects %}
-  {% assign ttags = project.tags | join:'|' | append:'|' %}
-  {% assign rawtags = rawtags | append:ttags %}
+  {% assign tags = project.tags | join:'|' | append:'|' %}
+  {% assign rawtags = rawtags | append:tags %}
 {% endfor %}
 {% assign rawtags = rawtags | split:'|' | sort %}
 {% assign tags = "" %}

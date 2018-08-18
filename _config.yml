@@ -12,3 +12,6 @@ defaults:
 
 collections:
   projects:
+
+exclude:
+  run_development_cycle.sh

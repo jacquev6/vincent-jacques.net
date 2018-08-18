@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacquev6/vincent-jacques.net.git"
+  },
+  "homepage": "https://vincent-jacques.net",
+  "dependencies": {
+    "html-minifier": "^3.5.19"
+  }
+}

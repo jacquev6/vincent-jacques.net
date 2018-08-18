@@ -8,6 +8,7 @@
   },
   "homepage": "https://vincent-jacques.net",
   "dependencies": {
-    "html-minifier": "^3.5.19"
+    "html-minifier": "^3.5.19",
+    "node-sass": "^4.9.3"
   }
 }

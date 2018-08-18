@@ -6,7 +6,7 @@ PROJECT_ROOT=$(pwd)
 
 JEKYLL_COMMAND=build
 
-SERVE_PROD=false
+SERVE=false
 
 SHOW_IN_BROWSER=false
 function show_in_browser {
@@ -25,11 +25,8 @@ do
     -wb|--web-browser)
       SHOW_IN_BROWSER=true
       ;;
-    -s|--serve-dev)
-      JEKYLL_COMMAND="serve --livereload"
-      ;;
-    -p|--serve-prod)
-      SERVE_PROD=true
+    -s|--serve)
+      SERVE=true
       ;;
     *)
       echo "Unknown parameter passed: $1"
@@ -41,7 +38,7 @@ done
 
 npm install
 
-jekyll $JEKYLL_COMMAND --source jekyll-src --destination docs
+jekyll build --source jekyll-src --destination docs
 
 for f in $(find docs -name "*.html")
 do
@@ -62,7 +59,9 @@ do
     $f -o $f
 done
 
-if $SERVE_PROD
+./node_modules/.bin/node-sass --output-style compact src/index.scss docs/index.css
+
+if $SERVE
 then
   (cd docs; python3 -m http.server)
 fi

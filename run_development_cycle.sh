@@ -60,6 +60,7 @@ do
     $f -o $f
 done
 
+cp src/banner.png docs
 touch docs/.nojekyll
 echo "vincent-jacques.net" >docs/CNAME
 ./node_modules/.bin/node-sass --output-style compact src/index.scss docs/index.css

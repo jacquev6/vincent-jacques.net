@@ -34,7 +34,8 @@ do
 done
 
 
-jekyll $JEKYLL_COMMAND --destination docs
+jekyll $JEKYLL_COMMAND --source jekyll-src --destination docs
+
 
 echo
 echo "Development cycle OK"

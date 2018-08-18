@@ -32,39 +32,39 @@
   <p>My <a href="http://ocaml.org/">OCaml</a> projects are documented using Sphinx as well and a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml">Sphinx extension for OCaml</a>.
     They are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a>.</p>
 
-{% for tag in tags %}
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_{{ tag }}"> {{ tag }}
-    </label>
-  </div>
-{% endfor %}
-
+  <p>Projects filter: {% for tag in site.data.tags %}<button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="{{ tag[0] }}">{{ tag[1].title }}</button> {% endfor %}</p>
 </div></div>
 
 <div class="row">
 {% for project in projects %}
-  <div class="col-md-6 col-lg-4 project{% for tag in project.tags %} tag_{{ tag }}{% endfor %}">
+  <div class="col-md-6 col-lg-4 project{% for tag in project.tags %} tag-{{ tag }}{% endfor %}">
     <h2>{{ project.title }}</h2>
-    <p>({% for tag in project.tags %}{% if forloop.first == false %}, {% endif %}{{ tag }}{% endfor %})</p>
+    <p>{% for tag in project.tags %}{% if forloop.first == false %} | {% endif %}<span class="badge badge-secondary">{{ site.data.tags[tag].title }}</span>{% endfor %}</p>
     {{ project.content }}
   </div>
 {% endfor %}
 </div>
 
 <script>
-  var tags = [{% for tag in tags %}"{{ tag }}",{% endfor %}];
-  $(function() {
-    $(".tag_checkbox").on("change", function() {
-      var checked = $(".tag_checkbox:checked");
-      if(checked.length) {
-        $(".project").hide();
-        checked.each(function(_, checkbox) {
-          $($(checkbox).data("tag_class")).show();
-        });
-      } else {
-        $(".project").show();
+  'use strict'
+
+  $(function () {
+    const tagFilters = $('button.tag-filter')
+    tagFilters.on('click', function () {
+      if (tagFilters.filter('.active').length === tagFilters.length) {
+        tagFilters.removeClass('active')
       }
-    });
-  });
+
+      $(this).button('toggle')
+
+      if (tagFilters.filter('.active').length === 0 || tagFilters.filter('.active').length === tagFilters.length) {
+        tagFilters.addClass('active')
+      }
+
+      $(".project").hide();
+      tagFilters.filter('.active').each(function () {
+        $('.tag-' + $(this).data('tag')).show()
+      })
+    })
+  })
 </script>

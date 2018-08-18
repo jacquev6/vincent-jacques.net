@@ -57,69 +57,14 @@
   <p>My <a href="http://ocaml.org/">OCaml</a> projects are documented using Sphinx as well and a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml">Sphinx extension for OCaml</a>.
     They are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a>.</p>
 
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_cpp"> cpp
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_javascript"> javascript
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_library"> library
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_mobile"> mobile
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_ocaml"> ocaml
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_program"> program
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_python"> python
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_visual"> visual
-    </label>
-  </div>
-
-  <div class="form-check form-check-inline">
-    <label class="form-check-label">
-      <input class="form-check-input tag_checkbox" type="checkbox" data-tag_class=".tag_web"> web
-    </label>
-  </div>
-
-
+  <p>Projects filter: <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="python">Python</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="cpp">C++</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="ocaml">OCaml</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="javascript">JavaScript</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="library">Library</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="program">Program</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="mobile">Mobile</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="web">Web</button> <button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="visual">Visual</button> </p>
 </div></div>
 
 <div class="row">
 
-  <div class="col-md-6 col-lg-4 project tag_python tag_library">
+  <div class="col-md-6 col-lg-4 project tag-python tag-library">
     <h2>PyGithub</h2>
-    <p>(python, library)</p>
+    <p><span class="badge badge-secondary">Python</span> | <span class="badge badge-secondary">Library</span></p>
     <p><a href="https://github.com/PyGithub/PyGithub">PyGithub</a> is a <a href="https://www.python.org/">Python</a> client library for the <a href="https://developer.github.com/v3/">GitHub REST API v3</a>.
 It’s widely used (1900+ stars on GitHub) and now maintained by the community.</p>
 
@@ -130,9 +75,9 @@ In PyGithub, if the method exists, then the endpoint exists.</p>
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_python tag_cpp tag_library tag_program tag_visual">
+  <div class="col-md-6 col-lg-4 project tag-python tag-cpp tag-library tag-program tag-visual">
     <h2>DrawTurksHead</h2>
-    <p>(python, cpp, library, program, visual)</p>
+    <p><span class="badge badge-secondary">Python</span> | <span class="badge badge-secondary">C++</span> | <span class="badge badge-secondary">Library</span> | <span class="badge badge-secondary">Program</span> | <span class="badge badge-secondary">Visual</span></p>
     <p><a href="http://jacquev6.github.io/DrawTurksHead/">DrawTurksHead</a> is a <a href="https://www.python.org/">Python</a> library to draw <a href="http://en.wikipedia.org/wiki/Turk%27s_head_knot">Turk’s head knots</a>.
 An <a href="http://jacquev6.github.io/DrawTurksHead/demo.html">interactive demo</a> is available.</p>
 
@@ -151,9 +96,9 @@ The C++ code uses <a href="https://www.cairographics.org/cairomm/">Cairomm</a> t
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_ocaml tag_visual tag_web tag_program">
+  <div class="col-md-6 col-lg-4 project tag-ocaml tag-visual tag-web tag-program">
     <h2>DrawGrammar</h2>
-    <p>(ocaml, visual, web, program)</p>
+    <p><span class="badge badge-secondary">OCaml</span> | <span class="badge badge-secondary">Visual</span> | <span class="badge badge-secondary">Web</span> | <span class="badge badge-secondary">Program</span></p>
     <p><a href="https://github.com/jacquev6/DrawGrammar/">DrawGrammar</a> is a tool to draw <a href="https://en.wikipedia.org/wiki/Syntax_diagram">railroad diagrams</a> of an <a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF</a> grammar.
 It is available as an <a href="https://jacquev6.github.io/DrawGrammar/">interactive demo</a> and as a command-line tool.</p>
 
@@ -168,9 +113,9 @@ The parsers for <a href="http://www.cl.cam.ac.uk/~mgk25/iso-14977.pdf">ISO-14977
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_ocaml tag_visual tag_program tag_mobile">
+  <div class="col-md-6 col-lg-4 project tag-ocaml tag-visual tag-program tag-mobile">
     <h2>Collide</h2>
-    <p>(ocaml, visual, program, mobile)</p>
+    <p><span class="badge badge-secondary">OCaml</span> | <span class="badge badge-secondary">Visual</span> | <span class="badge badge-secondary">Program</span> | <span class="badge badge-secondary">Mobile</span></p>
     <p><a href="https://github.com/jacquev6/Collide">Collide</a> is an <a href="https://en.wikipedia.org/wiki/Discrete_event_simulation">event-based simulation</a> of <a href="https://en.wikipedia.org/wiki/Elastic_collision">elastic collisions</a> between two-dimensional balls.
 An <a href="http://jacquev6.github.io/Collide/">interactive demo</a> is available.</p>
 
@@ -195,9 +140,9 @@ the resulting browser-based application is packaged using <a href="http://cordov
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_javascript tag_visual tag_web">
+  <div class="col-md-6 col-lg-4 project tag-javascript tag-visual tag-web">
     <h2>IpMap</h2>
-    <p>(javascript, visual, web)</p>
+    <p><span class="badge badge-secondary">JavaScript</span> | <span class="badge badge-secondary">Visual</span> | <span class="badge badge-secondary">Web</span></p>
     <p><a href="https://github.com/jacquev6/IpMap/">IpMap</a> is a browsable map of the IPv4 address space inspired by <a href="http://xkcd.com/195/">xkcd 195, Map of the Internet</a>.
 An <a href="http://jacquev6.github.io/IpMap/">interactive demo</a> is available.</p>
 
@@ -213,9 +158,9 @@ But I keep it here because it’s still working software.</p>
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_python tag_library">
+  <div class="col-md-6 col-lg-4 project tag-python tag-library">
     <h2>ActionTree</h2>
-    <p>(python, library)</p>
+    <p><span class="badge badge-secondary">Python</span> | <span class="badge badge-secondary">Library</span></p>
     <p><a href="http://jacquev6.github.io/ActionTree/">ActionTree</a> is a <a href="https://www.python.org/">Python</a> library to execute (long) actions in parallel, respecting dependencies between those actions.</p>
 
 <div class="text-center">
@@ -229,9 +174,9 @@ and <a href="http://matplotlib.org/">matplotlib</a> to produce visual reports of
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_python tag_library">
+  <div class="col-md-6 col-lg-4 project tag-python tag-library">
     <h2>variadic</h2>
-    <p>(python, library)</p>
+    <p><span class="badge badge-secondary">Python</span> | <span class="badge badge-secondary">Library</span></p>
     <p><a href="http://jacquev6.github.io/variadic/">variadic</a> is a <a href="https://www.python.org/">Python</a> <a href="https://docs.python.org/2/glossary.html#term-decorator">function decorator</a> to write variadic functions accepting a mix of arguments and iterables of those arguments.</p>
 
 <p>Its main added value is that decorated functions keep their <a href="https://docs.python.org/3/library/inspect.html#inspect.signature">signature</a>, so tools doing introspection (Sphinx doc, IDEs, etc.) will work like there is no decorator.</p>
@@ -241,9 +186,9 @@ This avoids using <code class="highlighter-rouge">eval</code> on generated code.
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_ocaml tag_web tag_library">
+  <div class="col-md-6 col-lg-4 project tag-ocaml tag-web tag-library">
     <h2>JsOfOCairo</h2>
-    <p>(ocaml, web, library)</p>
+    <p><span class="badge badge-secondary">OCaml</span> | <span class="badge badge-secondary">Web</span> | <span class="badge badge-secondary">Library</span></p>
     <p><a href="http://github.com/jacquev6/JsOfOCairo/">JsOfOCairo</a> is a <a href="http://ocaml.org/">OCaml</a> library to reuse Cairo-based drawing code in web browsers.</p>
 
 <p>It’s an adapter, implementing (a reasonable subset of) the interface of <a href="https://github.com/Chris00/ocaml-cairo/">Cairo OCaml</a>
@@ -251,9 +196,9 @@ targeting HTML5 canvas elements as exposed to OCaml by <a href="https://ocsigen.
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_ocaml tag_library">
+  <div class="col-md-6 col-lg-4 project tag-ocaml tag-library">
     <h2>hashids-ocaml</h2>
-    <p>(ocaml, library)</p>
+    <p><span class="badge badge-secondary">OCaml</span> | <span class="badge badge-secondary">Library</span></p>
     <p><a href="http://github.com/jacquev6/hashids-ocaml/">hashids-ocaml</a> is a <a href="http://ocaml.org/">OCaml</a> implementation of <a href="http://hashids.org/">hashids</a>.
 <!-- @todo link to http://hashids.org/ocaml/ when the PR is merged) --></p>
 
@@ -263,9 +208,9 @@ It’s been ported to a wide variety of programming languages by the community.<
 
   </div>
 
-  <div class="col-md-6 col-lg-4 project tag_python tag_javascript tag_web">
+  <div class="col-md-6 col-lg-4 project tag-python tag-javascript tag-web">
     <h2>vincent-jacques.net</h2>
-    <p>(python, javascript, web)</p>
+    <p><span class="badge badge-secondary">Python</span> | <span class="badge badge-secondary">JavaScript</span> | <span class="badge badge-secondary">Web</span></p>
     <p>The <a href="http://github.com/jacquev6/vincent-jacques.net">static part</a> of this website is built using <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://getbootstrap.com/">Bootstrap</a>.
 It’s hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
 
@@ -278,20 +223,27 @@ It’s hosted on <a href="https://aws.amazon.com/ec2/">Amazon EC2</a>.
 </div>
 
 <script>
-  var tags = ["cpp","javascript","library","mobile","ocaml","program","python","visual","web",];
-  $(function() {
-    $(".tag_checkbox").on("change", function() {
-      var checked = $(".tag_checkbox:checked");
-      if(checked.length) {
-        $(".project").hide();
-        checked.each(function(_, checkbox) {
-          $($(checkbox).data("tag_class")).show();
-        });
-      } else {
-        $(".project").show();
+  'use strict'
+
+  $(function () {
+    const tagFilters = $('button.tag-filter')
+    tagFilters.on('click', function () {
+      if (tagFilters.filter('.active').length === tagFilters.length) {
+        tagFilters.removeClass('active')
       }
-    });
-  });
+
+      $(this).button('toggle')
+
+      if (tagFilters.filter('.active').length === 0 || tagFilters.filter('.active').length === tagFilters.length) {
+        tagFilters.addClass('active')
+      }
+
+      $(".project").hide();
+      tagFilters.filter('.active').each(function () {
+        $('.tag-' + $(this).data('tag')).show()
+      })
+    })
+  })
 </script>
 
 </div></div>

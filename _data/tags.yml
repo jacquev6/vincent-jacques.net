@@ -1,0 +1,20 @@
+python:
+  title: Python
+cpp:
+  title: C++
+ocaml:
+  title: OCaml
+javascript:
+  title: JavaScript
+
+library:
+  title: Library
+program:
+  title: Program
+mobile:
+  title: Mobile
+web:
+  title: Web
+
+visual:
+  title: Visual

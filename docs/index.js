@@ -16873,7 +16873,7 @@ $(function () {
       tagFilters.addClass('active')
     }
 
-    $(".project").hide()
+    $('.project').hide()
     tagFilters.filter('.active').each(function () {
       $('.tag-' + $(this).data('tag')).show()
     })

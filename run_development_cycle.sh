@@ -4,7 +4,7 @@ set -o errexit
 
 PROJECT_ROOT=$(pwd)
 
-VJNET_COMMAND=generate
+COMMAND=generate
 
 SHOW_IN_BROWSER=false
 function show_in_browser {
@@ -24,7 +24,7 @@ do
       SHOW_IN_BROWSER=true
       ;;
     -s|--serve)
-      VJNET_COMMAND=serve
+      COMMAND=serve
       ;;
     *)
       echo "Unknown parameter passed: $1"
@@ -37,7 +37,7 @@ npm test
 
 show_in_browser "Unit test coverage details" $PROJECT_ROOT/coverage/index.html
 
-node vjnet.js $VJNET_COMMAND
+npm run $COMMAND
 
 echo
 echo "Development cycle OK"

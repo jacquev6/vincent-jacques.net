@@ -11,16 +11,6 @@ const path = require('path')
 const reload = require('reload')
 const sass = require('node-sass')
 
-const command = process.argv[2]
-
-const site = website({sourceDirName: 'src', skeletonDirName: 'skel'})
-
-if (command === 'generate') {
-  site.generate({outputDirName: 'docs'})
-} else if (command === 'serve') {
-  site.serve({port: 8000})
-}
-
 function website ({sourceDirName, skeletonDirName}) {
   return {generate, serve}
 
@@ -29,7 +19,7 @@ function website ({sourceDirName, skeletonDirName}) {
 
     fs.copy(skeletonDirName, outputDirName)
 
-    fs.outputFileSync(path.join(outputDirName, 'index.html'), minifyHtml(makeIndexHtml()))
+    fs.outputFileSync(path.join(outputDirName, 'index.html'), minifyHtml(makeIndexHtml({scripts: []})))
 
     fs.outputFileSync(path.join(outputDirName, 'index.css'), makeIndexCss())
   }
@@ -39,8 +29,10 @@ function website ({sourceDirName, skeletonDirName}) {
 
     app.use(express.static(skeletonDirName))
 
+    // Reload strategy:
+    // - files in sourceDirName are watched here to trigger a reload without restarting the server
+    // - generator source files (including the current file) are monitored using nodemon to restart the server
     const reloadServer = reload(app)
-
     chokidar.watch(sourceDirName).on('all', () => reloadServer.reload())
 
     app.get('/', (req, res) => {
@@ -112,3 +104,5 @@ function minifyHtml (input) {
     }
   )
 }
+
+Object.assign(exports, website({sourceDirName: 'src', skeletonDirName: 'skel'}))

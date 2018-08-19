@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test": "standard && nyc --reporter=html --reporter=text mocha $(find . -name '*-test.js' | grep -v node_modules)"
+    "test": "standard && nyc --reporter=html --reporter=text mocha $(find . -name '*-test.js' | grep -v node_modules)",
+    "generate": "node geni/generate.js",
+    "serve": "nodemon --watch geni geni/serve.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
     "mocha": "^5.2.0",
     "mustache": "^2.3.2",
     "node-sass": "^4.9.3",
+    "nodemon": "^1.18.3",
     "nyc": "^12.0.2",
     "reload": "^2.3.1",
     "standard": "^11.0.1"

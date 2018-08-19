@@ -38,33 +38,7 @@ done
 
 npm install
 
-rm -rf docs/*
-
-node src/data.js | ./node_modules/.bin/mustache - src/index.html > docs/index.html
-
-for f in $(find docs -name "*.html")
-do
-  ./node_modules/.bin/html-minifier \
-    --collapse-boolean-attributes \
-    --collapse-whitespace \
-    --decode-entities \
-    --minify-css true \
-    --minify-js true \
-    --remove-attribute-quotes \
-    --remove-comments \
-    --remove-script-type-attributes \
-    --remove-style-link-type-attributes \
-    --remove-tag-whitespace \
-    --sort-attributes \
-    --sort-class-name \
-    --use-short-doctype \
-    $f -o $f
-done
-
-cp src/banner.png docs
-touch docs/.nojekyll
-echo "vincent-jacques.net" >docs/CNAME
-./node_modules/.bin/node-sass --output-style compact src/index.scss docs/index.css
+node generate.js
 
 if $SERVE
 then

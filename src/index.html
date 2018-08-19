@@ -51,7 +51,7 @@
           {{#projects}}
           <div class="col-md-6 col-lg-4 project{{#tags}} tag-{{slug}}{{/tags}}">
             <h2 id="{{slug}}" class="px-1">{{name}}<span class="header-link"> <a href="#{{slug}}">&para;</a></span></h2>
-            <p>{{#tags}}{{^first}} | {{/first}}<span class="badge badge-tag">{{title}}</span>{{/tags}}</p>
+            <p>{{#tags}}{{^first}} {{/first}}<span class="badge badge-tag">{{title}}</span>{{/tags}}</p>
             <div class="text-justify">{{{content}}}</div>
           </div>
           {{/projects}}

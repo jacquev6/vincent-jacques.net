@@ -50,43 +50,42 @@ body {
   background-color: $color_primary_lighter;
 }
 
-.head-foot {
+@mixin head-foot() {
   background-color: $color_primary_darkest;
   margin-top: 15px;
   margin-bottom: 15px;
-}
-
-.head-foot p {
   color: white;
-}
 
-.header-links p {
-  margin: 0;
-}
-
-.head-foot a {
-  color: white;
+  a {
+    color: inherit;
+  }
 }
 
 #header {
+  @include head-foot()
+
   background-image: url("/banner.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   min-height: 150px;
-}
 
-#vjnet {
-  font-size: 40px;
-}
+  .header-links p {
+    margin: 0;
+  }
 
-#citation {
-  margin-left: 5em;
-  margin-bottom: 0;
-}
+  #vjnet {
+    font-size: 40px;
+  }
 
-#citation-origin {
-  margin-left: 10em;
-  margin-top: 0;
+  #citation {
+    margin-left: 5em;
+    margin-bottom: 0;
+  }
+
+  #citation-origin {
+    margin-left: 10em;
+    margin-top: 0;
+  }
 }
 
 #content {
@@ -94,46 +93,50 @@ body {
   border: solid 2px $color_complementary_base;
   padding-top: 15px;
   padding-bottom: 15px;
+
+  h1 {
+    background-color: $color_primary_darkest;
+    color: white;
+  }
+
+  h2 {
+    background-color: $color_primary_darker;
+    color: white;
+  }
+
+  a {
+    color: $color_primary_darkest;
+  }
+
+  .header-link {
+    visibility: hidden;
+  }
+
+  :hover > .header-link {
+    visibility: visible;
+  }
+
+  .header-link a {
+    color: inherit
+  }
+
+  .highlighted {
+    color: $color_complementary_base
+  }
+
+  .btn-tag {
+    @include button-variant(
+      white, $color_complementary_base, // Normal (background, border)
+      $color_complementary_lightest, $color_complementary_base, // Hover (background, border)
+      $color_complementary_lighter, $color_complementary_base, // Active (background, border)
+    );
+  }
+
+  .badge-tag {
+    @include badge-variant($color_complementary_lighter)
+  }
 }
 
-h1 {
-  background-color: $color_primary_darkest;
-  color: white;
-}
-
-h2 {
-  background-color: $color_primary_darker;
-  color: white;
-}
-
-#content a {
-  color: $color_primary_darkest;
-}
-
-.btn-tag {
-  @include button-variant(
-    white, $color_complementary_base, // Normal (background, border)
-    $color_complementary_lightest, $color_complementary_base, // Hover (background, border)
-    $color_complementary_lighter, $color_complementary_base, // Active (background, border)
-  );
-}
-
-.badge-tag {
-  @include badge-variant($color_complementary_lighter)
-}
-
-.header-link {
-  visibility: hidden;
-}
-
-h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .header-link, h6:hover .header-link {
-  visibility: visible;
-}
-
-#content .header-link a {
-  color: inherit
-}
-
-#content .highlighted {
-  color: $color_complementary_base
+#footer {
+  @include head-foot()
 }

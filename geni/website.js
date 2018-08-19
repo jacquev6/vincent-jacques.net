@@ -1,5 +1,6 @@
 'use strict'
 
+const browserify = require('browserify')
 const chokidar = require('chokidar')
 const express = require('express')
 const fs = require('fs-extra')
@@ -14,7 +15,7 @@ const sass = require('node-sass')
 function website ({sourceDirName, skeletonDirName, outputDirName}) {
   return {generate, serve}
 
-  function generate () {
+  async function generate () {
     fs.emptyDirSync(outputDirName)
 
     fs.copySync(skeletonDirName, outputDirName)
@@ -22,6 +23,8 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
     fs.outputFileSync(path.join(outputDirName, 'index.html'), minifyHtml(makeIndexHtml({scripts: []})))
 
     fs.outputFileSync(path.join(outputDirName, 'index.css'), makeIndexCss())
+
+    fs.outputFileSync(path.join(outputDirName, 'index.js'), await makeIndexJs())
   }
 
   function serve ({port}) {
@@ -48,6 +51,11 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
     app.get('/index.css', (req, res) => {
       res.type('.css')
       res.send(makeIndexCss())
+    })
+
+    app.get('/index.js', async (req, res) => {
+      res.type('.js')
+      res.send(await makeIndexJs())
     })
 
     app.listen(port, () => console.log(`Website live at http://localhost:${port}/`))
@@ -86,6 +94,20 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
       file: path.join(sourceDirName, 'index.scss'),
       outputStyle: 'compact'
     }).css
+  }
+
+  function makeIndexJs () {
+    // When this becomes too long, have a look at https://www.npmjs.com/package/watchify
+    return new Promise((resolve, reject) =>
+      browserify(path.join(sourceDirName, 'index.js'))
+        .bundle(function (error, result) {
+          if (error) {
+            reject(error)
+          } else {
+            resolve(result)
+          }
+        })
+    )
   }
 }
 

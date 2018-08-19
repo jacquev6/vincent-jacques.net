@@ -1,6 +1,4 @@
 ---
-title: Collide
-display_order: 400
 tags:
     - ocaml
     - visual

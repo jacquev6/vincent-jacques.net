@@ -1,6 +1,4 @@
 ---
-title: DrawGrammar
-display_order: 300
 tags:
     - ocaml
     - visual

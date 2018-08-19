@@ -1,6 +1,4 @@
 ---
-title: variadic
-display_order: 700
 tags:
     - python
     - library

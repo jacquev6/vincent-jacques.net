@@ -1,6 +1,4 @@
 ---
-title: DrawTurksHead
-display_order: 200
 tags:
     - python
     - cpp

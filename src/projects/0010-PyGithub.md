@@ -1,6 +1,4 @@
 ---
-title: PyGithub
-display_order: 100
 tags:
     - python
     - library

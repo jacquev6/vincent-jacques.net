@@ -1,6 +1,4 @@
 ---
-title: JsOfOCairo
-display_order: 800
 tags:
     - ocaml
     - web

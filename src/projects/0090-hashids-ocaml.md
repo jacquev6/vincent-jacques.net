@@ -1,6 +1,4 @@
 ---
-title: hashids-ocaml
-display_order: 900
 tags:
     - ocaml
     - library

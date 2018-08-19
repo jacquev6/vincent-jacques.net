@@ -1,0 +1,13 @@
+[
+  {"slug": "python", "title": "Python"},
+  {"slug": "cpp", "title": "C++"},
+  {"slug": "ocaml", "title": "OCaml"},
+  {"slug": "javascript", "title": "JavaScript"},
+
+  {"slug": "library", "title": "Library"},
+  {"slug": "program", "title": "Program"},
+  {"slug": "mobile", "title": "Mobile"},
+  {"slug": "web", "title": "Web"},
+
+  {"slug": "visual", "title": "Visual"}
+]

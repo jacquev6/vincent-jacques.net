@@ -1,6 +1,4 @@
 ---
-title: vincent-jacques.net
-display_order: 10000
 tags:
     - python
     - javascript

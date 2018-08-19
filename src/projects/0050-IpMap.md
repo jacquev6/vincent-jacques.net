@@ -1,6 +1,4 @@
 ---
-title: IpMap
-display_order: 500
 tags:
     - javascript
     - visual

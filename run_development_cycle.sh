@@ -4,9 +4,7 @@ set -o errexit
 
 PROJECT_ROOT=$(pwd)
 
-JEKYLL_COMMAND=build
-
-SERVE=false
+VJNET_COMMAND=generate
 
 SHOW_IN_BROWSER=false
 function show_in_browser {
@@ -26,7 +24,7 @@ do
       SHOW_IN_BROWSER=true
       ;;
     -s|--serve)
-      SERVE=true
+      VJNET_COMMAND=serve
       ;;
     *)
       echo "Unknown parameter passed: $1"
@@ -35,16 +33,9 @@ do
   shift
 done
 
+# npm install
 
-npm install
-
-node generate.js
-
-if $SERVE
-then
-  (cd docs; python3 -m http.server)
-fi
-
+node vjnet.js $VJNET_COMMAND
 
 echo
 echo "Development cycle OK"

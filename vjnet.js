@@ -7,11 +7,20 @@ const matter = require('gray-matter')
 const mustache = require('mustache')
 const path = require('path')
 const sass = require('node-sass')
+const express = require('express')
 
-website({sourceDirName: 'src', skeletonDirName: 'skel'}).generate({outputDirName: 'docs'})
+const command = process.argv[2]
+
+const site = website({sourceDirName: 'src', skeletonDirName: 'skel'})
+
+if (command === 'generate') {
+  site.generate({outputDirName: 'docs'})
+} else if (command === 'serve') {
+  site.serve({port: 8000})
+}
 
 function website ({sourceDirName, skeletonDirName}) {
-  return {generate}
+  return {generate, serve}
 
   function generate ({outputDirName}) {
     fs.emptyDirSync(outputDirName)
@@ -21,6 +30,24 @@ function website ({sourceDirName, skeletonDirName}) {
     fs.outputFileSync(path.join(outputDirName, 'index.html'), minifyHtml(makeIndexHtml()))
 
     fs.outputFileSync(path.join(outputDirName, 'index.css'), makeIndexCss())
+  }
+
+  function serve ({port}) {
+    const app = express()
+
+    app.use(express.static(skeletonDirName))
+
+    app.get('/', (req, res) => {
+      res.type('.html')
+      res.send(makeIndexHtml())
+    })
+
+    app.get('/index.css', (req, res) => {
+      res.type('.css')
+      res.send(makeIndexCss())
+    })
+
+    app.listen(port, () => console.log(`Website live at http://localhost:${port}/`))
   }
 
   function makeIndexHtml () {

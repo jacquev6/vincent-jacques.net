@@ -121,3 +121,15 @@ h2 {
 .badge-tag {
   @include badge-variant($color_complementary_lighter)
 }
+
+.header-link {
+  visibility: hidden;
+}
+
+h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .header-link, h6:hover .header-link {
+  visibility: visible;
+}
+
+#content .header-link a {
+  color: white
+}

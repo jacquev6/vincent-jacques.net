@@ -1743,3 +1743,9 @@ h2 { background-color: #495B83; color: white; }
 .badge-tag { color: #212529; background-color: #e8c98c; }
 
 .badge-tag[href]:hover, .badge-tag[href]:focus { color: #212529; text-decoration: none; background-color: #dfb562; }
+
+.header-link { visibility: hidden; }
+
+h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .header-link, h6:hover .header-link { visibility: visible; }
+
+#content .header-link a { color: white; }

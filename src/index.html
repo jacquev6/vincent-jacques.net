@@ -40,7 +40,7 @@
 
       <div id="content" class="row"><div class="col">
         <div class="row"><div class="col">
-          <h1>Portfolio</h1>
+          <h1 id="Portfolio" class="px-1">Portfolio<span class="header-link"> <a href="#Portfolio">&para;</a></span></h1>
           <p>Most of my projects are hosted on <a href="https://github.com/jacquev6">GitHub</a> and have continuous build on <a href="https://travis-ci.org/jacquev6">Travis CI</a>.</p>
           <p>My <a href="https://www.python.org/">Python</a> projects are documented using <a href="http://www.sphinx-doc.org/">Sphinx</a> and the <a href="https://alabaster.readthedocs.io/">Alabaster</a> theme. They are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>.</p>
           <p>My <a href="https://ocaml.org/">OCaml</a> projects are documented using Sphinx as well and a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml">Sphinx extension for OCaml</a>. They are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a>.</p>
@@ -50,7 +50,7 @@
         <div class="row">
           {{#projects}}
           <div class="col-md-6 col-lg-4 project{{#tags}} tag-{{slug}}{{/tags}}">
-            <h2>{{name}}</h2>
+            <h2 id="{{slug}}" class="px-1">{{name}}<span class="header-link"> <a href="#{{slug}}">&para;</a></span></h2>
             <p>{{#tags}}{{^first}} | {{/first}}<span class="badge badge-tag">{{title}}</span>{{/tags}}</p>
             <div class="text-justify">{{{content}}}</div>
           </div>

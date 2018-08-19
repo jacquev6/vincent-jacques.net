@@ -77,6 +77,7 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
       const name = fileName.slice(5, -3)
       const {data: {tags}, content} = matter(fs.readFileSync(path.join(sourceDirName, 'projects', fileName)))
       return {
+        slug: name,
         name,
         tags: tags.map((tag, index) => Object.assign({first: index === 0}, tagsBySlug[tag])),
         content: markdown.render(content)

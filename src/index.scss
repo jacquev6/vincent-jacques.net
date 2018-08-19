@@ -6,8 +6,8 @@ $color_primary_lightest: #BEC9E4;
 $color_complementary_base: #DFB562;
 $color_complementary_darkest: #B88F3D;
 $color_complementary_darker: #C3A364;
-$color_complementary_lighter: #F7DAA0;
-$color_complementary_lightest: #F7E8C9;
+$color_complementary_lighter: lighten($color_complementary_base, 10%);
+$color_complementary_lightest: lighten($color_complementary_base, 25%);
 
 // Copy-pasted from Bootstrap 4.1.3
 @import "../node_modules/bootstrap/scss/functions";
@@ -47,65 +47,77 @@ $color_complementary_lightest: #F7E8C9;
 // @import "../node_modules/bootstrap/scss/print";
 
 body {
-    background-color: $color_primary_lighter;
+  background-color: $color_primary_lighter;
 }
 
 .head-foot {
-    background-color: $color_primary_darkest;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  background-color: $color_primary_darkest;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .head-foot p {
-    color: white;
+  color: white;
 }
 
 .header-links p {
-    margin: 0;
+  margin: 0;
 }
 
 .head-foot a {
-    color: white;
+  color: white;
 }
 
 #header {
-    background-image: url("/banner.png");
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    min-height: 150px;
+  background-image: url("/banner.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  min-height: 150px;
 }
 
 #vjnet {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 #citation {
-    margin-left: 5em;
-    margin-bottom: 0;
+  margin-left: 5em;
+  margin-bottom: 0;
 }
 
 #citation-origin {
-    margin-left: 10em;
-    margin-top: 0;
+  margin-left: 10em;
+  margin-top: 0;
 }
 
 #content {
-    background-color: white;
-    border: solid 2px $color_complementary_base;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  background-color: white;
+  border: solid 2px $color_complementary_base;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 h1 {
-    background-color: $color_primary_darkest;
-    color: white;
+  background-color: $color_primary_darkest;
+  color: white;
 }
 
 h2 {
-    background-color: $color_primary_darker;
-    color: white;
+  background-color: $color_primary_darker;
+  color: white;
 }
 
 #content a {
-    color: $color_primary_darkest;
+  color: $color_primary_darkest;
+}
+
+.btn-tag {
+  @include button-variant(
+    white, $color_complementary_base, // Normal (background, border)
+    $color_complementary_lightest, $color_complementary_base, // Hover (background, border)
+    $color_complementary_lighter, $color_complementary_base, // Active (background, border)
+  );
+}
+
+.badge-tag {
+  @include badge-variant($color_complementary_lighter)
 }

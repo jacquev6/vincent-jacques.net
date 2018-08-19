@@ -1693,3 +1693,19 @@ h1 { background-color: #2E457B; color: white; }
 h2 { background-color: #495B83; color: white; }
 
 #content a { color: #2E457B; }
+
+.btn-tag { color: #212529; background-color: white; border-color: #DFB562; }
+
+.btn-tag:hover { color: #212529; background-color: #f5e7cc; border-color: #DFB562; }
+
+.btn-tag:focus, .btn-tag.focus { box-shadow: 0 0 0 0.2rem rgba(223, 181, 98, 0.5); }
+
+.btn-tag.disabled, .btn-tag:disabled { color: #212529; background-color: white; border-color: #DFB562; }
+
+.btn-tag:not(:disabled):not(.disabled):active, .btn-tag:not(:disabled):not(.disabled).active, .show > .btn-tag.dropdown-toggle { color: #212529; background-color: #e8c98c; border-color: #DFB562; }
+
+.btn-tag:not(:disabled):not(.disabled):active:focus, .btn-tag:not(:disabled):not(.disabled).active:focus, .show > .btn-tag.dropdown-toggle:focus { box-shadow: 0 0 0 0.2rem rgba(223, 181, 98, 0.5); }
+
+.badge-tag { color: #212529; background-color: #e8c98c; }
+
+.badge-tag[href]:hover, .badge-tag[href]:focus { color: #212529; text-decoration: none; background-color: #dfb562; }

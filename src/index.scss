@@ -50,7 +50,7 @@ body {
   background-color: $color_primary_lighter;
 }
 
-@mixin head-foot() {
+%head-foot {
   background-color: $color_primary_darkest;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -62,7 +62,7 @@ body {
 }
 
 #header {
-  @include head-foot()
+  @extend %head-foot;
 
   background-image: url("/banner.png");
   background-position: bottom right;
@@ -138,5 +138,5 @@ body {
 }
 
 #footer {
-  @include head-foot()
+  @extend %head-foot;
 }

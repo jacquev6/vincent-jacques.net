@@ -1704,9 +1704,11 @@ a.text-dark:hover, a.text-dark:focus { color: #1d2124 !important; }
 
 body { background-color: #9CB2E4; }
 
-#header { background-color: #2E457B; margin-top: 15px; margin-bottom: 15px; color: white; background-image: url("/banner.png"); background-position: bottom right; background-repeat: no-repeat; min-height: 150px; }
+#header, #footer { background-color: #2E457B; margin-top: 15px; margin-bottom: 15px; color: white; }
 
-#header a { color: inherit; }
+#header a, #footer a { color: inherit; }
+
+#header { background-image: url("/banner.png"); background-position: bottom right; background-repeat: no-repeat; min-height: 150px; }
 
 #header .header-links p { margin: 0; }
 
@@ -1747,7 +1749,3 @@ body { background-color: #9CB2E4; }
 #content .badge-tag { color: #212529; background-color: #e8c98c; }
 
 #content .badge-tag[href]:hover, #content .badge-tag[href]:focus { color: #212529; text-decoration: none; background-color: #dfb562; }
-
-#footer { background-color: #2E457B; margin-top: 15px; margin-bottom: 15px; color: white; }
-
-#footer a { color: inherit; }

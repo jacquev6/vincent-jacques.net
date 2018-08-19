@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard && nyc --reporter=html --reporter=text mocha $(find . -name '*-test.js' | grep -v node_modules)"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,10 @@
     "gray-matter": "^4.0.1",
     "html-minifier": "^3.5.19",
     "markdown-it": "^8.4.2",
+    "mocha": "^5.2.0",
     "mustache": "^2.3.2",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "nyc": "^12.0.2",
+    "standard": "^11.0.1"
   }
 }

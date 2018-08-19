@@ -85,7 +85,7 @@ function website ({sourceDirName, skeletonDirName}) {
 
 function minifyHtml (input) {
   return htmlMinifier.minify(
-    input, 
+    input,
     {
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
@@ -99,7 +99,7 @@ function minifyHtml (input) {
       removeTagWhitespace: true,
       sortAttributes: true,
       sortClassName: true,
-      useShortDoctype: true,
+      useShortDoctype: true
     }
   )
 }

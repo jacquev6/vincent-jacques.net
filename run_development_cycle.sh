@@ -33,7 +33,9 @@ do
   shift
 done
 
-# npm install
+npm test
+
+show_in_browser "Unit test coverage details" $PROJECT_ROOT/coverage/index.html
 
 node vjnet.js $VJNET_COMMAND
 

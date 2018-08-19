@@ -5,6 +5,7 @@ const $ = require('jquery')
 
 $(function () {
   var tagFilters = $('button.tag-filter')
+  tagFilters.tooltip()
   tagFilters.on('click', function () {
     if (tagFilters.filter('.active').length === tagFilters.length) {
       tagFilters.removeClass('active')

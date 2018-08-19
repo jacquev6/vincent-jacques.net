@@ -1,13 +1,49 @@
 [
-  {"slug": "python", "title": "Python"},
-  {"slug": "cpp", "title": "C++"},
-  {"slug": "ocaml", "title": "OCaml"},
-  {"slug": "javascript", "title": "JavaScript"},
+  {
+    "slug": "python",
+    "title": "Python",
+    "description": "implemented in Python"
+  },
+  {
+    "slug": "cpp",
+    "title": "C++",
+    "description": "implemented in C++"
+  },
+  {
+    "slug": "ocaml",
+    "title": "OCaml",
+    "description": "implemented in OCaml"
+  },
+  {
+    "slug": "javascript",
+    "title": "JavaScript",
+    "description": "implemented in JavaScript"
+  },
 
-  {"slug": "library", "title": "Library"},
-  {"slug": "program", "title": "Program"},
-  {"slug": "mobile", "title": "Mobile"},
-  {"slug": "web", "title": "Web"},
+  {
+    "slug": "library",
+    "title": "Library",
+    "description": "providing a reusable library"
+  },
+  {
+    "slug": "program",
+    "title": "Program",
+    "description": "providing a desktop program"
+  },
+  {
+    "slug": "mobile",
+    "title": "Mobile",
+    "description": "providing a mobile application"
+  },
+  {
+    "slug": "web",
+    "title": "Web",
+    "description": "targeting the web environment"
+  },
 
-  {"slug": "visual", "title": "Visual"}
+  {
+    "slug": "visual",
+    "title": "Visualization",
+    "description": "drawing something"
+  }
 ]

@@ -2,4 +2,4 @@
 
 const website = require('./website')
 
-website.generate({outputDirName: 'docs'})
+website.generate()

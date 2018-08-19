@@ -16,7 +16,6 @@ $(function () {
 
 function highlightProject () {
   const fragment = window.location.hash
-  console.log(fragment)
   $('h1, h2, h3, h4, h5, h6').removeClass('highlighted')
   if (fragment.startsWith('#')) {
     $(fragment).addClass('highlighted')

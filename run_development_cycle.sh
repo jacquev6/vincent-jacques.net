@@ -58,7 +58,6 @@ do
     --sort-attributes \
     --sort-class-name \
     --use-short-doctype \
-    --preserve-line-breaks \
     $f -o $f
 done
 

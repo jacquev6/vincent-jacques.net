@@ -38,7 +38,9 @@ done
 
 npm install
 
-jekyll build --source jekyll-src --destination docs
+rm -rf docs/*
+
+node src/data.js | ./node_modules/.bin/mustache - src/index.html > docs/index.html
 
 for f in $(find docs -name "*.html")
 do

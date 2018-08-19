@@ -8,7 +8,11 @@
   },
   "homepage": "https://vincent-jacques.net",
   "dependencies": {
+    "fs-extra": "^7.0.0",
+    "gray-matter": "^4.0.1",
     "html-minifier": "^3.5.19",
+    "markdown-it": "^8.4.2",
+    "mustache": "^2.3.2",
     "node-sass": "^4.9.3"
   }
 }

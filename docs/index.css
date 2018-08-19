@@ -1748,4 +1748,6 @@ h2 { background-color: #495B83; color: white; }
 
 h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .header-link, h6:hover .header-link { visibility: visible; }
 
-#content .header-link a { color: white; }
+#content .header-link a { color: inherit; }
+
+#content .highlighted { color: #DFB562; }

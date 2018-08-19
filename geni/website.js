@@ -7,6 +7,7 @@ const fs = require('fs-extra')
 const htmlMinifier = require('html-minifier')
 const markdownIt = require('markdown-it')
 const matter = require('gray-matter')
+const modernizr = require('modernizr')
 const mustache = require('mustache')
 const path = require('path')
 const reload = require('reload')
@@ -25,6 +26,8 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
     fs.outputFileSync(path.join(outputDirName, 'index.css'), makeIndexCss())
 
     fs.outputFileSync(path.join(outputDirName, 'index.js'), await makeIndexJs())
+
+    fs.outputFileSync(path.join(outputDirName, 'modernizr.js'), await makeModernizrJs())
   }
 
   function serve ({port}) {
@@ -56,6 +59,11 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
     app.get('/index.js', async (req, res) => {
       res.type('.js')
       res.send(await makeIndexJs())
+    })
+
+    app.get('/modernizr.js', async (req, res) => {
+      res.type('.js')
+      res.send(await makeModernizrJs())
     })
 
     app.listen(port, () => console.log(`Website live at http://localhost:${port}/`))
@@ -108,6 +116,18 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
             resolve(result)
           }
         })
+    )
+  }
+
+  function makeModernizrJs () {
+    const config = fs.readJsonSync(path.join(sourceDirName, 'modernizr.json'))
+    return new Promise((resolve, reject) =>
+      modernizr.build(
+        config,
+        function (result) {
+          resolve(result)
+        }
+      )
     )
   }
 }

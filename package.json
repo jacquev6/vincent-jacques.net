@@ -20,6 +20,7 @@
     "jquery": "^3.3.1",
     "markdown-it": "^8.4.2",
     "mocha": "^5.2.0",
+    "modernizr": "^3.6.0",
     "mustache": "^2.3.2",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.3",

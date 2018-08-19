@@ -1,9 +1,29 @@
 'use strict'
 
+/* global Modernizr */
+
 require('bootstrap')
 const $ = require('jquery')
 
 $(function () {
+  initializeTagsFilter()
+
+  if (Modernizr.hashchange) {
+    highlightProject()
+    $(window).on('hashchange', highlightProject)
+  }
+})
+
+function highlightProject () {
+  const fragment = window.location.hash
+  console.log(fragment)
+  $('h1, h2, h3, h4, h5, h6').removeClass('highlighted')
+  if (fragment.startsWith('#')) {
+    $(fragment).addClass('highlighted')
+  }
+}
+
+function initializeTagsFilter () {
   var tagFilters = $('button.tag-filter')
   tagFilters.tooltip()
   tagFilters.on('click', function () {
@@ -22,4 +42,4 @@ $(function () {
       $('.tag-' + $(this).data('tag')).show()
     })
   })
-})
+}

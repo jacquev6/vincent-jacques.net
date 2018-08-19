@@ -131,5 +131,9 @@ h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .h
 }
 
 #content .header-link a {
-  color: white
+  color: inherit
+}
+
+#content .highlighted {
+  color: $color_complementary_base
 }

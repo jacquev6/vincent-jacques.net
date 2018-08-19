@@ -35,35 +35,22 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
 
     const app = express()
 
-    app.use(express.static(skeletonDirName))
+    app.use(express.static(outputDirName))
 
     // Reload strategy:
     // - files in sourceDirName are watched here to trigger a reload without restarting the server
     // - generator source files (including the current file) are monitored using nodemon to restart the server
     const reloadServer = reload(app)
-    chokidar.watch(sourceDirName).on('all', () => {
+
+    chokidar.watch(sourceDirName, {ignoreInitial: true}).on('all', async (event, path) => {
+      await generate()
+      console.log('Website regenerated due to', event, 'on', path)
       reloadServer.reload()
-      generate()
     })
 
     app.get('/', (req, res) => {
       res.type('.html')
       res.send(makeIndexHtml({scripts: ['/reload/reload.js']}))
-    })
-
-    app.get('/index.css', (req, res) => {
-      res.type('.css')
-      res.send(makeIndexCss())
-    })
-
-    app.get('/index.js', async (req, res) => {
-      res.type('.js')
-      res.send(await makeIndexJs())
-    })
-
-    app.get('/modernizr.js', async (req, res) => {
-      res.type('.js')
-      res.send(await makeModernizrJs())
     })
 
     app.listen(port, () => console.log(`Website live at http://localhost:${port}/`))

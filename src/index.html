@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -15,122 +15,115 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="/index.css">
     {{#scripts}}<script src="{{{.}}}"></script>{{/scripts}}
-</head>
-<body>
-<div class="container">
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="row head-foot"><div class="col">
+        <div class="row"><div class="col">
+          <p id="vjnet"><a href="/">vincent-jacques.net</a></p>
+        </div></div>
+        <div class="row">
+          <div class="col-md-6">
+            <p id="citation">&laquo;&nbsp;S'il n'y a pas de solution,<br/>c'est qu'il n'y a pas de problème.&nbsp;&raquo;</p>
+            <p id="citation-origin">Devise <a href="http://en.wikipedia.org/wiki/Les_Shadoks">Shadock</a></p>
+          </div>
+          <div class="header-links col-md-2">
+            <p><a href="mailto:vincent@vincent-jacques.net">e-mail</a></p>
+            <p><a href="https://www.github.com/jacquev6/">GitHub</a>,
+            <a href="https://travis-ci.org/jacquev6/">Travis CI</a></p>
+            <p><a href="https://pypi.org/user/jacquev6/">PyPi</a>,
+            <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues&amp;utf8=%E2%9C%93">OPAM</a></p>
+          </div>
+          <div class="header-links col-md-4">
+            <p><a href="https://www.linkedin.com/in/jacquev6/">LinkedIn</a></p>
+            <p><a href="https://stackoverflow.com/users/905845/jacquev6/">StackOverflow</a></p>
+          </div>
+        </div>
+      </div></div>
 
-<div id="header" class="row head-foot"><div class="col">
-    <div class="row"><div class="col">
-        <p id="vjnet"><a href="/">vincent-jacques.net</a></p>
-    </div></div>
-    <div class="row"><div class="col-md-6">
-        <p id="citation">&laquo;&nbsp;S'il n'y a pas de solution,<br/>c'est qu'il n'y a pas de problème.&nbsp;&raquo;</p>
-        <p id="citation-origin">Devise <a href="http://en.wikipedia.org/wiki/Les_Shadoks">Shadock</a></p>
-    </div><div class="header-links col-md-2">
-        <p><a href="mailto:vincent@vincent-jacques.net">e-mail</a></p>
-        <p><a href="https://www.github.com/jacquev6/">GitHub</a>,
-        <a href="https://travis-ci.org/jacquev6/">Travis CI</a></p>
-        <p><a href="https://pypi.org/user/jacquev6/">PyPi</a>,
-        <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a></p>
-    </div><div class="header-links col-md-4">
-        <p><a href="https://www.linkedin.com/in/jacquev6/">LinkedIn</a></p>
-        <p><a href="https://stackoverflow.com/users/905845/jacquev6/">StackOverflow</a></p>
-    </div></div>
-</div></div>
+      <div id="content" class="row"><div class="col">
+        <div class="row"><div class="col">
+          <h1>Portfolio</h1>
+          <p>Most of my projects are hosted on <a href="https://github.com/jacquev6">GitHub</a> and have continuous build on <a href="https://travis-ci.org/jacquev6">Travis CI</a>.</p>
+          <p>My <a href="https://www.python.org/">Python</a> projects are documented using <a href="http://www.sphinx-doc.org/">Sphinx</a> and the <a href="https://alabaster.readthedocs.io/">Alabaster</a> theme. They are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>.</p>
+          <p>My <a href="http://ocaml.org/">OCaml</a> projects are documented using Sphinx as well and a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml">Sphinx extension for OCaml</a>. They are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a>.</p>
+          <p>Projects filter: {{#tags}}<button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="{{slug}}">{{title}}</button> {{/tags}}</p>
+        </div></div>
 
-<div id="content" class="row"><div class="col">
+        <div class="row">
+          {{#projects}}
+          <div class="col-md-6 col-lg-4 project{{#tags}} tag-{{slug}}{{/tags}}">
+            <h2>{{name}}</h2>
+            <p>{{#tags}}{{^first}} | {{/first}}<span class="badge badge-secondary">{{title}}</span>{{/tags}}</p>
+            {{{content}}}
+          </div>
+          {{/projects}}
+        </div>
 
-<!-- @todo <h1>Blog</h1> Use topics from "future" branch and MinimalExamples project -->
+        <script>
+          'use strict'
 
-<div class="row"><div class="col">
-  <h1>Portfolio</h1>
+          $(function () {
+            var tagFilters = $('button.tag-filter')
+            tagFilters.on('click', function () {
+              if (tagFilters.filter('.active').length === tagFilters.length) {
+                tagFilters.removeClass('active')
+              }
 
-  <p>Most of my projects are hosted on <a href="https://github.com/jacquev6">GitHub</a> and have continuous build on <a href="https://travis-ci.org/jacquev6">Travis CI</a>.</p>
-  <p>My <a href="https://www.python.org/">Python</a> projects are documented using <a href="http://www.sphinx-doc.org/">Sphinx</a> and the <a href="https://alabaster.readthedocs.io/">Alabaster</a> theme.
-    They are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>.</p>
-  <p>My <a href="http://ocaml.org/">OCaml</a> projects are documented using Sphinx as well and a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml">Sphinx extension for OCaml</a>.
-    They are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a>.</p>
+              $(this).button('toggle')
 
-  <p>Projects filter: {{#tags}}<button class="tag-filter btn btn-sm btn-outline-secondary active" data-tag="{{slug}}">{{title}}</button> {{/tags}}</p>
-</div></div>
+              if (tagFilters.filter('.active').length === 0 || tagFilters.filter('.active').length === tagFilters.length) {
+                tagFilters.addClass('active')
+              }
 
-<div class="row">
-{{#projects}}
-  <div class="col-md-6 col-lg-4 project{{#tags}} tag-{{slug}}{{/tags}}">
-    <h2>{{name}}</h2>
-    <p>{{#tags}}{{^first}} | {{/first}}<span class="badge badge-secondary">{{title}}</span>{{/tags}}</p>
-    {{{content}}}
-  </div>
-{{/projects}}
-</div>
+              $(".project").hide()
+              tagFilters.filter('.active').each(function () {
+                $('.tag-' + $(this).data('tag')).show()
+              })
+            })
+          })
+        </script>
+      </div></div>
 
-<script>
-  'use strict'
+      <div id="footer" class="row head-foot"><div class="col">
+        <p class="text-center">&copy; <a href="mailto:vincent@vincent-jacques.net">Vincent Jacques</a> 2010-2018</p>
+      </div></div>
+    </div>
 
-  $(function () {
-    var tagFilters = $('button.tag-filter')
-    tagFilters.on('click', function () {
-      if (tagFilters.filter('.active').length === tagFilters.length) {
-        tagFilters.removeClass('active')
-      }
-
-      $(this).button('toggle')
-
-      if (tagFilters.filter('.active').length === 0 || tagFilters.filter('.active').length === tagFilters.length) {
-        tagFilters.addClass('active')
-      }
-
-      $(".project").hide()
-      tagFilters.filter('.active').each(function () {
-        $('.tag-' + $(this).data('tag')).show()
+    <div id="debug" style="margin-top: 50px; display: none"><ul>
+      <li>Breakpoint:
+        <span class="d-none d-sm-inline-block">xs</span>
+        <strong class="d-inline-block d-sm-none">xs</strong>
+        &lt; 576px &le;
+        <span class="d-sm-none d-md-inline-block">sm</span>
+        <strong class="d-none d-sm-inline-block d-md-none">sm</strong>
+        &lt; 768px &le;
+        <span class="d-md-none d-lg-inline-block">md</span>
+        <strong class="d-none d-md-inline-block d-lg-none">md</strong>
+        &lt; 992px &le;
+        <span class="d-lg-none d-xl-inline-block">lg</span>
+        <strong class="d-none d-lg-inline-block d-xl-none">lg</strong>
+        &lt; 1200px &le;
+        <span class="d-xl-none">xl</span>
+        <strong class="d-none d-xl-inline-block">xl</strong>
+      </li>
+      <li>Container:
+        <span class="d-inline-block d-sm-none">fluid</span>
+        <span class="d-none d-sm-inline-block d-md-none">540px = 12 * 45px</span>
+        <span class="d-none d-md-inline-block d-lg-none">720px = 12 * 60px</span>
+        <span class="d-none d-lg-inline-block d-xl-none">960px = 12 * 80px</span>
+        <span class="d-none d-xl-inline-block">1140px = 12 * 95px</span>
+      </li>
+    </ul></div>
+    <script>
+      $(function() {
+        if(window.location.href.includes("?debug")) {
+          $("#debug").show();
+          $("a").each(function(a, b) {
+            $(b).attr("href", $(b).attr("href") + "?debug");
+          });
+        }
       })
-    })
-  })
-</script>
-
-</div></div>
-
-<div id="footer" class="row head-foot"><div class="col">
-    <p class="text-center">&copy; <a href="mailto:vincent@vincent-jacques.net">Vincent Jacques</a> 2010-2018</p>
-</div></div>
-
-</div>
-
-<div id="debug" style="margin-top: 50px; display: none"><ul>
-  <li>Breakpoint:
-    <span class="d-none d-sm-inline-block">xs</span>
-    <strong class="d-inline-block d-sm-none">xs</strong>
-    &lt; 576px &le;
-    <span class="d-sm-none d-md-inline-block">sm</span>
-    <strong class="d-none d-sm-inline-block d-md-none">sm</strong>
-    &lt; 768px &le;
-    <span class="d-md-none d-lg-inline-block">md</span>
-    <strong class="d-none d-md-inline-block d-lg-none">md</strong>
-    &lt; 992px &le;
-    <span class="d-lg-none d-xl-inline-block">lg</span>
-    <strong class="d-none d-lg-inline-block d-xl-none">lg</strong>
-    &lt; 1200px &le;
-    <span class="d-xl-none">xl</span>
-    <strong class="d-none d-xl-inline-block">xl</strong>
-  </li>
-  <li>Container:
-    <span class="d-inline-block d-sm-none">fluid</span>
-    <span class="d-none d-sm-inline-block d-md-none">540px = 12 * 45px</span>
-    <span class="d-none d-md-inline-block d-lg-none">720px = 12 * 60px</span>
-    <span class="d-none d-lg-inline-block d-xl-none">960px = 12 * 80px</span>
-    <span class="d-none d-xl-inline-block">1140px = 12 * 95px</span>
-  </li>
-</ul></div>
-<script>
-  $(function() {
-    if(window.location.href.includes("?debug")) {
-      $("#debug").show();
-      $("a").each(function(a, b) {
-        $(b).attr("href", $(b).attr("href") + "?debug");
-      });
-    }
-  })
-</script>
-
-</body>
+    </script>
+  </body>
 </html>

@@ -1,13 +1,15 @@
 'use strict'
 
+const chokidar = require('chokidar')
+const express = require('express')
 const fs = require('fs-extra')
 const htmlMinifier = require('html-minifier')
 const markdownIt = require('markdown-it')
 const matter = require('gray-matter')
 const mustache = require('mustache')
 const path = require('path')
+const reload = require('reload')
 const sass = require('node-sass')
-const express = require('express')
 
 const command = process.argv[2]
 
@@ -37,9 +39,13 @@ function website ({sourceDirName, skeletonDirName}) {
 
     app.use(express.static(skeletonDirName))
 
+    const reloadServer = reload(app)
+
+    chokidar.watch(sourceDirName).on('all', () => reloadServer.reload())
+
     app.get('/', (req, res) => {
       res.type('.html')
-      res.send(makeIndexHtml())
+      res.send(makeIndexHtml({scripts: ['/reload/reload.js']}))
     })
 
     app.get('/index.css', (req, res) => {
@@ -50,7 +56,7 @@ function website ({sourceDirName, skeletonDirName}) {
     app.listen(port, () => console.log(`Website live at http://localhost:${port}/`))
   }
 
-  function makeIndexHtml () {
+  function makeIndexHtml ({scripts}) {
     const tags = fs.readJsonSync(path.join(sourceDirName, 'tags.json'))
     const tagsBySlug = {}
     for (var tag of tags) {
@@ -72,7 +78,10 @@ function website ({sourceDirName, skeletonDirName}) {
       }
     })
 
-    return mustache.render(fs.readFileSync(path.join(sourceDirName, 'index.html'), 'utf8'), {tags, projects})
+    return mustache.render(
+      fs.readFileSync(path.join(sourceDirName, 'index.html'), 'utf8'),
+      {scripts, tags, projects}
+    )
   }
 
   function makeIndexCss () {

@@ -24,7 +24,7 @@ function highlightProject () {
 
 function initializeTagsFilter () {
   var tagFilters = $('button.tag-filter')
-  tagFilters.tooltip()
+  tagFilters.tooltip({trigger: 'hover'})
   tagFilters.on('click', function () {
     if (tagFilters.filter('.active').length === tagFilters.length) {
       tagFilters.removeClass('active')

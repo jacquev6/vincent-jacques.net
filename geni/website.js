@@ -35,6 +35,11 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
 
     const app = express()
 
+    app.get('/', (req, res) => {
+      res.type('.html')
+      res.send(makeIndexHtml({scripts: ['/reload/reload.js']}))
+    })
+
     app.use(express.static(outputDirName))
 
     // Reload strategy:
@@ -46,11 +51,6 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
       await generate()
       console.log('Website regenerated due to', event, 'on', path)
       reloadServer.reload()
-    })
-
-    app.get('/', (req, res) => {
-      res.type('.html')
-      res.send(makeIndexHtml({scripts: ['/reload/reload.js']}))
     })
 
     app.listen(port, () => console.log(`Website live at http://localhost:${port}/`))

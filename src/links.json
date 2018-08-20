@@ -1,4 +1,11 @@
 {
+  "Amadeus": "http://www.amadeus.com/",
+  "Amazon": "https://www.amazon.com/",
+  "Criteo": "https://www.criteo.com/",
+  "ECP": "https://en.wikipedia.org/wiki/%C3%89cole_Centrale_Paris",
+  "Thales": "https://www.thalesgroup.com/",
+  "UCL": "https://www.ucl.ac.uk/",
+
   "Alabaster": "https://alabaster.readthedocs.io/",
   "autodoc": "www.sphinx-doc.org/en/master/usage/extensions/autodoc.html",
   "Boost.Python": "https://www.boost.org/doc/libs/release/libs/python/",

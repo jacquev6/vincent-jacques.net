@@ -1,6 +1,8 @@
 'use strict'
 
+const assert = require('assert').strict
 const browserify = require('browserify')
+const childProcess = require('child_process')
 const chokidar = require('chokidar')
 const dedent = require('dedent')
 const express = require('express')
@@ -11,13 +13,15 @@ const markdownItAnchor = require('markdown-it-anchor')
 const markdownItAttrs = require('markdown-it-attrs')
 const markdownItDeflist = require('markdown-it-deflist')
 const matter = require('gray-matter')
+const md5 = require('md5')
 const modernizr = require('modernizr')
 const mustache = require('mustache')
 const path = require('path')
+const pdfjs = require('pdfjs-dist')
 const reload = require('reload')
 const sass = require('node-sass')
 
-function website ({sourceDirName, skeletonDirName, outputDirName}) {
+function website ({sourceDirName, skeletonDirName, outputDirName, assetsDirName}) {
   return {generate, serve}
 
   async function generate () {
@@ -32,6 +36,17 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
     fs.outputFileSync(path.join(outputDirName, 'index.js'), await makeIndexJs())
 
     fs.outputFileSync(path.join(outputDirName, 'modernizr.js'), await makeModernizrJs())
+
+    const resumeSource = path.join(sourceDirName, 'Vincent Jacques - resume.odt')
+    const resumeAsset = path.join(assetsDirName, 'Vincent Jacques - resume.' + md5(fs.readFileSync(resumeSource)) + '.pdf')
+    const resumeOutput = path.join(outputDirName, 'Vincent Jacques - resume.pdf')
+    if (fs.existsSync(resumeAsset)) {
+      fs.copySync(resumeAsset, resumeOutput)
+    } else {
+      childProcess.spawnSync('libreoffice', ['--convert-to', 'pdf', resumeSource, '--outdir', outputDirName])
+      fs.copySync(resumeOutput, resumeAsset)
+    }
+    assert.equal((await pdfjs.getDocument(resumeOutput)).numPages, 2)
   }
 
   function serve ({port}) {
@@ -52,6 +67,7 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
     const reloadServer = reload(app)
 
     chokidar.watch(sourceDirName, {ignoreInitial: true}).on('all', async (event, path) => {
+      // If two files are modified at the same time, several calls to generate will race. We'll live with that for now.
       await generate()
       console.log('Website regenerated due to', event, 'on', path)
       reloadServer.reload()
@@ -78,7 +94,7 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
         typographer: true
       })
       markdown.use(markdownItAttrs)
-      markdown.use(markdownItAnchor, {permalink: true})
+      markdown.use(markdownItAnchor, {permalink: true, slugify})
       markdown.use(markdownItDeflist)
 
       return function (text) {
@@ -106,6 +122,10 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
         md: function () { return function (text, render) { return renderMarkdown(render(dedent(text))) } }
       }
     )
+  }
+
+  function slugify (s) {
+    return String(s).trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, '-').replace(/[^-a-z]/g, '')
   }
 
   function makeIndexCss () {
@@ -163,4 +183,7 @@ function minifyHtml (input) {
   )
 }
 
-Object.assign(exports, website({sourceDirName: 'src', skeletonDirName: 'skel', outputDirName: 'docs'}))
+Object.assign(
+  exports,
+  website({sourceDirName: 'src', skeletonDirName: 'skel', assetsDirName: 'assets', outputDirName: 'docs'})
+)

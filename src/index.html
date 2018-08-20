@@ -13,7 +13,7 @@
     <script src="/modernizr.js"></script>
     {{#scripts}}<script src="{{{.}}}"></script>{{/scripts}}
   </head>
-  <body>
+  <body lang="en">
     <div class="container">
       <div id="header" class="row"><div class="col">
         <div class="row"><div class="col">
@@ -49,6 +49,36 @@
 
       <div id="content" class="row text-justify"><div class="col">
         <div class="row"><div class="col">
+          {{#md}}# Introduction {.px-1}{{/md}}
+        </div></div>
+
+        <div class="row">
+          <div class="col-md">
+            {{#md}}
+              I'm Vincent Jacques, alias [@jacquev6] on the web.
+              I'm a 35 years old, French, passionate software engineer.
+              I started programming when I was 12 on a [Casio calculator],
+              and haven't stopped learning since.
+
+              [@jacquev6]: https://www.google.com/search?q=jacquev6
+              [Casio calculator]: http://www.rskey.org/fx790p
+
+              I studied general engineering at [Ecole Centrale Paris][ECP]
+              (2006) and I specialized on software as a very enthusiastic career choice.
+            {{/md}}
+          </div><div class="col-md">
+            {{#md}}
+              After eleven years of professional software engineering, I value maintainable and evolutive source code
+              and the use of tools and automation to create working, reliable software.
+
+              As of September 2018, I'm **looking for my next job**.
+              Maybe we can work together on your software project?
+              More details [below my portfolio](#hire-me). {.strong-attention}
+            {{/md}}
+          </div>
+        </div>
+
+        <div class="row"><div class="col">
           {{#md}}
             # Portfolio {.px-1}
 
@@ -76,6 +106,79 @@
             <div>{{{content}}}</div>
           </div>
           {{/projects}}
+        </div>
+
+        <div class="row"><div class="col">
+          {{#md}}
+            # Hire me {.px-1}
+
+            ## Résumé {.px-1}
+
+            I hope you liked my portfolio and it made you want to work together!
+            If yes, here is my [résumé (PDF)](/Vincent%20Jacques%20-%20resume.pdf).
+
+            <div class="d-none d-lg-block embed-responsive embed-responsive-16by9 mb-4">
+              <embed src="/Vincent%20Jacques%20-%20resume.pdf" class="embed-responsive-item" width="640" height="480" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+            </div>
+
+            ## My dream job {.px-1}
+
+            I'm pretty flexible about administrative status: I can either invoice you as a freelancer,
+            or, if you are a French company, I can join your payroll.
+
+            I aim at making the most of my time.
+            Based on my work experience, I have identified below a few conditions that help me be as productive as possible.
+            Of course this is just to give you a taste of what I'm looking for, and we don't have to be a 100% match.
+            If you think we could be a good fit, please send me an [e-mail](mailto:vincent.jacques@centraliens.net) and let's discuss working together!
+          {{/md}}
+        </div></div>
+
+        <div class="row">
+          <div class="col-md">
+            {{#md}}
+              ##### Working from home {.px-1}
+
+              As my personal life is now organized around it, this is the most important for me.
+              It gives me long uninterrupted focused work periods, the best for people on a [maker schedule](https://www.google.fr/search?q=maker+schedule+manager+schedule).
+              Without the daily commute I feel less tired and I waste less time.
+              This means I have more time for work *and* for myself.
+
+              I've been doing that for a few years now.
+              Regularly scheduled video meetings have been enough to keep projects on track.
+
+              ##### Focusing on building technical solutions... {.px-1}
+
+              I enjoy technical work.
+              I like to dive deep in technical issues and create solutions as simple as possible.
+              I wish to become a very potent expert rather than a manager, and I'm looking for a job that values that.
+
+              My team should have the freedom to choose appropriate technical solutions with no arbitrary technological constraints.
+              It should be responsible for solving problems, and decide *how* (in the context allowed by said problem: there may be actual technological constraints.)
+
+              ##### ...for actual business problems {.px-1}
+
+              I need to understand the business big picture, to keep in mind *why* we are doing anything.
+              The question of exactly *what* we should do, however, is probably better answered by domain specialists.
+              Regular, bi-directional, communication with them is key to successful projects.
+            {{/md}}
+          </div>
+          <div class="col-md">
+            {{#md}}
+              ##### An application domain I enjoy {.px-1}
+
+              These are purely personal preferences with *no value judgment*.
+              I would rather not work in a military or finance-related domain.
+              I would be very happy to work in toys, hobby supplies, robots, software engineering tools, science.
+              I would also like many other domains in the industry, transportations, tourism, culture... and many more I don't even know exist.
+
+              ##### High moral standards {.px-1}
+
+              This may seem obvious, but it is not.
+              I'm looking for a job where laws and individuals are respected and that condemns any form of discrimination.
+              Anyone should feel free to discuss ideas, behaviors and produced artifacts, and refrain from discussing people.
+              There should be a culture of openness (about information and software) and knowledge spreading to reach a distributed technical excellence.
+            {{/md}}
+          </div>
         </div>
       </div></div>
 

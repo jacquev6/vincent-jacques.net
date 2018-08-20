@@ -16875,7 +16875,7 @@ function highlightProject () {
   const fragment = window.location.hash
   $('h1, h2, h3, h4, h5, h6').removeClass('highlighted')
   if (fragment.startsWith('#')) {
-    $(fragment).addClass('highlighted')
+    $(document.getElementById(fragment.slice(1))).addClass('highlighted')
   }
 }
 

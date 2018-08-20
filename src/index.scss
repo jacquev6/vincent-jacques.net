@@ -89,32 +89,53 @@ body {
   border: solid 2px $color_complementary_base;
   padding-top: 15px;
   padding-bottom: 15px;
+  hyphens: auto;
 
   h1 {
     background-color: $color_primary_darkest;
     color: white;
+  }
+  h1.highlighted {
+    color: $color_complementary_base;
   }
 
   h2 {
     background-color: $color_primary_darker;
     color: white;
   }
+  h2.highlighted {
+    color: $color_complementary_base;
+  }
+
+  h5 {
+    background-color: $color_primary_lightest;
+    color: black;
+  }
+  h5.highlighted {
+    color: $color_primary_darkest;
+  }
 
   a {
     color: $color_primary_darkest;
+    text-decoration: underline $color_primary_lightest;
+  }
+
+  a:hover {
+    text-decoration-color: $color_primary_darkest;
   }
 
   a.header-anchor {
     visibility: hidden;
-    color: inherit
+    color: inherit;
+    text-decoration: none;
   }
 
-  :hover > a.header-anchor {
+  a.header-anchor:hover {
+    text-decoration: underline;
+  }
+
+  :hover > a.header-anchor, .highlighted a.header-anchor {
     visibility: visible;
-  }
-
-  .highlighted {
-    color: $color_complementary_base
   }
 
   .btn-tag {
@@ -127,6 +148,12 @@ body {
 
   .badge-tag {
     @include badge-variant($color_complementary_lighter)
+  }
+
+  .strong-attention {
+    background-color: $color_complementary_lightest;
+    border: solid 3px $color_primary_base;
+    padding: 3px
   }
 }
 

@@ -108,16 +108,13 @@ body {
     color: $color_primary_darkest;
   }
 
-  .header-link {
+  a.header-anchor {
     visibility: hidden;
-  }
-
-  :hover > .header-link {
-    visibility: visible;
-  }
-
-  .header-link a {
     color: inherit
+  }
+
+  :hover > a.header-anchor {
+    visibility: visible;
   }
 
   .highlighted {

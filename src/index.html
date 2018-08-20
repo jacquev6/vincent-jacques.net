@@ -17,49 +17,75 @@
     <div class="container">
       <div id="header" class="row"><div class="col">
         <div class="row"><div class="col">
-          <p id="vjnet"><a href="/">vincent-jacques.net</a></p>
+          {{#md}}
+            [vincent-jacques.net](/) {#vjnet}
+          {{/md}}
         </div></div>
         <div class="row">
           <div class="col-md-6">
-            <p id="citation">&laquo;&nbsp;S'il n'y a pas de solution,<br/>c'est qu'il n'y a pas de problème.&nbsp;&raquo;</p>
-            <p id="citation-origin">Devise <a href="https://en.wikipedia.org/wiki/Les_Shadoks">Shadock</a></p>
+            {{#md}}
+              &laquo;&nbsp;S'il n'y a pas de solution,<br>c'est qu'il n'y a pas de problème.&nbsp;&raquo; {#citation}
+
+              Devise [Shadock](https://en.wikipedia.org/wiki/Les_Shadoks) {#citation-origin}
+            {{/md}}
           </div>
           <div class="header-links col-md-2">
-            <p><a href="mailto:vincent@vincent-jacques.net">e-mail</a></p>
-            <p><a href="https://www.github.com/jacquev6/">GitHub</a>,
-            <a href="https://travis-ci.org/jacquev6/">Travis CI</a></p>
-            <p><a href="https://pypi.org/user/jacquev6/">PyPi</a>,
-            <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues&amp;utf8=%E2%9C%93">OPAM</a></p>
+            {{#md}}
+              [e-mail](mailto:vincent@vincent-jacques.net)
+
+              [GitHub](https://www.github.com/jacquev6/), [Travis CI](https://travis-ci.org/jacquev6/)
+
+              [PyPi](https://pypi.org/user/jacquev6/),
+              [OPAM](https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues)
+            {{/md}}
           </div>
           <div class="header-links col-md-4">
-            <p><a href="https://www.linkedin.com/in/jacquev6/">LinkedIn</a></p>
-            <p><a href="https://stackoverflow.com/users/905845/jacquev6/">StackOverflow</a></p>
+            {{#md}}
+              [LinkedIn](https://www.linkedin.com/in/jacquev6/)
+
+              [StackOverflow](https://stackoverflow.com/users/905845/jacquev6/)
+            {{/md}}
           </div>
         </div>
       </div></div>
 
-      <div id="content" class="row"><div class="col">
+      <div id="content" class="row text-justify"><div class="col">
         <div class="row"><div class="col">
-          <h1 id="Portfolio" class="px-1">Portfolio<span class="header-link"> <a href="#Portfolio">&para;</a></span></h1>
-          <p>Most of my projects are hosted on <a href="https://github.com/jacquev6">GitHub</a> and have continuous build on <a href="https://travis-ci.org/jacquev6">Travis CI</a>.</p>
-          <p>My <a href="https://www.python.org/">Python</a> projects are documented using <a href="http://www.sphinx-doc.org/">Sphinx</a> and the <a href="https://alabaster.readthedocs.io/">Alabaster</a> theme. They are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>.</p>
-          <p>My <a href="https://ocaml.org/">OCaml</a> projects are documented using Sphinx as well and a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml">Sphinx extension for OCaml</a>. They are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues&utf8=%E2%9C%93">OPAM</a>.</p>
-          <p>Projects filter: {{#tags}}<button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="{{slug}}" data-toggle="tooltip" title="Display projects {{description}}">{{title}}</button> {{/tags}}</p>
+          {{#md}}
+            # Portfolio {.px-1}
+
+            Most of my projects are hosted on [GitHub](https://github.com/jacquev6)
+            and have continuous build on [Travis CI](https://travis-ci.org/jacquev6).
+
+            My [Python](https://www.python.org/) projects are documented using [Sphinx](http://www.sphinx-doc.org/)
+            and the [Alabaster](https://alabaster.readthedocs.io/) theme.
+            They are distributed on the [Python package index](https://pypi.org/user/jacquev6/).
+
+            My [OCaml](https://ocaml.org/) projects are documented using Sphinx as well and a preliminary version
+            of my [Sphinx extension for OCaml](https://github.com/jacquev6/sphinxcontrib-ocaml).
+            They are published on [OPAM](https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&type=Issues).
+
+            Projects filter:{{#tags}} <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="{{slug}}" data-toggle="tooltip" title="Display projects {{description}}">{{title}}</button>{{/tags}}
+          {{/md}}
         </div></div>
 
         <div class="row">
           {{#projects}}
           <div class="col-md-6 col-lg-4 project{{#tags}} tag-{{slug}}{{/tags}}">
-            <h2 id="{{slug}}" class="px-1">{{name}}<span class="header-link"> <a href="#{{slug}}">&para;</a></span></h2>
-            <p>{{#tags}}{{^first}} {{/first}}<span class="badge badge-tag">{{title}}</span>{{/tags}}</p>
-            <div class="text-justify">{{{content}}}</div>
+            {{#md}}
+              ## {{name}} {.px-1}
+              {{#tags}}{{^first}} {{/first}}<span class="badge badge-tag">{{title}}</span>{{/tags}} {.text-left}
+            {{/md}}
+            <div>{{{content}}}</div>
           </div>
           {{/projects}}
         </div>
       </div></div>
 
       <div id="footer" class="row"><div class="col">
-        <p class="text-center">&copy; <a href="https://github.com/jacquev6/vincent-jacques.net">Vincent Jacques</a> 2010-2018</p>
+        {{#md}}
+          &copy; [Vincent Jacques](https://github.com/jacquev6/vincent-jacques.net) 2010-2018 {.text-center}
+        {{/md}}
       </div></div>
     </div>
   <script src="/index.js"></script>

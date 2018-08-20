@@ -2,10 +2,14 @@
 
 const browserify = require('browserify')
 const chokidar = require('chokidar')
+const dedent = require('dedent')
 const express = require('express')
 const fs = require('fs-extra')
 const htmlMinifier = require('html-minifier')
 const markdownIt = require('markdown-it')
+const markdownItAnchor = require('markdown-it-anchor')
+const markdownItAttrs = require('markdown-it-attrs')
+const markdownItDeflist = require('markdown-it-deflist')
 const matter = require('gray-matter')
 const modernizr = require('modernizr')
 const mustache = require('mustache')
@@ -67,6 +71,9 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
       html: true,
       typographer: true
     })
+    markdown.use(markdownItAttrs)
+    markdown.use(markdownItAnchor, {permalink: true})
+    markdown.use(markdownItDeflist)
 
     const projects = fs.readdirSync(path.join(sourceDirName, 'projects')).map(fileName => {
       const name = fileName.slice(5, -3)
@@ -81,7 +88,12 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
 
     return mustache.render(
       fs.readFileSync(path.join(sourceDirName, 'index.html'), 'utf8'),
-      {scripts, tags, projects}
+      {
+        scripts,
+        tags,
+        projects,
+        md: function () { return function (text, render) { return markdown.render(render(dedent(text))) } }
+      }
     )
   }
 

@@ -1726,11 +1726,9 @@ body { background-color: #9CB2E4; }
 
 #content a { color: #2E457B; }
 
-#content .header-link { visibility: hidden; }
+#content a.header-anchor { visibility: hidden; color: inherit; }
 
-#content :hover > .header-link { visibility: visible; }
-
-#content .header-link a { color: inherit; }
+#content :hover > a.header-anchor { visibility: visible; }
 
 #content .highlighted { color: #DFB562; }
 

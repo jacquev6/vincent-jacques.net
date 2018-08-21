@@ -1710,8 +1710,6 @@ body { background-color: #9CB2E4; }
 
 #header { background-image: url("/banner.png"); background-position: bottom right; background-repeat: no-repeat; min-height: 150px; }
 
-#header .header-links p { margin: 0; }
-
 #header #vjnet { font-size: 40px; }
 
 #header #citation { margin-left: 5em; margin-bottom: 0; }

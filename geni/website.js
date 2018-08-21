@@ -67,13 +67,24 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
       tagsBySlug[tag.slug] = tag
     }
 
-    const markdown = markdownIt({
-      html: true,
-      typographer: true
-    })
-    markdown.use(markdownItAttrs)
-    markdown.use(markdownItAnchor, {permalink: true})
-    markdown.use(markdownItDeflist)
+    const renderMarkdown = (function () {
+      const links =
+        '\n\n' + Object.entries(fs.readJsonSync(path.join(sourceDirName, 'links.json')))
+          .map(([title, url]) => `[${title}]: ${url}`)
+          .join('\n')
+
+      const markdown = markdownIt({
+        html: true,
+        typographer: true
+      })
+      markdown.use(markdownItAttrs)
+      markdown.use(markdownItAnchor, {permalink: true})
+      markdown.use(markdownItDeflist)
+
+      return function (text) {
+        return markdown.render(text + links)
+      }
+    }())
 
     const projects = fs.readdirSync(path.join(sourceDirName, 'projects')).map(fileName => {
       const name = fileName.slice(5, -3)
@@ -82,7 +93,7 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
         slug: name,
         name,
         tags: tags.map((tag, index) => Object.assign({first: index === 0}, tagsBySlug[tag])),
-        content: markdown.render(content)
+        content: renderMarkdown(content)
       }
     })
 
@@ -92,7 +103,7 @@ function website ({sourceDirName, skeletonDirName, outputDirName}) {
         scripts,
         tags,
         projects,
-        md: function () { return function (text, render) { return markdown.render(render(dedent(text))) } }
+        md: function () { return function (text, render) { return renderMarkdown(render(dedent(text))) } }
       }
     )
   }

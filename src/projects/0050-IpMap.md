@@ -13,7 +13,7 @@ An [interactive demo][IpMap-demo] is available.
 <img class="img-fluid" src="https://jacquev6.github.io/IpMap/logo.png">
 </div>
 
-It's implemented in HTML5 and JavaScript, purely on the client side, using [jQuery] and [jquery-mousewheel].
+It's implemented in HTML5 and [JavaScript], purely on the client side, using [jQuery] and [jquery-mousewheel].
 
 [jquery-mousewheel]: https://github.com/jquery/jquery-mousewheel
 

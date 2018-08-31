@@ -1,10 +1,13 @@
 {
   "Alabaster": "https://alabaster.readthedocs.io/",
+  "autodoc": "www.sphinx-doc.org/en/master/usage/extensions/autodoc.html",
   "Boost.Python": "https://www.boost.org/doc/libs/release/libs/python/",
+  "Breathe": "https://breathe.readthedocs.io/",
   "C++": "https://isocpp.org/",
   "Cairo": "https://www.cairographics.org/",
   "Cairomm": "https://www.cairographics.org/cairomm/",
   "Cordova": "https://cordova.apache.org/",
+  "Doxygen": "http://www.doxygen.nl/",
   "GitHub": "https://github.com/",
   "Graphviz": "https://graphviz.org/",
   "Gtk": "https://www.gtk.org/",

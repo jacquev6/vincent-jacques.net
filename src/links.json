@@ -19,6 +19,7 @@
   "ocaml-cairo": "https://github.com/Chris00/ocaml-cairo/",
   "PyCairo": "https://cairographics.org/pycairo/",
   "Python": "https://www.python.org/",
+  "QuadProg++": "https://github.com/liuq/QuadProgpp",
   "Sphinx": "http://www.sphinx-doc.org/",
 
   "ActionTree": "https://github.com/jacquev6/ActionTree/",
@@ -35,6 +36,7 @@
   "MarblesCollide": "https://github.com/jacquev6/MarblesCollide",
   "Polyglot": "https://github.com/jacquev6/Polyglot/",
   "PyGithub": "https://github.com/PyGithub/PyGithub/",
+  "QuadProgMm": "https://github.com/jacquev6/QuadProgMm/",
   "sphinxcontrib-ocaml": "https://github.com/jacquev6/sphinxcontrib-ocaml/",
   "variadic": "https://github.com/jacquev6/variadic",
   "vincent-jacques.net": "https://github.com/jacquev6/vincent-jacques.net/",

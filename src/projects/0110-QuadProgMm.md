@@ -8,4 +8,4 @@ tags:
 
 [Quadratic programming]: http://en.wikipedia.org/wiki/Quadratic_programming
 
-It leverages the C++ type system to create a small domains specific language.
+It leverages the C++ type system to create a small domains specific language, and [QuadProg++] to actually solve QP problems.

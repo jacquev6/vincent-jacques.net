@@ -1755,5 +1755,3 @@ body { background-color: #9CB2E4; }
 #content .badge-tag { color: #212529; background-color: #e8c98c; }
 
 #content .badge-tag[href]:hover, #content .badge-tag[href]:focus { color: #212529; text-decoration: none; background-color: #dfb562; }
-
-#content .strong-attention { background-color: #f5e7cc; border: solid 3px #4B6195; padding: 3px; }

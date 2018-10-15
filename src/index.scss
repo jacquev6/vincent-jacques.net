@@ -149,12 +149,6 @@ body {
   .badge-tag {
     @include badge-variant($color_complementary_lighter)
   }
-
-  .strong-attention {
-    background-color: $color_complementary_lightest;
-    border: solid 3px $color_primary_base;
-    padding: 3px
-  }
 }
 
 #footer {

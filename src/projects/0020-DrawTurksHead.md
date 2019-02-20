@@ -12,7 +12,7 @@ An [interactive demo][DrawTurksHead-demo] is available.
 [Turk’s head knots]: https://en.wikipedia.org/wiki/Turk%27s_head_knot
 
 <div class="text-center">
-<img class="img-fluid" src="http://dyn.vincent-jacques.net/turkshead?leads=4&bights=5&line_width=20&inner_radius=25&width=270&height=270">
+<img class="img-fluid" src="https://dyn.vincent-jacques.net/turkshead?leads=4&bights=5&line_width=20&inner_radius=25&width=270&height=270">
 </div>
 
 Its core functionality is written in [C++] and exposed as a Python library using [Boost.Python].

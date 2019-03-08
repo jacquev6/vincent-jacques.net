@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dev-daemon:
+    image: "node:11.9"
+    command: tail -f /dev/null
+    volumes:
+      - ".:/app"
+    working_dir: /app
+    ports:
+      - "8000:8000"

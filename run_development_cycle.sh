@@ -33,6 +33,9 @@ do
   shift
 done
 
+docker-compose up -d dev-daemon
+. ./development_aliases.sh
+
 npm test
 
 show_in_browser "Unit test coverage details" $PROJECT_ROOT/coverage/index.html

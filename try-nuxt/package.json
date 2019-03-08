@@ -1,0 +1,10 @@
+{
+  "name": "vincent-jacques.net",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev --hostname 0.0.0.0"
+  },
+  "dependencies": {
+    "nuxt": "^2.4.5"
+  }
+}

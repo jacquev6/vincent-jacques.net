@@ -1,13 +1,7 @@
 <template>
-  <p>Hello</p>
+  <b-container>
+    <b-row><b-col>
+      <h1>Hello</h1>
+    </b-col></b-row>
+  </b-container>
 </template>
-
-<script>
-export default {
-  head () {
-    return {
-      title: 'vincent-jacques.net',
-    }
-  }
-}
-</script>

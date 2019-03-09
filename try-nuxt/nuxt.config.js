@@ -21,5 +21,13 @@ module.exports = {
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false
+  },
+  build: {
+    extend (config) {
+      config.module.rules.push({
+        test: /\.md$/,
+        use: [{ loader: "gray-matter-loader" }]
+      })
+    }
   }
 }

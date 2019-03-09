@@ -8,6 +8,8 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.14",
+    "gray-matter-loader": "0.0.10",
+    "markdown-it": "^8.4.2",
     "node-sass": "^4.11.0",
     "nuxt": "^2.4.5",
     "sass-loader": "^7.1.0"

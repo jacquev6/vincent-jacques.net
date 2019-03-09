@@ -14,5 +14,9 @@ module.exports = {
   },
   modules: [
     'bootstrap-vue/nuxt', // https://bootstrap-vue.js.org/docs#nuxtjs-plugin-module
-  ]
+  ],
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false
+  }
 }

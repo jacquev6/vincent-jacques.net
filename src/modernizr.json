@@ -1,7 +1,0 @@
-{
-  "minify": true,
-  "options": [],
-  "feature-detects": [
-    "test/hashchange"
-  ]
-}

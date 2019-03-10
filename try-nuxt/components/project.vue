@@ -4,24 +4,17 @@
     <p class="text-left">
       <template v-for="tag in tags"><span class="badge badge-tag">{{ tagTitles[tag] }}</span>{{ ' ' }}</template>
     </p>
-    <div v-html="htmlDescription"/>
+    <vj-markdown :md="description"/>
   </b-col>
 </template>
 
 <script>
-import markdownIt from 'markdown-it'
-
 import tags from '../assets/tags.json'
-import links from '../assets/links.json'
 
 const tagTitles = {}
 tags.forEach(({slug, title}) => {
   tagTitles[slug] = title
 })
-
-const linksText = Object.entries(links).map(([title, url]) => `[${title}]: ${url}`).join('\n')
-
-const markdown = markdownIt({ html: true, typographer: true })
 
 export default {
   props: ['name', 'tags', 'description'],
@@ -36,9 +29,6 @@ export default {
     },
     classes () {
       return this.tags.map(tag => 'tag-' + tag)
-    },
-    htmlDescription () {
-      return markdown.render(this.description + '\n\n' + linksText)
     }
   }
 }

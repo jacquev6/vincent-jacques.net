@@ -3,19 +3,31 @@
 
      <b-row id="header"><b-col>
         <b-row><b-col>
-          <p id="vjnet"><a href="/">vincent-jacques.net</a></p>
+          <vj-markdown>
+[vincent-jacques.net](/) {#vjnet}
+          </vj-markdown>
         </b-col></b-row>
         <b-row>
           <b-col md="6">
-            <p id="citation">« S’il n’y a pas de solution,<br>c’est qu’il n’y a pas de problème. »</p>
-            <p id="citation-origin">Devise <a href="https://en.wikipedia.org/wiki/Les_Shadoks">Shadock</a></p>
+            <!-- Using '  \n' in markdown to emit a <br/> (https://daringfireball.net/projects/markdown/syntax#p).
+            We can't use a plain '<br/>' with markdownIt({ html: true }) because the 'markdown.vue' component
+            doesn't have access to the raw text of the slot, and reconstructing the raw text from the
+            this.$slot.default array is... hazardous. -->
+            <vj-markdown>
+&laquo;&nbsp;S'il n'y a pas de solution,  
+c'est qu'il n'y a pas de problème.&nbsp;&raquo; {#citation}
+
+Devise [Shadock] {#citation-origin}
+
+[Shadock]: https://en.wikipedia.org/wiki/Les_Shadoks
+            </vj-markdown>
           </b-col>
           <b-col class="header-links" md="2">
-            <p><a href="mailto:vincent@vincent-jacques.net">e-mail</a><br>
-            <a href="https://github.com/jacquev6/">GitHub</a>,
-            <a href="https://travis-ci.org/jacquev6/">Travis CI</a><br>
-            <a href="https://pypi.org/user/jacquev6/">PyPi</a>,
-            <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues">OPAM</a></p>
+            <vj-markdown>
+[e-mail][my-email]  
+[GitHub][my-github], [Travis CI][my-travis]  
+[PyPi][my-pypi], [OPAM][my-opam]
+            </vj-markdown>
           </b-col>
           <b-col class="header-links" md="4">
             <p><a href="https://www.linkedin.com/in/jacquev6/">LinkedIn</a><br>
@@ -31,34 +43,43 @@
 
         <b-row>
           <b-col md="6">
-            <p>I’m Vincent Jacques, alias <a href="https://www.google.com/search?q=jacquev6">@jacquev6</a> on the web.
-            I’m a 35 years old, French, passionate software engineer.
-            I started programming when I was 12 on a <a href="http://www.rskey.org/fx790p">Casio calculator</a>,
-            and haven’t stopped learning since.</p>
+            <vj-markdown>
+I'm Vincent Jacques, alias [@jacquev6] on the web.
+I'm a 35 years old, French, passionate software engineer.
+I started programming when I was 12 on a [Casio calculator],
+and haven't stopped learning since.
 
-            <p>I studied general engineering at <a href="https://en.wikipedia.org/wiki/%C3%89cole_Centrale_Paris">Ecole Centrale Paris</a>
-            (2006) and I specialized on software as a very enthusiastic career choice.</p>
+[@jacquev6]: https://www.google.com/search?q=jacquev6
+[Casio calculator]: http://www.rskey.org/fx790p
+
+I studied general engineering at [Ecole Centrale Paris][ECP]
+(2006) and I specialized on software as a very enthusiastic career choice.
+            </vj-markdown>
           </b-col>
           <b-col md="6">
-            <p>After eleven years of professional software engineering, I value maintainable and evolutive source code
-            and the use of tools and automation to create working, reliable software.</p>
+            <vj-markdown>
+After eleven years of professional software engineering, I value maintainable and evolutive source code
+and the use of tools and automation to create working, reliable software.
 
-            <p>As of October 2018, I’m working as a Software Engineer at <a href="https://www.datadoghq.com/">Datadog</a>.</p>
+As of October 2018, I'm working as a Software Engineer at [Datadog](https://www.datadoghq.com/).
+            </vj-markdown>
           </b-col>
         </b-row>
 
         <b-row><b-col>
           <vj-hdr lvl="1" id="portfolio">Portfolio</vj-hdr>
 
-          <p>Most of my projects are hosted on <a href="https://github.com/jacquev6/">GitHub</a>
-          and have continuous build on <a href="https://travis-ci.org/jacquev6/">Travis CI</a>.</p>
+          <vj-markdown>
+Most of my projects are hosted on [GitHub][my-github]
+and have continuous build on [Travis CI][my-travis].
 
-          <p>My projects are documented using <a href="http://www.sphinx-doc.org/">Sphinx</a> and the <a href="https://alabaster.readthedocs.io/">Alabaster</a> theme.
-          Reference documentation is generated from <a href="https://www.python.org/">Python</a> source code by <a href="www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc</a>,
-          form <a href="https://isocpp.org/">C++</a> source code by <a href="http://www.doxygen.nl/">Doxygen</a> and <a href="https://breathe.readthedocs.io/">Breathe</a>,
-          and from <a href="https://ocaml.org/">OCaml</a> source code by a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml/">Sphinx extension for OCaml</a></p>
+My projects are documented using [Sphinx] and the [Alabaster] theme.
+Reference documentation is generated from [Python] source code by [autodoc],
+form [C++] source code by [Doxygen] and [Breathe],
+and from [OCaml] source code by a preliminary version of my [Sphinx extension for OCaml][sphinxcontrib-ocaml]
 
-          <p>My <a href="https://www.python.org/">Python</a> projects are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>, and my <a href="https://ocaml.org/">OCaml</a> projects are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues">OPAM</a>.</p>
+My [Python] projects are distributed on the [Python package index][my-pypi], and my [OCaml] projects are published on [OPAM][my-opam].
+          </vj-markdown>
 
           <p>Projects filter: <template v-for="tag in tags">
             <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter(tag.slug)">{{ tag.title }}</b-btn>{{ ' ' }}
@@ -136,6 +157,7 @@ export default {
   },
   methods: {
     toggleFilter (tag) {
+      // const tag = click.target.getAttribute('data-tag-slug')
       if (this.tags.every(({slug}) => this.tagsVisibility[slug])) {
         this.tags.forEach(({slug}) => {
           this.tagsVisibility[slug] = false

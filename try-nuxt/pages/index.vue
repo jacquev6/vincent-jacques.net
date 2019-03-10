@@ -35,30 +35,42 @@
             I’m a 35 years old, French, passionate software engineer.
             I started programming when I was 12 on a <a href="http://www.rskey.org/fx790p">Casio calculator</a>,
             and haven’t stopped learning since.</p>
+
             <p>I studied general engineering at <a href="https://en.wikipedia.org/wiki/%C3%89cole_Centrale_Paris">Ecole Centrale Paris</a>
             (2006) and I specialized on software as a very enthusiastic career choice.</p>
           </b-col>
           <b-col md="6">
             <p>After eleven years of professional software engineering, I value maintainable and evolutive source code
             and the use of tools and automation to create working, reliable software.</p>
+
             <p>As of October 2018, I’m working as a Software Engineer at <a href="https://www.datadoghq.com/">Datadog</a>.</p>
           </b-col>
         </b-row>
 
         <b-row><b-col>
           <vj-hdr lvl="1" id="portfolio">Portfolio</vj-hdr>
+
           <p>Most of my projects are hosted on <a href="https://github.com/jacquev6/">GitHub</a>
           and have continuous build on <a href="https://travis-ci.org/jacquev6/">Travis CI</a>.</p>
+
           <p>My projects are documented using <a href="http://www.sphinx-doc.org/">Sphinx</a> and the <a href="https://alabaster.readthedocs.io/">Alabaster</a> theme.
           Reference documentation is generated from <a href="https://www.python.org/">Python</a> source code by <a href="www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc</a>,
           form <a href="https://isocpp.org/">C++</a> source code by <a href="http://www.doxygen.nl/">Doxygen</a> and <a href="https://breathe.readthedocs.io/">Breathe</a>,
           and from <a href="https://ocaml.org/">OCaml</a> source code by a preliminary version of my <a href="https://github.com/jacquev6/sphinxcontrib-ocaml/">Sphinx extension for OCaml</a></p>
+
           <p>My <a href="https://www.python.org/">Python</a> projects are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>, and my <a href="https://ocaml.org/">OCaml</a> projects are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues">OPAM</a>.</p>
-          <p>Projects filter: <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="python" data-toggle="tooltip" title="Display projects implemented in Python">Python</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="cpp" data-toggle="tooltip" title="Display projects implemented in C++">C++</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="ocaml" data-toggle="tooltip" title="Display projects implemented in OCaml">OCaml</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="javascript" data-toggle="tooltip" title="Display projects implemented in JavaScript">JavaScript</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="library" data-toggle="tooltip" title="Display projects providing a reusable library">Library</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="program" data-toggle="tooltip" title="Display projects providing a desktop program">Program</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="mobile" data-toggle="tooltip" title="Display projects providing a mobile application">Mobile</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="web" data-toggle="tooltip" title="Display projects targeting the web environment">Web</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="demo" data-toggle="tooltip" title="Display projects are just a technology demonstration">Demo</button> <button class="tag-filter btn btn-sm btn-tag my-1 active" data-tag="visual" data-toggle="tooltip" title="Display projects drawing something">Visualization</button></p>
+
+          <p>Projects filter: <template v-for="tag in tags">
+            <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter" :data-tag-slug="tag.slug">{{ tag.title }}</b-btn>{{ ' ' }}
+          </template></p>
         </b-col></b-row>
 
         <b-row>
-          <vj-project v-for="project in projects" :key="project.name" v-bind="project"/>
+          <template v-for="project in projects">
+            <template v-if="project.visible">
+              <vj-project :key="project.name" :name="project.name" :tags="project.tags" :description="project.description"/>
+            </template>
+          </template>
         </b-row>
       </b-col></b-row>
 
@@ -69,6 +81,8 @@
 </template>
 
 <script>
+import tags from '../assets/tags.json'
+
 import PyGithub from '../assets/PyGithub.md'
 import DrawTurksHead from '../assets/DrawTurksHead.md'
 import DrawGrammar from '../assets/DrawGrammar.md'
@@ -83,20 +97,59 @@ import QuadProgMm from '../assets/QuadProgMm.md'
 
 export default {
   data () {
+    const tagsVisibility = {}
+    tags.forEach(({slug}) => { tagsVisibility[slug] = true })
     return {
-      projects: [
-        { name: 'PyGithub', tags: PyGithub.data.tags, description: PyGithub.content },
-        { name: 'DrawTurksHead', tags: DrawTurksHead.data.tags, description: DrawTurksHead.content },
-        { name: 'DrawGrammar', tags: DrawGrammar.data.tags, description: DrawGrammar.content },
-        { name: 'Collide', tags: Collide.data.tags, description: Collide.content },
-        { name: 'IpMap', tags: IpMap.data.tags, description: IpMap.content },
-        { name: 'ActionTree', tags: ActionTree.data.tags, description: ActionTree.content },
-        { name: 'variadic', tags: variadic.data.tags, description: variadic.content },
-        { name: 'JsOfOCairo', tags: JsOfOCairo.data.tags, description: JsOfOCairo.content },
-        { name: 'hashids-ocaml', tags: hashidsOCaml.data.tags, description: hashidsOCaml.content },
-        { name: 'Polyglot', tags: Polyglot.data.tags, description: Polyglot.content },
-        { name: 'QuadProgMm', tags: QuadProgMm.data.tags, description: QuadProgMm.content },
-      ]
+      tags,
+      tagsVisibility
+    }
+  },
+  computed: {
+    projects () {
+      const projects = {
+        PyGithub,
+        DrawTurksHead,
+        DrawGrammar,
+        Collide,
+        IpMap,
+        ActionTree,
+        variadic,
+        JsOfOCairo,
+        'hashids-ocaml': hashidsOCaml,
+        Polyglot,
+        QuadProgMm
+      }
+
+      return [
+        'PyGithub', 'DrawTurksHead', 'DrawGrammar', 'Collide', 'IpMap', 'ActionTree', 'variadic',
+        'JsOfOCairo', 'hashids-ocaml', 'Polyglot', 'QuadProgMm'
+      ].map(name => {
+        const project = projects[name]
+        const tags = project.data.tags
+        const description = project.content
+
+        const visible = tags.some(tag => this.tagsVisibility[tag])
+
+        return { name, tags, description, visible }
+      })
+    }
+  },
+  methods: {
+    toggleFilter (click) {
+      const tag = click.target.getAttribute('data-tag-slug')
+      if (this.tags.every(({slug}) => this.tagsVisibility[slug])) {
+        this.tags.forEach(({slug}) => {
+          this.tagsVisibility[slug] = false
+        })
+        this.tagsVisibility[tag] = true
+      } else {
+        this.tagsVisibility[tag] = !this.tagsVisibility[tag]
+        if (!this.tags.some(({slug}) => this.tagsVisibility[slug])) {
+          this.tags.forEach(({slug}) => {
+            this.tagsVisibility[slug] = true
+          })
+        }
+      }
     }
   }
 }

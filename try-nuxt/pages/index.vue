@@ -61,7 +61,7 @@
           <p>My <a href="https://www.python.org/">Python</a> projects are distributed on the <a href="https://pypi.org/user/jacquev6/">Python package index</a>, and my <a href="https://ocaml.org/">OCaml</a> projects are published on <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues">OPAM</a>.</p>
 
           <p>Projects filter: <template v-for="tag in tags">
-            <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter" :data-tag-slug="tag.slug">{{ tag.title }}</b-btn>{{ ' ' }}
+            <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter(tag.slug)">{{ tag.title }}</b-btn>{{ ' ' }}
           </template></p>
         </b-col></b-row>
 
@@ -135,8 +135,7 @@ export default {
     }
   },
   methods: {
-    toggleFilter (click) {
-      const tag = click.target.getAttribute('data-tag-slug')
+    toggleFilter (tag) {
       if (this.tags.every(({slug}) => this.tagsVisibility[slug])) {
         this.tags.forEach(({slug}) => {
           this.tagsVisibility[slug] = false

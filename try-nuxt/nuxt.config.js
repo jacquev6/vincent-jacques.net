@@ -1,3 +1,8 @@
+import assert from 'assert'
+import fs from 'fs-extra'
+import md5 from 'md5'
+import pdfjs from 'pdfjs-dist'
+
 module.exports = {
   router: {
     base: '/try-nuxt/'
@@ -28,6 +33,23 @@ module.exports = {
         test: /\.md$/,
         use: [{ loader: "gray-matter-loader" }]
       })
+    }
+  },
+  hooks: {
+    build: {
+      async before (builder) {
+        const resumeAssetOdt = 'assets/Vincent Jacques - resume.odt'
+        const resumeAssetPdf = 'assets/Vincent Jacques - resume.' + md5(fs.readFileSync(resumeAssetOdt)) + '.pdf'
+        const resumeStaticPdf = 'static/Vincent Jacques - resume.pdf'
+        if (fs.existsSync(resumeAssetPdf)) {
+          fs.copySync(resumeAssetPdf, resumeStaticPdf)
+        } else {
+          console.log('Please run:')
+          console.log(`libreoffice --convert-to pdf "${resumeAssetOdt}"; mv "Vincent Jacques - resume.pdf" "${resumeAssetPdf}"`)
+          process.exit(0)
+        }
+        assert.equal((await pdfjs.getDocument(resumeStaticPdf)).numPages, 2)
+      }
     }
   }
 }

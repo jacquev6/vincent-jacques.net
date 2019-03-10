@@ -1,4 +1,4 @@
 /node_modules/
-/coverage/
-/.nyc_output/
-/src/.~lock.*.odt#
+/.nuxt/
+
+/static/Vincent\ Jacques\ -\ resume.pdf

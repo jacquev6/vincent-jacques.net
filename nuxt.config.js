@@ -4,9 +4,6 @@ import md5 from 'md5'
 import pdfjs from 'pdfjs-dist'
 
 module.exports = {
-  router: {
-    base: '/try-nuxt/'
-  },
   generate: {
     dir: 'docs'
   },

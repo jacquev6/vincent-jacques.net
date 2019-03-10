@@ -236,7 +236,7 @@ body {
 #header {
   @extend %head-foot;
 
-  background-image: url("/try-nuxt/banner.png");
+  background-image: url("/banner.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   min-height: 150px;

@@ -1,3 +1,5 @@
+docker-compose up -d dev-daemon
+
 function run_in_dev_daemon {
   docker-compose exec dev-daemon "$@"
 }

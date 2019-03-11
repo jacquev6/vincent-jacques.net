@@ -33,8 +33,7 @@ do
   shift
 done
 
-docker-compose up -d dev-daemon
-. ./development_aliases.sh
+. development_aliases.sh
 
 npm run $COMMAND
 

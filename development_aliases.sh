@@ -1,7 +1,7 @@
 docker-compose up -d dev-daemon
 
 function run_in_dev_daemon {
-  docker-compose exec dev-daemon "$@"
+  docker-compose exec --user $(id -u):$(id -g) dev-daemon "$@"
 }
 
 function npm {

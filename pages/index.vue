@@ -42,7 +42,7 @@
           <b-col md="6">
             <vj-markdown>
               I'm Vincent Jacques, alias [@jacquev6] on the web.
-              I'm a 35 years old, French, passionate software engineer.
+              I'm a 36 years old, French, passionate software engineer.
               I started programming when I was 12 on a [Casio calculator],
               and haven't stopped learning since.
 
@@ -55,10 +55,8 @@
           </b-col>
           <b-col md="6">
             <vj-markdown>
-              After eleven years of professional software engineering, I value maintainable and evolutive source code
+              After twelve years of professional software engineering, I value maintainable and evolutive source code
               and the use of tools and automation to create working, reliable software.
-
-              As of October 2018, I'm working as a Software Engineer at [Datadog](https://www.datadoghq.com/).
             </vj-markdown>
           </b-col>
         </b-row>
@@ -68,10 +66,13 @@
             <vj-hdr id="portfolio" lvl="1">
               Portfolio
             </vj-hdr>
+          </b-col>
+        </b-row>
 
+        <b-row>
+          <b-col>
             <vj-markdown>
-              Most of my projects are hosted on [GitHub][my-github]
-              and have continuous build on [Travis CI][my-travis].
+              Most of my projects are hosted on [GitHub][my-github] and have continuous build on [Travis CI][my-travis].
 
               My projects are documented using [Sphinx] and the [Alabaster] theme.
               Reference documentation is generated from [Python] source code by [autodoc],
@@ -80,7 +81,11 @@
 
               My [Python] projects are distributed on the [Python package index][my-pypi], and my [OCaml] projects are published on [OPAM][my-opam].
             </vj-markdown>
+          </b-col>
+        </b-row>
 
+        <b-row>
+          <b-col>
             <p>
               Projects filter: <template v-for="tag in tags">
                 <b-btn

@@ -1,10 +1,10 @@
 version: '3'
 services:
   dev-daemon:
-    image: "node:11.9"
-    command: tail -f /dev/null
+    build: .
+    command: bash /init.sh ${DEV_DAEMON_UID} ${DEV_DAEMON_GID}
     volumes:
-      - ".:/app"
+      - "..:/app"
     working_dir: /app
     ports:
       - "3000:3000"

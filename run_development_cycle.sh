@@ -33,7 +33,7 @@ do
   shift
 done
 
-. development_aliases.sh
+. dev-daemon/aliases.sh
 
 npm run $COMMAND
 

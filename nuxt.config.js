@@ -1,4 +1,5 @@
 import assert from 'assert'
+import childProcess from 'child_process'
 import fs from 'fs-extra'
 import md5 from 'md5'
 import pdfjs from 'pdfjs-dist'
@@ -38,14 +39,12 @@ module.exports = {
         const resumeAssetOdt = 'assets/Vincent Jacques - resume.odt'
         const resumeAssetPdf = 'assets/Vincent Jacques - resume.' + md5(fs.readFileSync(resumeAssetOdt)) + '.pdf'
         const resumeStaticPdf = 'static/Vincent Jacques - resume.pdf'
-        if (fs.existsSync(resumeAssetPdf)) {
-          fs.copySync(resumeAssetPdf, resumeStaticPdf)
-        } else {
-          console.log('Please run:')
-          console.log(`libreoffice --convert-to pdf "${resumeAssetOdt}"; mv "Vincent Jacques - resume.pdf" "${resumeAssetPdf}"`)
-          process.exit(0)
+        if (!fs.existsSync(resumeAssetPdf)) {
+          childProcess.spawnSync('/usr/bin/libreoffice', ['--convert-to', 'pdf', resumeAssetOdt])
+          fs.moveSync("Vincent Jacques - resume.pdf", resumeAssetPdf)
         }
-        assert.equal((await pdfjs.getDocument(resumeStaticPdf)).numPages, 2)
+        assert.equal((await pdfjs.getDocument(resumeAssetPdf)).numPages, 2)
+        fs.copySync(resumeAssetPdf, resumeStaticPdf)
       }
     }
   }

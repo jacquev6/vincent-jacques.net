@@ -291,6 +291,11 @@ body {
     text-decoration-color: $color_primary_darkest;
   }
 
+  a[href^='https://github.com/jacquev6/']::after, a[href='https://github.com/PyGithub/PyGithub/']::after {
+    font-family: "Font Awesome 5 Brands";
+    content: "\2009\f09b"; // Thin space followed by GitHub
+  }
+
   .btn-tag {
     @include button-variant(
       white, $color_complementary_base, // Normal (background, border)

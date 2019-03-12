@@ -19,4 +19,4 @@ It's implemented in HTML5 and [JavaScript], purely on the client side, using [jQ
 
 I've recently improved my knowledge of the JavaScript language and ecosystem.
 I think this project would deserve some work to improve its code quality and maintainability.
-But I keep it here because it's still working software.
+I keep it here because it's still working software.

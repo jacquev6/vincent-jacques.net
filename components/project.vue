@@ -5,7 +5,7 @@
     </vj-hdr>
     <p class="text-left">
       <template v-for="tag in tags">
-        <span :key="tag" class="badge badge-tag">{{ tagTitles[tag] }}</span>{{ ' ' }}
+        <span :key="tag" class="badge badge-tag">{{ tagTitles[tag] || ('TAG NOT FOUND: ' + tag) }}</span>{{ ' ' }}
       </template>
     </p>
     <vj-markdown :md="description" />
@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     slug () {
-      return String(this.name).trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, '-').replace(/[^-a-z]/g, '')
+      return String(this.name).trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[.\s]+/g, '-').replace(/[^-a-z]/g, '')
     },
     classes () {
       return this.tags.map(tag => 'tag-' + tag)

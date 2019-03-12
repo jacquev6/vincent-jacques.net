@@ -5,7 +5,7 @@ tags:
     - web
     - program
 ---
-[DrawGrammar] is a tool to draw [railroad diagrams] of an [EBNF] grammar.
+[DrawGrammar] is a tool to draw [railroad diagrams] of [EBNF] grammars.
 It is available as an [interactive demo][DrawGrammar-demo] and as a command-line tool.
 
 [railroad diagrams]: https://en.wikipedia.org/wiki/Syntax_diagram

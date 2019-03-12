@@ -119,17 +119,20 @@
 <script>
 import tags from '../assets/tags.json'
 
-import PyGithub from '../assets/PyGithub.md'
-import DrawTurksHead from '../assets/DrawTurksHead.md'
-import DrawGrammar from '../assets/DrawGrammar.md'
-import Collide from '../assets/Collide.md'
-import IpMap from '../assets/IpMap.md'
 import ActionTree from '../assets/ActionTree.md'
-import variadic from '../assets/variadic.md'
-import JsOfOCairo from '../assets/JsOfOCairo.md'
+import Collide from '../assets/Collide.md'
+import DrawGrammar from '../assets/DrawGrammar.md'
+import DrawTurksHead from '../assets/DrawTurksHead.md'
 import hashidsOCaml from '../assets/hashids-ocaml.md'
+import infrastructure from '../assets/infrastructure.md'
+import IpMap from '../assets/IpMap.md'
+import JsOfOCairo from '../assets/JsOfOCairo.md'
 import Polyglot from '../assets/Polyglot.md'
+import PyGithub from '../assets/PyGithub.md'
 import QuadProgMm from '../assets/QuadProgMm.md'
+import Splight from '../assets/Splight.md'
+import variadic from '../assets/variadic.md'
+import vjnet from '../assets/vjnet.md'
 
 export default {
   data () {
@@ -143,22 +146,37 @@ export default {
   computed: {
     projects () {
       const projects = {
-        PyGithub,
-        DrawTurksHead,
-        DrawGrammar,
-        Collide,
-        IpMap,
         ActionTree,
-        variadic,
-        JsOfOCairo,
+        Collide,
+        DrawGrammar,
+        DrawTurksHead,
         'hashids-ocaml': hashidsOCaml,
+        infrastructure,
+        IpMap,
+        JsOfOCairo,
         Polyglot,
-        QuadProgMm
+        PyGithub,
+        QuadProgMm,
+        Splight,
+        variadic,
+        'vincent-jacques.net': vjnet
       }
 
       return [
-        'PyGithub', 'DrawTurksHead', 'DrawGrammar', 'Collide', 'IpMap', 'ActionTree', 'variadic',
-        'JsOfOCairo', 'hashids-ocaml', 'Polyglot', 'QuadProgMm'
+        'PyGithub',
+        'DrawTurksHead',
+        'DrawGrammar',
+        'Splight',
+        'Collide',
+        'vincent-jacques.net',
+        'infrastructure',
+        'IpMap',
+        'ActionTree',
+        'variadic',
+        'JsOfOCairo',
+        'hashids-ocaml',
+        'Polyglot',
+        'QuadProgMm'
       ].map((name) => {
         const project = projects[name]
         const tags = project.data.tags

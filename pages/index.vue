@@ -87,18 +87,11 @@
         <b-row>
           <b-col>
             <p>
-              Projects filter: <template v-for="tag in tags">
-                <b-btn
-                  :key="tag.slug"
-                  size="sm"
-                  variant="tag"
-                  :pressed="tagsVisibility[tag.slug]"
-                  class="my-1"
-                  @click="toggleFilter(tag.slug)"
-                >
+              Projects filter: <span v-for="tag in tags" :key="tag.slug">
+                <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter(tag.slug)">
                   {{ tag.title }}
                 </b-btn>{{ ' ' }}
-              </template>
+              </span>
             </p>
           </b-col>
         </b-row>

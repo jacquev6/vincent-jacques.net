@@ -1,8 +1,9 @@
 <template>
-  <div v-html="html"/>
+  <div v-html="html" /><!-- eslint-disable-line vue/no-v-html (https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/no-v-html.md) -->
 </template>
 
 <script>
+import dedent from 'dedent-js'
 import markdownIt from 'markdown-it'
 import markdownItAttrs from 'markdown-it-attrs'
 
@@ -14,17 +15,15 @@ const renderer = markdownIt({ html: true, typographer: true })
 renderer.use(markdownItAttrs)
 
 export default {
-  props: ['md'],
+  props: {
+    md: { type: String, required: false, default: null }
+  },
   computed: {
     html () {
       return renderer.render(this.markdown + '\n\n' + linksText)
     },
     markdown () {
-      if (this.md) {
-        return this.md
-      } else {
-        return this.$slots.default && this.$slots.default[0].text
-      }
+      return this.md || dedent(this.$slots.default[0].text)
     }
   }
 }

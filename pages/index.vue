@@ -1,103 +1,120 @@
 <template>
   <b-container lang="en">
-
-     <b-row id="header"><b-col>
-        <b-row><b-col>
-          <vj-markdown>
-[vincent-jacques.net](/) {#vjnet}
-          </vj-markdown>
-        </b-col></b-row>
+    <b-row id="header">
+      <b-col>
         <b-row>
-          <b-col md="6">
-            <!-- Using '  \n' in markdown to emit a <br/> (https://daringfireball.net/projects/markdown/syntax#p).
-            We can't use a plain '<br/>' with markdownIt({ html: true }) because the 'markdown.vue' component
-            doesn't have access to the raw text of the slot, and reconstructing the raw text from the
-            this.$slot.default array is... hazardous. -->
+          <b-col>
             <vj-markdown>
-&laquo;&nbsp;S'il n'y a pas de solution,  
-c'est qu'il n'y a pas de problème.&nbsp;&raquo; {#citation}
-
-Devise [Shadock] {#citation-origin}
-
-[Shadock]: https://en.wikipedia.org/wiki/Les_Shadoks
+              [vincent-jacques.net](/) {#vjnet}
             </vj-markdown>
-          </b-col>
-          <b-col class="header-links" md="2">
-            <vj-markdown>
-[e-mail][my-email]  
-[GitHub][my-github], [Travis CI][my-travis]  
-[PyPi][my-pypi], [OPAM][my-opam]
-            </vj-markdown>
-          </b-col>
-          <b-col class="header-links" md="4">
-            <p><a href="https://www.linkedin.com/in/jacquev6/">LinkedIn</a><br>
-            <a href="https://stackoverflow.com/users/905845/jacquev6/">StackOverflow</a></p>
           </b-col>
         </b-row>
-      </b-col></b-row>
+        <b-row>
+          <b-col cols="7" md="5" lg="5">
+            <vj-markdown>
+              &laquo;&nbsp;S'il n'y a pas de solution, c'est qu'il n'y a pas de problème.&nbsp;&raquo; {#citation}
 
-      <b-row id="content" class="text-justify"><b-col>
-        <b-row><b-col>
-          <vj-hdr lvl="1" id="introduction">Introduction</vj-hdr>
-        </b-col></b-row>
+              Devise [Shadock] {#citation-origin}
+
+              [Shadock]: https://en.wikipedia.org/wiki/Les_Shadoks
+            </vj-markdown>
+          </b-col>
+          <b-col cols="7" md="4" xl="5">
+            <vj-markdown>
+              [e-mail][my-email] [GitHub][my-github] [TravisCI][my-travis] [PyPi][my-pypi] [OPAM][my-opam] [LinkedIn][my-linkedin] [StackOverflow][my-stackoverflow] {.contact}
+            </vj-markdown>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+
+    <b-row id="content" class="text-justify">
+      <b-col>
+        <b-row>
+          <b-col>
+            <vj-hdr id="introduction" lvl="1">
+              Introduction
+            </vj-hdr>
+          </b-col>
+        </b-row>
 
         <b-row>
           <b-col md="6">
             <vj-markdown>
-I'm Vincent Jacques, alias [@jacquev6] on the web.
-I'm a 35 years old, French, passionate software engineer.
-I started programming when I was 12 on a [Casio calculator],
-and haven't stopped learning since.
+              I'm Vincent Jacques, alias [@jacquev6] on the web.
+              I'm a 35 years old, French, passionate software engineer.
+              I started programming when I was 12 on a [Casio calculator],
+              and haven't stopped learning since.
 
-[@jacquev6]: https://www.google.com/search?q=jacquev6
-[Casio calculator]: http://www.rskey.org/fx790p
+              [@jacquev6]: https://www.google.com/search?q=jacquev6
+              [Casio calculator]: http://www.rskey.org/fx790p
 
-I studied general engineering at [Ecole Centrale Paris][ECP]
-(2006) and I specialized on software as a very enthusiastic career choice.
+              I studied general engineering at [Ecole Centrale Paris][ECP]
+              (2006) and I specialized on software as a very enthusiastic career choice.
             </vj-markdown>
           </b-col>
           <b-col md="6">
             <vj-markdown>
-After eleven years of professional software engineering, I value maintainable and evolutive source code
-and the use of tools and automation to create working, reliable software.
+              After eleven years of professional software engineering, I value maintainable and evolutive source code
+              and the use of tools and automation to create working, reliable software.
 
-As of October 2018, I'm working as a Software Engineer at [Datadog](https://www.datadoghq.com/).
+              As of October 2018, I'm working as a Software Engineer at [Datadog](https://www.datadoghq.com/).
             </vj-markdown>
           </b-col>
         </b-row>
 
-        <b-row><b-col>
-          <vj-hdr lvl="1" id="portfolio">Portfolio</vj-hdr>
+        <b-row>
+          <b-col>
+            <vj-hdr id="portfolio" lvl="1">
+              Portfolio
+            </vj-hdr>
 
-          <vj-markdown>
-Most of my projects are hosted on [GitHub][my-github]
-and have continuous build on [Travis CI][my-travis].
+            <vj-markdown>
+              Most of my projects are hosted on [GitHub][my-github]
+              and have continuous build on [Travis CI][my-travis].
 
-My projects are documented using [Sphinx] and the [Alabaster] theme.
-Reference documentation is generated from [Python] source code by [autodoc],
-form [C++] source code by [Doxygen] and [Breathe],
-and from [OCaml] source code by a preliminary version of my [Sphinx extension for OCaml][sphinxcontrib-ocaml]
+              My projects are documented using [Sphinx] and the [Alabaster] theme.
+              Reference documentation is generated from [Python] source code by [autodoc],
+              form [C++] source code by [Doxygen] and [Breathe],
+              and from [OCaml] source code by a preliminary version of my [Sphinx extension for OCaml][sphinxcontrib-ocaml]
 
-My [Python] projects are distributed on the [Python package index][my-pypi], and my [OCaml] projects are published on [OPAM][my-opam].
-          </vj-markdown>
+              My [Python] projects are distributed on the [Python package index][my-pypi], and my [OCaml] projects are published on [OPAM][my-opam].
+            </vj-markdown>
 
-          <p>Projects filter: <template v-for="tag in tags">
-            <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter(tag.slug)">{{ tag.title }}</b-btn>{{ ' ' }}
-          </template></p>
-        </b-col></b-row>
+            <p>
+              Projects filter: <template v-for="tag in tags">
+                <b-btn
+                  :key="tag.slug"
+                  size="sm"
+                  variant="tag"
+                  :pressed="tagsVisibility[tag.slug]"
+                  class="my-1"
+                  @click="toggleFilter(tag.slug)"
+                >
+                  {{ tag.title }}
+                </b-btn>{{ ' ' }}
+              </template>
+            </p>
+          </b-col>
+        </b-row>
 
         <b-row>
           <template v-for="project in projects">
             <template v-if="project.visible">
-              <vj-project :key="project.name" :name="project.name" :tags="project.tags" :description="project.description"/>
+              <vj-project :key="project.name" :name="project.name" :tags="project.tags" :description="project.description" />
             </template>
           </template>
         </b-row>
-      </b-col></b-row>
+      </b-col>
+    </b-row>
 
-      <b-row id="footer"><b-col>
-        <p class="text-center">&copy; <a href="https://github.com/jacquev6/vincent-jacques.net/">Vincent Jacques</a> 2010-2019</p>
-      </b-col></b-row>
+    <b-row id="footer">
+      <b-col>
+        <p class="text-center">
+          &copy; <a href="https://github.com/jacquev6/vincent-jacques.net/">Vincent Jacques</a> 2010-2019
+        </p>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -119,7 +136,7 @@ import QuadProgMm from '../assets/QuadProgMm.md'
 export default {
   data () {
     const tagsVisibility = {}
-    tags.forEach(({slug}) => { tagsVisibility[slug] = true })
+    tags.forEach(({ slug }) => { tagsVisibility[slug] = true })
     return {
       tags,
       tagsVisibility
@@ -144,7 +161,7 @@ export default {
       return [
         'PyGithub', 'DrawTurksHead', 'DrawGrammar', 'Collide', 'IpMap', 'ActionTree', 'variadic',
         'JsOfOCairo', 'hashids-ocaml', 'Polyglot', 'QuadProgMm'
-      ].map(name => {
+      ].map((name) => {
         const project = projects[name]
         const tags = project.data.tags
         const description = project.content
@@ -158,15 +175,15 @@ export default {
   methods: {
     toggleFilter (tag) {
       // const tag = click.target.getAttribute('data-tag-slug')
-      if (this.tags.every(({slug}) => this.tagsVisibility[slug])) {
-        this.tags.forEach(({slug}) => {
+      if (this.tags.every(({ slug }) => this.tagsVisibility[slug])) {
+        this.tags.forEach(({ slug }) => {
           this.tagsVisibility[slug] = false
         })
         this.tagsVisibility[tag] = true
       } else {
         this.tagsVisibility[tag] = !this.tagsVisibility[tag]
-        if (!this.tags.some(({slug}) => this.tagsVisibility[slug])) {
-          this.tags.forEach(({slug}) => {
+        if (!this.tags.some(({ slug }) => this.tagsVisibility[slug])) {
+          this.tags.forEach(({ slug }) => {
             this.tagsVisibility[slug] = true
           })
         }
@@ -246,13 +263,17 @@ body {
   }
 
   #citation {
-    margin-left: 5em;
     margin-bottom: 0;
   }
 
   #citation-origin {
-    margin-left: 10em;
+    margin-left: 2em;
     margin-top: 0;
+  }
+
+  p.contact {
+    text-shadow: -1px 0 $color_primary_darkest, 0 1px $color_primary_darkest, 1px 0 $color_primary_darkest, 0 -1px $color_primary_darkest;
+    word-spacing: 200%;
   }
 }
 

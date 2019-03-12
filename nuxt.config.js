@@ -1,8 +1,10 @@
-import assert from 'assert'
+import assert_ from 'assert'
 import childProcess from 'child_process'
 import fs from 'fs-extra'
 import md5 from 'md5'
 import pdfjs from 'pdfjs-dist'
+
+const assert = assert_.strict
 
 module.exports = {
   generate: {
@@ -16,10 +18,11 @@ module.exports = {
     ]
   },
   plugins: [
-    '~/plugins/global.js', // https://github.com/nuxt/nuxt.js/issues/421#issuecomment-288671748
+    '~/plugins/global.js' // https://github.com/nuxt/nuxt.js/issues/421#issuecomment-288671748
   ],
   modules: [
-    'bootstrap-vue/nuxt', // https://bootstrap-vue.js.org/docs#nuxtjs-plugin-module
+    '@nuxtjs/eslint-module',
+    'bootstrap-vue/nuxt' // https://bootstrap-vue.js.org/docs#nuxtjs-plugin-module
   ],
   bootstrapVue: {
     bootstrapCSS: false,
@@ -29,7 +32,7 @@ module.exports = {
     extend (config) {
       config.module.rules.push({
         test: /\.md$/,
-        use: [{ loader: "gray-matter-loader" }]
+        use: [{ loader: 'gray-matter-loader' }]
       })
     }
   },
@@ -41,7 +44,7 @@ module.exports = {
         const resumeStaticPdf = 'static/Vincent Jacques - resume.pdf'
         if (!fs.existsSync(resumeAssetPdf)) {
           childProcess.spawnSync('/usr/bin/libreoffice', ['--convert-to', 'pdf', resumeAssetOdt])
-          fs.moveSync("Vincent Jacques - resume.pdf", resumeAssetPdf)
+          fs.moveSync('Vincent Jacques - resume.pdf', resumeAssetPdf)
         }
         assert.equal((await pdfjs.getDocument(resumeAssetPdf)).numPages, 2)
         fs.copySync(resumeAssetPdf, resumeStaticPdf)

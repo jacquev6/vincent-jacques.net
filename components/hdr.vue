@@ -1,12 +1,19 @@
 <template>
-  <h1      v-if="lvl === '1'" class="px-1" :class="{highlighted}" :id="id"><slot/><no-ssr>&nbsp;<a class="header-anchor" :href="'#' + id">¶</a></no-ssr></h1>
-  <h2 v-else-if="lvl === '2'" class="px-1" :class="{highlighted}" :id="id"><slot/><no-ssr>&nbsp;<a class="header-anchor" :href="'#' + id">¶</a></no-ssr></h2>
+  <h1 v-if="lvl === '1'" :id="id" class="px-1" :class="{highlighted}">
+    <slot /><no-ssr>&nbsp;<a class="header-anchor" :href="'#' + id">¶</a></no-ssr>
+  </h1>
+  <h2 v-else-if="lvl === '2'" :id="id" class="px-1" :class="{highlighted}">
+    <slot /><no-ssr>&nbsp;<a class="header-anchor" :href="'#' + id">¶</a></no-ssr>
+  </h2>
 </template>
 
 <script>
 // @todo https://vuejs.org/v2/guide/render-function.html
 export default {
-  props: ['lvl', 'id'],
+  props: {
+    lvl: { type: String, required: true },
+    id: { type: String, required: true }
+  },
   computed: {
     highlighted () {
       return this.$route.hash === '#' + this.id

@@ -1,10 +1,14 @@
 <template>
   <b-col md="6" lg="4" class="project" :class="classes">
-    <vj-hdr lvl="2" :id="slug">{{ name }}</vj-hdr>
+    <vj-hdr :id="slug" lvl="2">
+      {{ name }}
+    </vj-hdr>
     <p class="text-left">
-      <template v-for="tag in tags"><span class="badge badge-tag">{{ tagTitles[tag] }}</span>{{ ' ' }}</template>
+      <template v-for="tag in tags">
+        <span :key="tag" class="badge badge-tag">{{ tagTitles[tag] }}</span>{{ ' ' }}
+      </template>
     </p>
-    <vj-markdown :md="description"/>
+    <vj-markdown :md="description" />
   </b-col>
 </template>
 
@@ -12,12 +16,16 @@
 import tags from '../assets/tags.json'
 
 const tagTitles = {}
-tags.forEach(({slug, title}) => {
+tags.forEach(({ slug, title }) => {
   tagTitles[slug] = title
 })
 
 export default {
-  props: ['name', 'tags', 'description'],
+  props: {
+    name: { type: String, required: true },
+    tags: { type: Array, required: true },
+    description: { type: String, required: true }
+  },
   data () {
     return {
       tagTitles

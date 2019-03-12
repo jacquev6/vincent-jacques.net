@@ -3,11 +3,23 @@
   "private": true,
   "scripts": {
     "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --fix .",
     "serve": "nuxt dev --hostname 0.0.0.0"
   },
   "dependencies": {
+    "@nuxtjs/eslint-config": "0.0.1",
+    "@nuxtjs/eslint-module": "0.0.1",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.14",
+    "dedent-js": "^1.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.3.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
     "fs-extra": "^7.0.1",
     "gray-matter-loader": "0.0.10",
     "markdown-it": "^8.4.2",
@@ -17,5 +29,19 @@
     "nuxt": "^2.4.5",
     "pdfjs-dist": "^2.0.943",
     "sass-loader": "^7.1.0"
-  }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "@nuxtjs",
+      "standard"
+    ]
+  },
+  "eslintIgnore": [
+    "docs/**"
+  ]
 }

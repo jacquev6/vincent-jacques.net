@@ -5,6 +5,9 @@
   <h2 v-else-if="lvl === '2'" :id="id" class="px-1" :class="{highlighted}">
     <slot /><no-ssr>&nbsp;<a class="header-anchor" :href="'#' + id">¶</a></no-ssr>
   </h2>
+  <h3 v-else-if="lvl === '3'" :id="id" class="px-1" :class="{highlighted}">
+    <slot /><no-ssr>&nbsp;<a class="header-anchor" :href="'#' + id">¶</a></no-ssr>
+  </h3>
 </template>
 
 <script>
@@ -40,6 +43,14 @@ export default {
   }
   h2.highlighted {
     color: $color_complementary_base;
+  }
+
+  h3 {
+    background-color: $color_primary_lightest;
+    color: black;
+  }
+  h3.highlighted {
+    color: $color_primary_darkest;
   }
 
   a.header-anchor {

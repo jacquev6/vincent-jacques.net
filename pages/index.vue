@@ -152,9 +152,11 @@
 
         <b-row>
           <b-col md="6">
-            <vj-markdown>
-              ##### Working from home
+            <vj-hdr id="working-from-home" lvl="3">
+              Working from home
+            </vj-hdr>
 
+            <vj-markdown>
               As my personal life is now organized around it, this is the most important for me.
               It gives me long uninterrupted focused work periods, the best for people on a [maker schedule](https://www.google.fr/search?q=maker+schedule+manager+schedule).
               Without the daily commute I feel less tired and I waste less time.
@@ -162,15 +164,23 @@
 
               I've been doing that for a few years now.
               Regularly scheduled video meetings have been enough to keep projects on track.
+            </vj-markdown>
 
-              ##### Focusing on building technical solutions...
+            <vj-hdr id="technical-solutions" lvl="3">
+              Focusing on building technical solutions...
+            </vj-hdr>
 
+            <vj-markdown>
               I enjoy technical work.
               I like to dive deep in technical issues and create solutions as simple as possible.
               I wish to become a very potent expert rather than a manager, and I'm looking for a job that values that.
+            </vj-markdown>
 
-              ##### ...for actual business problems
+            <vj-hdr id="actual-business-problems" lvl="3">
+              ...for actual business problems
+            </vj-hdr>
 
+            <vj-markdown>
               I need to understand the business big picture, to keep in mind *why* we are doing anything.
               The question of exactly *what* we should do, however, is probably better answered by domain specialists.
               Regular, bi-directional, communication with them is key to successful projects.
@@ -178,16 +188,22 @@
           </b-col>
 
           <b-col md="6">
-            <vj-markdown>
-              ##### An application domain I enjoy
+            <vj-hdr id="application-domain" lvl="3">
+              An application domain I enjoy
+            </vj-hdr>
 
+            <vj-markdown>
               These are purely personal preferences with *no value judgment*.
               I would rather not work in a military or finance-related domain.
               I would be very happy to work in toys, hobby supplies, robots, software engineering tools, science.
               I would also like many other domains in the industry, transportations, tourism, culture... and many more I don't even know exist.
+            </vj-markdown>
 
-              ##### High moral standards
+            <vj-hdr id="high-moral-standards" lvl="3">
+              High moral standards
+            </vj-hdr>
 
+            <vj-markdown>
               This may seem obvious, but it is not.
               I'm looking for a job where laws and individuals are respected and that condemns any form of discrimination.
               Anyone should feel free to discuss ideas, behaviors and produced artifacts, and refrain from discussing people.

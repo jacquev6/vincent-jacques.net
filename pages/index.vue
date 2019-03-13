@@ -57,6 +57,10 @@
             <vj-markdown>
               After twelve years of professional software engineering, I value maintainable and evolutive source code
               and the use of tools and automation to create working, reliable software.
+
+              As of March 2019, I'm **looking for my next job**.
+              Maybe we can work together on your software project?
+              More details [below my portfolio](#hire-me). {.strong-attention}
             </vj-markdown>
           </b-col>
         </b-row>
@@ -102,6 +106,94 @@
               <vj-project :key="project.name" :name="project.name" :tags="project.tags" :description="project.description" />
             </template>
           </template>
+        </b-row>
+
+        <b-row>
+          <b-col>
+            <vj-hdr id="hire-me" lvl="1">
+              Hire me
+            </vj-hdr>
+
+            <vj-hdr id="resume" lvl="2">
+              Résumé
+            </vj-hdr>
+
+            <p>
+              I hope you liked my portfolio and it made you want to work together!
+              If yes, here is my <a href="/Vincent%20Jacques%20-%20resume.pdf">résumé (PDF)</a>.
+            </p>
+
+            <div class="d-none d-lg-block embed-responsive embed-responsive-16by9 mb-4">
+              <embed
+                src="/Vincent%20Jacques%20-%20resume.pdf"
+                class="embed-responsive-item"
+                width="640"
+                height="480"
+                alt="pdf"
+                pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"
+              >
+            </div>
+
+            <vj-hdr id="my-dream-job" lvl="2">
+              My dream job
+            </vj-hdr>
+
+            <vj-markdown>
+              I'm pretty flexible about administrative status: I can either invoice you as a freelancer,
+              or, if you are a French company, I can join your payroll.
+
+              I aim at making the most of my time.
+              Based on my work experience, I have identified below a few conditions that help me be as productive as possible.
+              Of course this is just to give you a taste of what I'm looking for, and we don't have to be a 100% match.
+              If you think we could be a good fit, please send me an [e-mail](mailto:vincent.jacques@centraliens.net) and let's discuss working together!
+            </vj-markdown>
+          </b-col>
+        </b-row>
+
+        <b-row>
+          <b-col md="6">
+            <vj-markdown>
+              ##### Working from home
+
+              As my personal life is now organized around it, this is the most important for me.
+              It gives me long uninterrupted focused work periods, the best for people on a [maker schedule](https://www.google.fr/search?q=maker+schedule+manager+schedule).
+              Without the daily commute I feel less tired and I waste less time.
+              This means I have more time for work *and* for myself.
+
+              I've been doing that for a few years now.
+              Regularly scheduled video meetings have been enough to keep projects on track.
+
+              ##### Focusing on building technical solutions...
+
+              I enjoy technical work.
+              I like to dive deep in technical issues and create solutions as simple as possible.
+              I wish to become a very potent expert rather than a manager, and I'm looking for a job that values that.
+
+              ##### ...for actual business problems
+
+              I need to understand the business big picture, to keep in mind *why* we are doing anything.
+              The question of exactly *what* we should do, however, is probably better answered by domain specialists.
+              Regular, bi-directional, communication with them is key to successful projects.
+            </vj-markdown>
+          </b-col>
+
+          <b-col md="6">
+            <vj-markdown>
+              ##### An application domain I enjoy
+
+              These are purely personal preferences with *no value judgment*.
+              I would rather not work in a military or finance-related domain.
+              I would be very happy to work in toys, hobby supplies, robots, software engineering tools, science.
+              I would also like many other domains in the industry, transportations, tourism, culture... and many more I don't even know exist.
+
+              ##### High moral standards
+
+              This may seem obvious, but it is not.
+              I'm looking for a job where laws and individuals are respected and that condemns any form of discrimination.
+              Anyone should feel free to discuss ideas, behaviors and produced artifacts, and refrain from discussing people.
+              There should be a culture of openness (about information and software) and knowledge spreading to reach a distributed technical excellence.
+            </vj-markdown>
+          </b-col>
         </b-row>
       </b-col>
     </b-row>
@@ -324,6 +416,12 @@ body {
 
   .badge-tag {
     @include badge-variant($color_complementary_lighter)
+  }
+
+  .strong-attention {
+    background-color: $color_complementary_lightest;
+    border: solid 3px $color_primary_base;
+    padding: 3px
   }
 }
 

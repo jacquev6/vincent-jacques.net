@@ -40,15 +40,10 @@
     "title": "Web",
     "description": "targeting the web environment"
   },
-  {
-    "slug": "demo",
-    "title": "Demo",
-    "description": "are just a technology demonstration"
-  },
 
   {
     "slug": "visual",
-    "title": "Visualization",
+    "title": "Visual",
     "description": "drawing something"
   }
 ]

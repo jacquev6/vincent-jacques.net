@@ -1,6 +1,5 @@
 ---
 tags:
-  - demo
   - cpp
   - python
   - javascript

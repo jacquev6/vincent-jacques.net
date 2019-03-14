@@ -7,7 +7,7 @@ tags:
     - visual
 ---
 [DrawTurksHead] is a [Python] library to draw [Turk’s head knots].
-An [interactive demo][DrawTurksHead-demo] is available.
+You can try the [interactive demo][DrawTurksHead-demo].
 
 [Turk’s head knots]: https://en.wikipedia.org/wiki/Turk%27s_head_knot
 
@@ -16,8 +16,8 @@ An [interactive demo][DrawTurksHead-demo] is available.
 </div>
 
 Its core functionality is written in [C++] and exposed as a Python library using [Boost.Python].
-A Python callback for computing the colors is called from the C++ code.
-This required two-way integration of C++ and Python code.
+Two-way integration between C++ and Python code allows a Python callback computing the colors to be called by the C++ code.
+
 Drawings are made using [Cairo].
 The Cairo context is created in Python using [PyCairo] and passed to the C++ layer.
 The C++ code uses [Cairomm] to do the actual drawing.

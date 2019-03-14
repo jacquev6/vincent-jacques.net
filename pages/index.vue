@@ -10,7 +10,7 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col cols="7" md="5" lg="5">
+          <b-col cols="7" md="5" lg="6">
             <vj-markdown>
               &laquo;&nbsp;S'il n'y a pas de solution, c'est qu'il n'y a pas de problème.&nbsp;&raquo; {#citation}
 
@@ -19,7 +19,7 @@
               [Shadock]: https://en.wikipedia.org/wiki/Les_Shadoks
             </vj-markdown>
           </b-col>
-          <b-col cols="7" md="4" xl="5">
+          <b-col cols="7" md="4">
             <vj-markdown>
               [e-mail][my-email] [GitHub][my-github] [TravisCI][my-travis] [PyPi][my-pypi] [OPAM][my-opam] [LinkedIn][my-linkedin] [StackOverflow][my-stackoverflow] {.contact}
             </vj-markdown>
@@ -44,7 +44,7 @@
               I'm Vincent Jacques, alias [@jacquev6] on the web.
               I'm a 36 years old, French, passionate software engineer.
               I started programming when I was 12 on a [Casio calculator],
-              and haven't stopped learning since.
+              and I haven't stopped learning.
 
               [@jacquev6]: https://www.google.com/search?q=jacquev6
               [Casio calculator]: http://www.rskey.org/fx790p
@@ -83,7 +83,7 @@
               form [C++] source code by [Doxygen] and [Breathe],
               and from [OCaml] source code by a preliminary version of my [Sphinx extension for OCaml][sphinxcontrib-ocaml]
 
-              My [Python] projects are distributed on the [Python package index][my-pypi], and my [OCaml] projects are published on [OPAM][my-opam].
+              My [Python] libraries are distributed on the [Python package index][my-pypi], and my [OCaml] ones are published on [OPAM][my-opam].
             </vj-markdown>
           </b-col>
         </b-row>
@@ -120,7 +120,7 @@
 
             <p>
               I hope you liked my portfolio and it made you want to work together!
-              If yes, here is my <a href="/Vincent%20Jacques%20-%20resume.pdf">résumé (PDF)</a>.
+              Here is my <a href="/Vincent%20Jacques%20-%20resume.pdf">résumé (PDF)</a>.
             </p>
 
             <div class="d-none d-lg-block embed-responsive embed-responsive-16by9 mb-4">
@@ -139,13 +139,14 @@
             </vj-hdr>
 
             <vj-markdown>
-              I'm pretty flexible about administrative status: I can either invoice you as a freelancer,
-              or, if you are a French company, I can join your payroll.
-
               I aim at making the most of my time.
               Based on my work experience, I have identified below a few conditions that help me be as productive as possible.
               Of course this is just to give you a taste of what I'm looking for, and we don't have to be a 100% match.
               If you think we could be a good fit, please send me an [e-mail](mailto:vincent.jacques@centraliens.net) and let's discuss working together!
+
+              Also, to say it plainly: money is less important than these points.
+              So if you can give me amazing working conditions, you will benefit from my technical skills for a reasonable price.
+              And so is administrative status: I can freelance if you need to share the burden of risk.
             </vj-markdown>
           </b-col>
         </b-row>
@@ -157,27 +158,35 @@
             </vj-hdr>
 
             <vj-markdown>
-              As my personal life is now organized around it, this is the most important for me.
+              I've been working from home for a few years now and my personal life is organized around it so this is *the most important for me*.
+
               It gives me long uninterrupted focused work periods, the best for people on a [maker schedule](https://www.google.fr/search?q=maker+schedule+manager+schedule).
               Without the daily commute I feel less tired and I waste less time.
               This means I have more time for work *and* for myself.
-
-              I've been doing that for a few years now.
-              Regularly scheduled video meetings have been enough to keep projects on track.
             </vj-markdown>
 
             <vj-hdr id="technical-solutions" lvl="3">
-              Focusing on building technical solutions...
+              Building technical solutions...
             </vj-hdr>
 
             <vj-markdown>
               I enjoy technical work.
-              I like to dive deep in technical issues and create solutions as simple as possible.
+              I like and I need to deeply understand what I do.
+              When I discover new technologies, I take some time to read about and experiment with them.
+              When I start working on new code, I appreciate having time to understand how it works globally,
+              preferably with the help of an expert.
+              And when I take on a new problem, I spend some time analyzing it to find a solution as simple as possible.
+
+              I strongly believe [spending time early](https://www.google.com/search?q=find+bugs+early) reduces the overall time to deliver long-term solutions.
+              This is an investment though, and a strategy that must be adopted consiously.
+
               I wish to become a very potent expert rather than a manager, and I'm looking for a job that values that.
             </vj-markdown>
+          </b-col>
 
-            <vj-hdr id="actual-business-problems" lvl="3">
-              ...for actual business problems
+          <b-col md="6">
+            <vj-hdr id="business-problems" lvl="3">
+              ...to actual business problems
             </vj-hdr>
 
             <vj-markdown>
@@ -185,18 +194,17 @@
               The question of exactly *what* we should do, however, is probably better answered by domain specialists.
               Regular, bi-directional, communication with them is key to successful projects.
             </vj-markdown>
-          </b-col>
 
-          <b-col md="6">
             <vj-hdr id="application-domain" lvl="3">
               An application domain I enjoy
             </vj-hdr>
 
             <vj-markdown>
               These are purely personal preferences with *no value judgment*.
+
               I would rather not work in a military or finance-related domain.
               I would be very happy to work in toys, hobby supplies, robots, software engineering tools, science.
-              I would also like many other domains in the industry, transportations, tourism, culture... and many more I don't even know exist.
+              I would also like many other domains in the industry, transportations, tourism, culture... and many more I don't even know exist!
             </vj-markdown>
 
             <vj-hdr id="high-moral-standards" lvl="3">
@@ -204,9 +212,10 @@
             </vj-hdr>
 
             <vj-markdown>
-              This may seem obvious, but it is not.
               I'm looking for a job where laws and individuals are respected and that condemns any form of discrimination.
+
               Anyone should feel free to discuss ideas, behaviors and produced artifacts, and refrain from discussing people.
+
               There should be a culture of openness (about information and software) and knowledge spreading to reach a distributed technical excellence.
             </vj-markdown>
           </b-col>
@@ -397,7 +406,7 @@ body {
 
   p.contact {
     text-shadow: -1px 0 $color_primary_darkest, 0 1px $color_primary_darkest, 1px 0 $color_primary_darkest, 0 -1px $color_primary_darkest;
-    word-spacing: 200%;
+    word-spacing: 400%;
   }
 }
 

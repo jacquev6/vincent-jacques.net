@@ -5,7 +5,7 @@ tags:
     - web
 ---
 [IpMap] is a browsable map of the IPv4 address space inspired by [xkcd 195, Map of the Internet][xkcd-195].
-An [interactive demo][IpMap-demo] is available.
+You can try the [interactive demo][IpMap-demo].
 
 [xkcd-195]: https://xkcd.com/195/
 

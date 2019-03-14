@@ -9,7 +9,7 @@ The data we have so far is not ready for production, so you can have a look at t
 Splight is architectured around a [GraphQL] API served by an [Apollo] server.
 Data is stored in [MongoDB].
 
-Its public and admin front-ends are written in JavaScript using [Vue.js] with [Vue Router] and [Vue Apollo],
+Its public and admin front-ends are written in [JavaScript] using [Vue.js] with [Vue Router] and [Vue Apollo],
 built as a static web application and served by [Nginx].
 
 Its services are packaged as [Docker] images and run on a [Kubernetes] cluster described in my [infrastructure](#infrastructure) project.

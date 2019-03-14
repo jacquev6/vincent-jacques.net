@@ -18,7 +18,7 @@ It is available as an [interactive demo][DrawGrammar-demo] and as a command-line
 It is written in [OCaml].
 The OCaml bytecode is translated to JavaScript using [js_of_ocaml].
 My library [JsOfOCairo] is used to share the Cairo-based drawing code between HTML5 canvases and PNG files.
-The parsers for [ISO-14977 EBNF] and the EBNF variant used to specify the [Python grammar] are written using the [Menhir parser generator][Menhir].
+The parsers for [ISO-14977 EBNF] (and the variant used for the [Python grammar]) are written using the [Menhir parser generator][Menhir].
 
 [ISO-14977 EBNF]: https://www.cl.cam.ac.uk/~mgk25/iso-14977.pdf
 [Python grammar]: https://github.com/python/cpython/blob/master/Grammar/Grammar

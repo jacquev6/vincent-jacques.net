@@ -20,9 +20,15 @@
             </vj-markdown>
           </b-col>
           <b-col cols="7" md="4">
-            <vj-markdown>
-              [e-mail][my-email] [GitHub][my-github] [TravisCI][my-travis] [PyPi][my-pypi] [OPAM][my-opam] [LinkedIn][my-linkedin] [StackOverflow][my-stackoverflow] {.contact}
-            </vj-markdown>
+            <p class="contact">
+              <a href="mailto:vincent@vincent-jacques.net">e-mail <fa-icon :icon="['far', 'envelope']" /></a>
+              <a href="https://github.com/jacquev6/">GitHub <fa-icon :icon="['fab', 'github']" /></a>
+              <a href="https://travis-ci.org/jacquev6/">Travis CI <img height="15px" src="/travis.svg"></img></a>
+              <a href="https://pypi.org/user/jacquev6/">PyPi <fa-icon :icon="['fab', 'python']" /></a>
+              <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues">OPAM <img height="15px" src="/ocaml.svg"></img></a>
+              <a href="https://www.linkedin.com/in/jacquev6/">LinkedIn <fa-icon :icon="['fab', 'linkedin']" /></a>
+              <a href="https://stackoverflow.com/users/905845/jacquev6/">StackOverflow <fa-icon :icon="['fab', 'stack-overflow']" /></a>
+            </p>
           </b-col>
         </b-row>
       </b-col>
@@ -407,6 +413,11 @@ body {
   p.contact {
     text-shadow: -1px 0 $color_primary_darkest, 0 1px $color_primary_darkest, 1px 0 $color_primary_darkest, 0 -1px $color_primary_darkest;
     word-spacing: 400%;
+
+    a {
+      word-spacing: normal;
+      white-space: nowrap;
+    }
   }
 }
 

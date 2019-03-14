@@ -26,6 +26,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/eslint-module',
+    'qonfucius-nuxt-fontawesome',
     'bootstrap-vue/nuxt' // https://bootstrap-vue.js.org/docs#nuxtjs-plugin-module
   ],
   bootstrapVue: {
@@ -54,5 +55,17 @@ module.exports = {
         fs.copySync(resumeAssetPdf, resumeStaticPdf)
       }
     }
-  }
+  },
+  fontAwesome: {
+    packs: [
+      {
+        package: '@fortawesome/free-brands-svg-icons',
+        icons: ['faGithub', 'faPython', 'faLinkedin', 'faStackOverflow'],
+      },
+      {
+        package: '@fortawesome/free-regular-svg-icons',
+        icons: ['faEnvelope'],
+      }
+    ],
+  },
 }

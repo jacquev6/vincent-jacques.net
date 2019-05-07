@@ -64,7 +64,7 @@
               After twelve years of professional software engineering, I value maintainable and evolutive source code
               and the use of tools and automation to create working, reliable software.
 
-              As of March 2019, I'm **looking for my next job**.
+              As of May 2019, I'm **looking for my next job**.
               Maybe we can work together on your software project?
               More details [below my portfolio](#hire-me). {.strong-attention}
             </vj-markdown>

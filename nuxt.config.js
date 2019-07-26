@@ -8,7 +8,10 @@ const assert = assert_.strict
 
 module.exports = {
   generate: {
-    dir: 'docs'
+    dir: 'docs',
+    routes: [
+      '/blog/2019/07/26/dont-fork-connection-pools'
+    ]
   },
   head: {
     title: 'vincent-jacques.net',

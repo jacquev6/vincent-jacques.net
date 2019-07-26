@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import tags from '../assets/tags.json'
+import tags from '../contents/tags.json'
 
 const tagTitles = {}
 tags.forEach(({ slug, title }) => {

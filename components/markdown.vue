@@ -7,7 +7,7 @@ import dedent from 'dedent-js'
 import markdownIt from 'markdown-it'
 import markdownItAttrs from 'markdown-it-attrs'
 
-import links from '../assets/links.json'
+import links from '../contents/links.json'
 
 const linksText = Object.entries(links).map(([title, url]) => `[${title}]: ${url}`).join('\n')
 

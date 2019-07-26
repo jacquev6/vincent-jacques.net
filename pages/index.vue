@@ -77,22 +77,22 @@
 </template>
 
 <script>
-import tags from '../assets/tags.json'
+import tags from '../contents/tags.json'
 
-import ActionTree from '../assets/ActionTree.md'
-import Collide from '../assets/Collide.md'
-import DrawGrammar from '../assets/DrawGrammar.md'
-import DrawTurksHead from '../assets/DrawTurksHead.md'
-import hashidsOCaml from '../assets/hashids-ocaml.md'
-import infrastructure from '../assets/infrastructure.md'
-import IpMap from '../assets/IpMap.md'
-import JsOfOCairo from '../assets/JsOfOCairo.md'
-import Polyglot from '../assets/Polyglot.md'
-import PyGithub from '../assets/PyGithub.md'
-import QuadProgMm from '../assets/QuadProgMm.md'
-import Splight from '../assets/Splight.md'
-import variadic from '../assets/variadic.md'
-import vjnet from '../assets/vjnet.md'
+import ActionTree from '../contents/projects/ActionTree.md'
+import Collide from '../contents/projects/Collide.md'
+import DrawGrammar from '../contents/projects/DrawGrammar.md'
+import DrawTurksHead from '../contents/projects/DrawTurksHead.md'
+import hashidsOCaml from '../contents/projects/hashids-ocaml.md'
+import infrastructure from '../contents/projects/infrastructure.md'
+import IpMap from '../contents/projects/IpMap.md'
+import JsOfOCairo from '../contents/projects/JsOfOCairo.md'
+import Polyglot from '../contents/projects/Polyglot.md'
+import PyGithub from '../contents/projects/PyGithub.md'
+import QuadProgMm from '../contents/projects/QuadProgMm.md'
+import Splight from '../contents/projects/Splight.md'
+import variadic from '../contents/projects/variadic.md'
+import vjnet from '../contents/projects/vjnet.md'
 
 export default {
   layout: 'default',

@@ -1,0 +1,25 @@
+- bilingual presentation/introduction/I'm freelance
+  - but English for portfolio
+- portfolio: add motivation, human factor, etc.
+  - context of the project
+  - motivation
+  - level of current maintenance
+- portfolio:
+  - index page /pf/
+  - project page /pf/{project}/
+- blog:
+  - do it
+  - on /blog/
+  - articles
+    - from branch "future"
+    - experiments
+      - read a bunch of files in Python
+- gather visit statistics
+  - use Google Analytics
+- gather search result statistics
+  - Read https://www.google.com/webmasters and https://www.google.com/webmasters/learn/
+  - use Google Search Console
+- fix "More projects by Vincent Jacques" ribbon on all projects
+  - use a versionned reference to the ribbon.js file
+  - create a new version of the ribbon.js file: ribbon.2.js pointing at /pf/
+- update portfolio projects to use devlpr

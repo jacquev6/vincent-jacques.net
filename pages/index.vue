@@ -325,6 +325,8 @@ body {
     content: "\2009\f09b"; // Thin space followed by GitHub
   }
 
+  // @todo Add wikipedia icon to wikipedia links
+
   .btn-tag {
     @include button-variant(
       white, $color_complementary_base, // Normal (background, border)

@@ -1,125 +1,79 @@
 <template>
-  <b-container lang="en">
-    <b-row id="header">
+  <div>
+    <b-row>
       <b-col>
-        <b-row>
-          <b-col>
-            <vj-markdown>
-              [vincent-jacques.net](/) {#vjnet}
-            </vj-markdown>
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col cols="7" md="5" lg="6">
-            <vj-markdown>
-              &laquo;&nbsp;S'il n'y a pas de solution, c'est qu'il n'y a pas de problème.&nbsp;&raquo; {#citation}
-
-              Devise [Shadock] {#citation-origin}
-
-              [Shadock]: https://en.wikipedia.org/wiki/Les_Shadoks
-            </vj-markdown>
-          </b-col>
-          <b-col cols="7" md="4">
-            <p class="contact">
-              <a href="mailto:vincent@vincent-jacques.net">e-mail <fa-icon :icon="['far', 'envelope']" /></a>
-              <a href="https://github.com/jacquev6/">GitHub <fa-icon :icon="['fab', 'github']" /></a>
-              <a href="https://travis-ci.org/jacquev6/">Travis CI <img height="15px" src="/travis.svg"></img></a>
-              <a href="https://pypi.org/user/jacquev6/">PyPi <fa-icon :icon="['fab', 'python']" /></a>
-              <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues">OPAM <img height="15px" src="/ocaml.svg"></img></a>
-              <a href="https://www.linkedin.com/in/jacquev6/">LinkedIn <fa-icon :icon="['fab', 'linkedin']" /></a>
-              <a href="https://stackoverflow.com/users/905845/jacquev6/">StackOverflow <fa-icon :icon="['fab', 'stack-overflow']" /></a>
-            </p>
-          </b-col>
-        </b-row>
+        <vj-hdr id="introduction" lvl="1">
+          Introduction
+        </vj-hdr>
       </b-col>
     </b-row>
 
-    <b-row id="content" class="text-justify">
-      <b-col>
-        <b-row>
-          <b-col>
-            <vj-hdr id="introduction" lvl="1">
-              Introduction
-            </vj-hdr>
-          </b-col>
-        </b-row>
+    <b-row>
+      <b-col md="6">
+        <vj-markdown>
+          I'm Vincent Jacques, alias [@jacquev6] on the web.
+          I'm a 36 years old, French, passionate software engineer.
+          I started programming when I was 12 on a [Casio calculator],
+          and I haven't stopped learning.
 
-        <b-row>
-          <b-col md="6">
-            <vj-markdown>
-              I'm Vincent Jacques, alias [@jacquev6] on the web.
-              I'm a 36 years old, French, passionate software engineer.
-              I started programming when I was 12 on a [Casio calculator],
-              and I haven't stopped learning.
+          [@jacquev6]: https://www.google.com/search?q=jacquev6
+          [Casio calculator]: http://www.rskey.org/fx790p
 
-              [@jacquev6]: https://www.google.com/search?q=jacquev6
-              [Casio calculator]: http://www.rskey.org/fx790p
-
-              I studied general engineering at [Ecole Centrale Paris][ECP]
-              (2006) and I specialized on software as a very enthusiastic career choice.
-            </vj-markdown>
-          </b-col>
-          <b-col md="6">
-            <vj-markdown>
-              After twelve years of professional software engineering, I value maintainable and evolutive source code
-              and the use of tools and automation to create working, reliable software.
-            </vj-markdown>
-          </b-col>
-        </b-row>
-
-        <b-row>
-          <b-col>
-            <vj-hdr id="portfolio" lvl="1">
-              Portfolio
-            </vj-hdr>
-          </b-col>
-        </b-row>
-
-        <b-row>
-          <b-col>
-            <vj-markdown>
-              Most of my projects are hosted on [GitHub][my-github] and have continuous build on [Travis CI][my-travis].
-
-              My projects are documented using [Sphinx] and the [Alabaster] theme.
-              Reference documentation is generated from [Python] source code by [autodoc],
-              form [C++] source code by [Doxygen] and [Breathe],
-              and from [OCaml] source code by a preliminary version of my [Sphinx extension for OCaml][sphinxcontrib-ocaml]
-
-              My [Python] libraries are distributed on the [Python package index][my-pypi], and my [OCaml] ones are published on [OPAM][my-opam].
-            </vj-markdown>
-          </b-col>
-        </b-row>
-
-        <b-row>
-          <b-col>
-            <p>
-              Projects filter: <span v-for="tag in tags" :key="tag.slug">
-                <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter(tag.slug)">
-                  {{ tag.title }}
-                </b-btn>{{ ' ' }}
-              </span>
-            </p>
-          </b-col>
-        </b-row>
-
-        <b-row>
-          <template v-for="project in projects">
-            <template v-if="project.visible">
-              <vj-project :key="project.name" :name="project.name" :tags="project.tags" :description="project.description" />
-            </template>
-          </template>
-        </b-row>
+          I studied general engineering at [Ecole Centrale Paris][ECP]
+          (2006) and I specialized on software as a very enthusiastic career choice.
+        </vj-markdown>
+      </b-col>
+      <b-col md="6">
+        <vj-markdown>
+          After twelve years of professional software engineering, I value maintainable and evolutive source code
+          and the use of tools and automation to create working, reliable software.
+        </vj-markdown>
       </b-col>
     </b-row>
 
-    <b-row id="footer">
+    <b-row>
       <b-col>
-        <p class="text-center">
-          &copy; <a href="https://github.com/jacquev6/vincent-jacques.net/">Vincent Jacques</a> 2010-2019
+        <vj-hdr id="portfolio" lvl="1">
+          Portfolio
+        </vj-hdr>
+      </b-col>
+    </b-row>
+
+    <b-row>
+      <b-col>
+        <vj-markdown>
+          Most of my projects are hosted on [GitHub][my-github] and have continuous build on [Travis CI][my-travis].
+
+          My projects are documented using [Sphinx] and the [Alabaster] theme.
+          Reference documentation is generated from [Python] source code by [autodoc],
+          form [C++] source code by [Doxygen] and [Breathe],
+          and from [OCaml] source code by a preliminary version of my [Sphinx extension for OCaml][sphinxcontrib-ocaml]
+
+          My [Python] libraries are distributed on the [Python package index][my-pypi], and my [OCaml] ones are published on [OPAM][my-opam].
+        </vj-markdown>
+      </b-col>
+    </b-row>
+
+    <b-row>
+      <b-col>
+        <p>
+          Projects filter: <span v-for="tag in tags" :key="tag.slug">
+            <b-btn size="sm" variant="tag" :pressed="tagsVisibility[tag.slug]" class="my-1" @click="toggleFilter(tag.slug)">
+              {{ tag.title }}
+            </b-btn>{{ ' ' }}
+          </span>
         </p>
       </b-col>
     </b-row>
-  </b-container>
+
+    <b-row>
+      <template v-for="project in projects">
+        <template v-if="project.visible">
+          <vj-project :key="project.name" :name="project.name" :tags="project.tags" :description="project.description" />
+        </template>
+      </template>
+    </b-row>
+  </div>
 </template>
 
 <script>
@@ -141,6 +95,7 @@ import variadic from '../assets/variadic.md'
 import vjnet from '../assets/vjnet.md'
 
 export default {
+  layout: 'default',
   data () {
     const tagsVisibility = {}
     tags.forEach(({ slug }) => { tagsVisibility[slug] = true })

@@ -90,7 +90,6 @@ import JsOfOCairo from '../contents/projects/JsOfOCairo.md'
 import Polyglot from '../contents/projects/Polyglot.md'
 import PyGithub from '../contents/projects/PyGithub.md'
 import QuadProgMm from '../contents/projects/QuadProgMm.md'
-import Splight from '../contents/projects/Splight.md'
 import variadic from '../contents/projects/variadic.md'
 import vjnet from '../contents/projects/vjnet.md'
 
@@ -118,7 +117,6 @@ export default {
         Polyglot,
         PyGithub,
         QuadProgMm,
-        Splight,
         variadic,
         'vincent-jacques.net': vjnet
       }
@@ -127,7 +125,6 @@ export default {
         'PyGithub',
         'DrawTurksHead',
         'DrawGrammar',
-        'Splight',
         'Collide',
         'vincent-jacques.net',
         'infrastructure',

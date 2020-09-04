@@ -27,7 +27,7 @@
     "markdown-it": "^8.4.2",
     "markdown-it-attrs": "^2.3.2",
     "md5": "^2.2.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "nuxt": "^2.4.5",
     "pdfjs-dist": "^2.0.943",
     "qonfucius-nuxt-fontawesome": "^1.0.1",

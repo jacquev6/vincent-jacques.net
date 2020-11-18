@@ -1,0 +1,10 @@
+$color_primary_base: #4B6195;
+$color_primary_darkest: #2E457B;
+$color_primary_darker: #495B83;
+$color_primary_lighter: #9CB2E4;
+$color_primary_lightest: #BEC9E4;
+$color_complementary_base: #DFB562;
+$color_complementary_darkest: #B88F3D;
+$color_complementary_darker: #C3A364;
+$color_complementary_lighter: lighten($color_complementary_base, 10%);
+$color_complementary_lightest: lighten($color_complementary_base, 25%);

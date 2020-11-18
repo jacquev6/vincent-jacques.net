@@ -11,6 +11,15 @@
         --volume vincent-jacques.net_node_modules:/app/node_modules \
         node:15-buster npm install
 
+Add a development dependency:
+
+    docker run \
+        --rm \
+        --volume $PWD:/app \
+        --workdir /app \
+        --volume vincent-jacques.net_node_modules:/app/node_modules \
+        node:15-buster npm install --save-dev sass sass-loader fibers
+
 ## Serve the development version
 
     docker run \

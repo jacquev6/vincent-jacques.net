@@ -17,6 +17,8 @@
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "babel-eslint": "^10.1.0",
@@ -27,6 +29,7 @@
     "gray-matter-loader": "^0.0.10",
     "markdown-it": "^11.0.1",
     "markdown-it-attrs": "^3.0.3",
+    "qonfucius-nuxt-fontawesome": "^1.0.1",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"
   }

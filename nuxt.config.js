@@ -15,6 +15,8 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/brands.css' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css' }
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
@@ -40,9 +42,26 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    'qonfucius-nuxt-fontawesome',
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt'
   ],
+  fontAwesome: {
+    packs: [
+      {
+        package: '@fortawesome/free-brands-svg-icons',
+        icons: ['faGithub', 'faPython', 'faLinkedin', 'faStackOverflow'],
+      },
+      {
+        package: '@fortawesome/free-regular-svg-icons',
+        icons: ['faEnvelope'],
+      }
+    ],
+  },
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

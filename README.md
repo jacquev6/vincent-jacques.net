@@ -22,3 +22,14 @@
         node:15-buster npm run dev
 
 Then go to http://localhost:3000.
+
+## Build static site for production
+
+    docker run \
+        --rm \
+        --volume $PWD:/app \
+        --workdir /app \
+        --volume vincent-jacques.net_node_modules:/app/node_modules \
+        node:15-buster npm run generate
+
+Then `git commit`, `git push`, let GitHub Pages do their magic, and go to https://vincent-jacques.net.

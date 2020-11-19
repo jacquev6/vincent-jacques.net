@@ -1,3 +1,11 @@
+import assert_ from 'assert'
+import childProcess from 'child_process'
+import fs from 'fs-extra'
+import md5 from 'md5'
+import pdfjs from 'pdfjs-dist'
+
+const assert = assert_.strict
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -68,6 +76,22 @@ export default {
         test: /\.md$/,
         use: [{ loader: 'gray-matter-loader' }]
       })
+    }
+  },
+
+  hooks: {
+    build: {
+      async before (builder) {
+        const resumeAssetOdt = 'assets/Vincent Jacques - resume.odt'
+        const resumeAssetPdf = 'assets/Vincent Jacques - resume.' + md5(fs.readFileSync(resumeAssetOdt)) + '.pdf'
+        const resumeStaticPdf = 'static/Vincent Jacques - resume.pdf'
+        if (!fs.existsSync(resumeAssetPdf)) {
+          childProcess.spawnSync('/usr/bin/libreoffice', ['--convert-to', 'pdf', resumeAssetOdt])
+          fs.moveSync('Vincent Jacques - resume.pdf', resumeAssetPdf)
+        }
+        assert.equal((await pdfjs.getDocument(resumeAssetPdf)).numPages, 2)
+        fs.copySync(resumeAssetPdf, resumeStaticPdf)
+      }
     }
   }
 }

@@ -26,9 +26,12 @@
     "eslint": "^7.10.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "fibers": "^5.0.0",
+    "fs-extra": "^8.1.0",
     "gray-matter-loader": "^0.0.10",
     "markdown-it": "^11.0.1",
     "markdown-it-attrs": "^3.0.3",
+    "md5": "^2.3.0",
+    "pdfjs-dist": "^2.0.943",
     "qonfucius-nuxt-fontawesome": "^1.0.1",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"

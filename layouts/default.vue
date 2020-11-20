@@ -23,7 +23,6 @@
             <p class="contact">
               <a href="mailto:vincent@vincent-jacques.net">e-mail <fa-icon :icon="['far', 'envelope']" /></a>
               <a href="https://github.com/jacquev6/">GitHub <fa-icon :icon="['fab', 'github']" /></a>
-              <a href="https://travis-ci.org/jacquev6/">Travis CI <img height="15px" src="/travis.svg"></img></a>
               <a href="https://pypi.org/user/jacquev6/">PyPi <fa-icon :icon="['fab', 'python']" /></a>
               <a href="https://github.com/ocaml/opam-repository/search?q=author%3Ajacquev6&amp;type=Issues">OPAM <img height="15px" src="/ocaml.svg"></img></a>
               <a href="https://www.linkedin.com/in/jacquev6/">LinkedIn <fa-icon :icon="['fab', 'linkedin']" /></a>

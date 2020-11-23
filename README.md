@@ -2,13 +2,13 @@
 
 ## Install dependencies
 
-    docker volume create vincent-jacques.net_node_modules
+    docker volume create vjnet_node_modules
 
     docker run \
         --rm \
         --volume $PWD:/app \
         --workdir /app \
-        --volume vincent-jacques.net_node_modules:/app/node_modules \
+        --volume vjnet_node_modules:/app/node_modules \
         node:15-buster npm install
 
 Add a development dependency:
@@ -17,7 +17,7 @@ Add a development dependency:
         --rm \
         --volume $PWD:/app \
         --workdir /app \
-        --volume vincent-jacques.net_node_modules:/app/node_modules \
+        --volume vjnet_node_modules:/app/node_modules \
         node:15-buster npm install --save-dev sass sass-loader fibers
 
 ## Serve the development version
@@ -26,7 +26,7 @@ Add a development dependency:
         --interactive --tty --rm \
         --volume $PWD:/app \
         --workdir /app \
-        --volume vincent-jacques.net_node_modules:/app/node_modules \
+        --volume vjnet_node_modules:/app/node_modules \
         --publish 3000:3000 \
         node:15-buster npm run dev
 
@@ -38,7 +38,7 @@ Then go to http://localhost:3000.
         --rm \
         --volume $PWD:/app \
         --workdir /app \
-        --volume vincent-jacques.net_node_modules:/app/node_modules \
+        --volume vjnet_node_modules:/app/node_modules \
         node:15-buster npm run generate
 
 Then `git commit`, `git push`, let GitHub Pages do their magic, and go to https://vincent-jacques.net.

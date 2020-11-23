@@ -107,7 +107,7 @@
           If you have a technical background, you can have a look at my [open-source portfolio](#portfolio) below to get a sense of the quality of my work.
 
           My fee starts at 500€ per day (before taxes), for independent software development,
-          if I can keep the source code and talk freely about the project.
+          if I can keep my author's rights and talk freely about the project.
           I can absolutely integrate into an existing technical and methodological environment,
           sell you the intellectual property and/or agree on confidentiality, for an additional cost.
           You pay for what you need.

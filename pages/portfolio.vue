@@ -10,15 +10,14 @@
 
     <b-row>
       <b-col>
-        <vj-markdown>
+        <!--
           @todo Say something about what OSS is and why it's a Good Thing (TM).
           @todo Give general context ("learning opportunities", "hobby projects")
           @todo Remove Travis? I'm using GitHub Actions more nowadays.
           @todo How can I express my knowledge of technologies I don't use anymore?
-
-          Most of my projects are hosted on [GitHub][my-github] and have continuous build on [Travis CI][my-travis].
-
-          My projects are documented using [Sphinx] and the [Alabaster] theme.
+        -->
+        <vj-markdown>
+          My projects are hosted on [GitHub][my-github]. They are documented using [Sphinx] and the [Alabaster] theme.
           Reference documentation is generated from [Python] source code by [autodoc],
           form [C++] source code by [Doxygen] and [Breathe],
           and from [OCaml] source code by a preliminary version of my [Sphinx extension for OCaml][sphinxcontrib-ocaml]
@@ -137,6 +136,9 @@ export default {
         }
       }
     }
+  },
+  head: {
+    title: 'Vincent Jacques - Portfolio'
   }
 }
 </script>

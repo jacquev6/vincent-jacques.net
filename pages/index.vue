@@ -67,8 +67,8 @@
     <b-row>
       <b-col>
         <vj-markdown>
-          Do not hesitate to [contact me](mailto:vincent@vincent-jacques.net) and let's find out how I can help you.
-          First discussions are always free, with no commitment.
+          Do not hesitate to [contact me (vincent@vincent-jacques.net)](mailto:vincent@vincent-jacques.net) and let's find out how I can help you.
+          First discussions are always free, with no commitment. {.strong-attention}
         </vj-markdown>
       </b-col>
     </b-row>

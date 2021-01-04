@@ -14,7 +14,7 @@
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -31,7 +31,7 @@
     "markdown-it": "^11.0.1",
     "markdown-it-attrs": "^3.0.3",
     "md5": "^2.3.0",
-    "pdfjs-dist": "^2.0.943",
+    "pdfjs-dist": "2.0.943",
     "qonfucius-nuxt-fontawesome": "^1.0.1",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"

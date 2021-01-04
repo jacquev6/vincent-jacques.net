@@ -11,12 +11,12 @@
     <b-row>
       <b-col md="6">
         <vj-markdown>
-          I'm Vincent Jacques, alias [@jacquev6] on the web.
+          I'm Vincent Jacques, alias [jacquev6] on the web.
           I'm a 36 years old, French, passionate software development engineer.
           I started programming when I was 12 on a [Casio calculator],
           and I haven't stopped learning.
 
-          [@jacquev6]: https://www.google.com/search?q=jacquev6
+          [jacquev6]: https://www.google.com/search?q=jacquev6
           [Casio calculator]: http://www.rskey.org/fx790p
 
           I acquired a broad engineering education at [Ecole Centrale Paris][ECP] (2006)
@@ -67,7 +67,7 @@
     <b-row>
       <b-col>
         <vj-markdown>
-          Do not hesitate to [contact me (vincent@vincent-jacques.net)](mailto:vincent@vincent-jacques.net) and let's find out how I can help you.
+          Feel free to [contact me (vincent@vincent-jacques.net)](mailto:vincent@vincent-jacques.net) and let's find out how I can help you.
           First discussions are always free, with no commitment. {.strong-attention}
         </vj-markdown>
       </b-col>
@@ -140,7 +140,7 @@
           I can animate synthetic and practical trainings about a set of topics I master:
 
           - basic and advanced use of Git and GitHub
-          - basic use of the Unix command-line and its tools
+          - basic and intermediate use of the Unix command-line and its tools
           - general software design principles (SOLID, GRASP, KISS, YAGNI)
           - basic and advanced object-oriented programming Design Patterns
           - the Python programming language and ecosystem (for people who already know a programming language)

@@ -11,29 +11,29 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
-    "bootstrap-vue": "^2.17.3",
-    "core-js": "^3.6.5",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.8.2",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@nuxtjs/eslint-config": "^3.1.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
     "babel-eslint": "^10.1.0",
     "dedent-js": "^1.0.1",
-    "eslint": "^7.10.0",
-    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint": "^7.17.0",
+    "eslint-plugin-nuxt": "^2.0.0",
     "fibers": "^5.0.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.1",
     "gray-matter-loader": "^0.0.10",
-    "markdown-it": "^11.0.1",
-    "markdown-it-attrs": "^3.0.3",
+    "markdown-it": "^12.0.4",
+    "markdown-it-attrs": "^4.0.0",
     "md5": "^2.3.0",
     "pdfjs-dist": "2.0.943",
     "qonfucius-nuxt-fontawesome": "^1.0.1",
-    "sass": "^1.29.0",
+    "sass": "^1.32.0",
     "sass-loader": "^10.1.0"
   }
 }

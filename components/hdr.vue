@@ -63,6 +63,10 @@ export default {
     text-decoration: underline;
   }
 
+  a.header-anchor:after {
+    content: "";
+  }
+
   :hover > a.header-anchor, .highlighted a.header-anchor {
     visibility: visible;
   }

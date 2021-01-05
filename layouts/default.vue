@@ -154,12 +154,26 @@ body {
     text-decoration-color: $color_primary_darkest;
   }
 
-  a[href^='https://github.com/jacquev6/']::after, a[href='https://github.com/PyGithub/PyGithub/']::after {
-    font-family: "Font Awesome 5 Brands";
-    content: "\2009\f09b"; // Thin space followed by GitHub
+  a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 80%;
+    content: "\2009\f35d"; // Thin space followed by https://fontawesome.com/icons/external-link-alt?style=solid
   }
 
-  // @todo Add wikipedia icon to wikipedia links
+  a[href^='/']::after {
+    content: "";
+  }
+
+  a[href^='https://github.com/jacquev6/']::after, a[href='https://github.com/PyGithub/PyGithub/']::after {
+    font-family: "Font Awesome 5 Brands";
+    content: "\2009\f09b"; // Thin space followed by https://fontawesome.com/icons/github?style=brands
+  }
+
+  a[href^='https://en.wikipedia.org/']::after {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 80%;
+    content: "\2009\f266"; // Thin space followed by https://fontawesome.com/icons/wikipedia-w?style=brands
+  }
 
   .btn-tag {
     @include button-variant(

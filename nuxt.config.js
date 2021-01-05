@@ -23,6 +23,7 @@ export default {
     ],
     link: [
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/brands.css' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/solid.css' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css' }
     ]
   },

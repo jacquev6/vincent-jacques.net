@@ -160,7 +160,7 @@ body {
     content: "\2009\f35d"; // Thin space followed by https://fontawesome.com/icons/external-link-alt?style=solid
   }
 
-  a[href^='/']::after {
+  a[href^='/']::after, a[href^='mailto:']::after {
     content: "";
   }
 

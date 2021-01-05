@@ -28,7 +28,7 @@ export default {
 <style lang="scss">
 @import "../assets/colors";
 
-#content { // @todo Remove
+#content { // @todo Remove (by making the style "scoped")
   h1 {
     background-color: $color_primary_darkest;
     color: white;

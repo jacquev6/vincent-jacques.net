@@ -76,6 +76,9 @@ export default {
       tagsVisibility
     }
   },
+  head: {
+    title: 'Vincent Jacques - Portfolio'
+  },
   computed: {
     projects () {
       const projects = {
@@ -136,9 +139,6 @@ export default {
         }
       }
     }
-  },
-  head: {
-    title: 'Vincent Jacques - Portfolio'
   }
 }
 </script>

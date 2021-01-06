@@ -94,6 +94,9 @@ import hashidsOCaml from '../contents/projects/hashids-ocaml.md'
 import PyGithub from '../contents/projects/PyGithub.md'
 
 export default {
+  head: {
+    title: 'Vincent Jacques - Home'
+  },
   computed: {
     projects () {
       const projects = {
@@ -113,9 +116,6 @@ export default {
         return { name, tags, description, visible: true }
       })
     }
-  },
-  head: {
-    title: 'Vincent Jacques - Home'
   }
 }
 </script>

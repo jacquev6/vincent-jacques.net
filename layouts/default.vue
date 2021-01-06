@@ -33,6 +33,22 @@
       </b-col>
     </b-row>
 
+    <b-row>
+      <b-col>
+        <b-nav tabs>
+          <b-nav-item to="/" exact exact-active-class="active">
+            Home
+          </b-nav-item>
+          <b-nav-item to="/freelance" active-class="active">
+            Freelancing
+          </b-nav-item>
+          <b-nav-item to="/portfolio" active-class="active">
+            Portfolio
+          </b-nav-item>
+        </b-nav>
+      </b-col>
+    </b-row>
+
     <b-row id="content" class="text-justify">
       <b-col>
         <nuxt />
@@ -52,6 +68,20 @@
 <style lang="scss">
 @import "../assets/colors";
 
+$nav-tabs-border-color: $color_primary_lighter;
+$nav-tabs-link-active-color: $color_primary_darkest;
+$nav-tabs-link-active-border-color: $color_complementary_base;
+$nav-tabs-link-hover-border-color: $color_complementary_base;
+// $nav-tabs-link-active-bg: white;
+
+a.nav-link {
+  color: $color_complementary_darkest;
+}
+
+a.nav-link:hover {
+  color: $color_primary_darkest;
+}
+
 // Copy-pasted from Bootstrap 4.5.3's node_modules/bootstrap/scss/bootstrap.scss file
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
@@ -70,7 +100,7 @@
 // @import "../node_modules/bootstrap/scss/button-group";
 // @import "../node_modules/bootstrap/scss/input-group";
 // @import "../node_modules/bootstrap/scss/custom-forms";
-// @import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/nav";
 // @import "../node_modules/bootstrap/scss/navbar";
 // @import "../node_modules/bootstrap/scss/card";
 // @import "../node_modules/bootstrap/scss/breadcrumb";

@@ -5,7 +5,7 @@
     docker volume create vjnet_node_modules
 
     docker run \
-        --rm \
+        --interactive --tty --rm \
         --volume $PWD:/app \
         --workdir /app \
         --volume vjnet_node_modules:/app/node_modules \
@@ -14,7 +14,7 @@
 Add a development dependency:
 
     docker run \
-        --rm \
+        --interactive --tty --rm \
         --volume $PWD:/app \
         --workdir /app \
         --volume vjnet_node_modules:/app/node_modules \

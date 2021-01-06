@@ -113,6 +113,9 @@ export default {
         return { name, tags, description, visible: true }
       })
     }
+  },
+  head: {
+    title: 'Vincent Jacques - Home'
   }
 }
 </script>

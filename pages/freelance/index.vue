@@ -113,3 +113,11 @@
     </b-row>
   </div>
 </template>
+
+<script>
+export default {
+  head: {
+    title: 'Vincent Jacques - Freelancing'
+  }
+}
+</script>

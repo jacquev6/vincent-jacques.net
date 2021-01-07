@@ -44,19 +44,19 @@
 
     <b-row>
       <b-col>
-        <vj-markdown>
-          For absolutely everyone:
-
-          - [custom software development (more details)](/freelance#custom-software-development)
-        </vj-markdown>
+        <p>For absolutely everyone:</p>
+        <ul>
+          <li><NuxtLink to="/freelance#custom-software-development">custom software development (more details)</NuxtLink></li>
+        </ul>
       </b-col>
       <b-col>
-        <vj-markdown>
+        <p>
           For companies with Software Development Engineers (SDEs), large or small:
-
-          - [technical interviews (more details)](/freelance#technical-interviews)
-          - [trainings (more details)](/freelance#trainings)
-        </vj-markdown>
+        </p>
+        <ul>
+          <li><NuxtLink to="/freelance#technical-interviews">technical interviews (more details)</NuxtLink></li>
+          <li><NuxtLink to="/freelance#trainings">trainings (more details)</NuxtLink></li>
+        </ul>
       </b-col>
     </b-row>
     <b-row>
@@ -73,10 +73,10 @@
         <vj-hdr id="portfolio" lvl="1">
           Portfolio
         </vj-hdr>
-        <vj-markdown>
+        <p>
           Here are my most significant open-source software projects.
-          You can view more in [my complete portfolio](/portfolio).
-        </vj-markdown>
+          You can view more in <NuxtLink to="/portfolio">my complete portfolio</NuxtLink>.
+        </p>
       </b-col>
     </b-row>
 

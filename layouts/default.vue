@@ -4,9 +4,9 @@
       <b-col>
         <b-row>
           <b-col>
-            <vj-markdown>
-              [vincent-jacques.net](/) {#vjnet}
-            </vj-markdown>
+            <p>
+              <NuxtLink id="vjnet" to="/">vincent-jacques.net</NuxtLink>
+            </p>
           </b-col>
         </b-row>
         <b-row>
@@ -190,7 +190,7 @@ body {
     content: "\2009\f35d"; // Thin space followed by https://fontawesome.com/icons/external-link-alt?style=solid
   }
 
-  a[href^='/']::after, a[href^='mailto:']::after {
+  a[href^='/']::after, a[href^='#']::after, a[href^='mailto:']::after {
     content: "";
   }
 

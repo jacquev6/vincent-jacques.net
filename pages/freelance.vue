@@ -44,17 +44,23 @@
           Custom software development
         </vj-hdr>
 
-        <vj-markdown>
+        <p>
           Whether you're a start-up developing your first product,
           an academic wanting to simulate a model or explore and visualize data,
           or an individual with a task that "a computer should be able to do",
           you have a choice between off-the-shelf software, and custom-made software.
+        </p>
 
+        <p>
           With custom software, you are sure to get something that:
+        </p>
+        <ul>
+          <li>is easy to learn and use (because <em>you</em> envisioned it)</li>
+          <li>does exactly what you want (and you can make it evolve the way you want)</li>
+        </ul>
+        </p>
 
-          - is easy to learn and use (because *you* envisioned it)
-          - does exactly what you want (and you can make it evolve the way you want)
-
+        <p>
           My contribution starts with understanding what you need, and giving you a price estimate.
           For that, we have to agree on something just formal enough to avoid misunderstandings.
           In most cases, it will be a specification document.
@@ -62,17 +68,23 @@
           In that case, we explore your functional requirements (what you need),
           your non-functional requirements if any (how you need it done),
           and your administrative requirements (do you need the software itself or just its result? should the project be kept secret? etc.).
+        </p>
 
+        <p>
           I advocate developing software in small slices that bring value immediately.
           We'll typically extract a first part of your project and agree on making it real.
           When I deliver this first working software, we'll discuss how you want it to evolve, and we'll iterate.
           This way you always have a clear view of what I'm doing, how much it will cost and what it will bring you.
           No surprises.
+        </p>
 
-          If you have a technical background, you can have a look at my [open-source portfolio](#portfolio) below to get a sense of the quality of my work.
+        <p>
+          If you have a technical background, you can have a look at my <NuxtLink to="/portfolio">open-source portfolio</NuxtLink> to get a sense of the quality of my work.
+        </p>
 
-          See my [pricing policy](/freelance/pricing#custom-software-development); you pay for what you need.
-        </vj-markdown>
+        <p>
+          See my <NuxtLink to="#custom-software-development-pricing">pricing policy</NuxtLink>; you pay for what you need.
+        </p>
       </b-col>
 
       <b-col>
@@ -114,7 +126,7 @@
 
     <b-row>
       <b-col>
-        <vj-hdr id="custom-software-development" lvl="1">
+        <vj-hdr id="custom-software-development-pricing" lvl="1">
           Custom software development pricing
         </vj-hdr>
         <vj-hdr id="fixed-price" lvl="2">

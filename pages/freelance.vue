@@ -2,8 +2,8 @@
   <div>
     <b-row>
       <b-col>
-        <vj-hdr id="offer" lvl="1">
-          Offer
+        <vj-hdr id="services" lvl="1">
+          Services
         </vj-hdr>
         <vj-markdown>
           Since June, 2019, I've become a freelancer. What can I do for you?

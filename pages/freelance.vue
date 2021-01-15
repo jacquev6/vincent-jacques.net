@@ -83,7 +83,7 @@
         </p>
 
         <p>
-          See my <NuxtLink to="#custom-software-development-pricing">pricing policy</NuxtLink>; you pay for what you need.
+          See my <NuxtLink to="#custom-software-development-pricing">pricing policy</NuxtLink> below; you pay for what you need.
         </p>
       </b-col>
 
@@ -176,7 +176,7 @@
         </vj-hdr>
         <p>
           <ul>
-            <li>Non-disclosure agreement: +25% to +50% based on how restrictive and punitive it is</li>
+            <li>Non-disclosure agreement and non-competition clause: +25% to +50% based on how restrictive and punitive they are</li>
             <li>Full session of my author's rights: +25%</li>
             <li>Publication as free software: +12.5%</li>
             <li>Integration with existing systems or software: +0% to +25% based on how well it was designed to be integrated</li>

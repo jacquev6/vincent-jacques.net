@@ -5,7 +5,9 @@
         <b-row>
           <b-col>
             <p>
-              <NuxtLink id="vjnet" to="/">vincent-jacques.net</NuxtLink>
+              <NuxtLink id="vjnet" to="/">
+                vincent-jacques.net
+              </NuxtLink>
             </p>
           </b-col>
         </b-row>

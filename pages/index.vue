@@ -46,7 +46,11 @@
       <b-col>
         <p>For absolutely everyone:</p>
         <ul>
-          <li><NuxtLink to="/freelance#custom-software-development">custom software development (more details)</NuxtLink></li>
+          <li>
+            <NuxtLink to="/freelance#custom-software-development">
+              custom software development (more details)
+            </NuxtLink>
+          </li>
         </ul>
       </b-col>
       <b-col>
@@ -54,8 +58,16 @@
           For companies with Software Development Engineers (SDEs), large or small:
         </p>
         <ul>
-          <li><NuxtLink to="/freelance#technical-interviews">technical interviews (more details)</NuxtLink></li>
-          <li><NuxtLink to="/freelance#trainings">trainings (more details)</NuxtLink></li>
+          <li>
+            <NuxtLink to="/freelance#technical-interviews">
+              technical interviews (more details)
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/freelance#trainings">
+              trainings (more details)
+            </NuxtLink>
+          </li>
         </ul>
       </b-col>
     </b-row>
@@ -75,7 +87,9 @@
         </vj-hdr>
         <p>
           Here are my most significant open-source software projects.
-          You can view more in <NuxtLink to="/portfolio">my complete portfolio</NuxtLink>.
+          You can view more in <NuxtLink to="/portfolio">
+            my complete portfolio
+          </NuxtLink>.
         </p>
       </b-col>
     </b-row>

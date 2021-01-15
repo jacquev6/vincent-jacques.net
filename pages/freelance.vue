@@ -79,11 +79,15 @@
         </p>
 
         <p>
-          If you have a technical background, you can have a look at my <NuxtLink to="/portfolio">open-source portfolio</NuxtLink> to get a sense of the quality of my work.
+          If you have a technical background, you can have a look at my <NuxtLink to="/portfolio">
+            open-source portfolio
+          </NuxtLink> to get a sense of the quality of my work.
         </p>
 
         <p>
-          See my <NuxtLink to="#custom-software-development-pricing">pricing policy</NuxtLink> below; you pay for what you need.
+          See my <NuxtLink to="#custom-software-development-pricing">
+            pricing policy
+          </NuxtLink> below; you pay for what you need.
         </p>
       </b-col>
 

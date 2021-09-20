@@ -43,7 +43,7 @@
     </b-row>
 
     <b-row>
-      <b-col>
+      <b-col sm="6">
         <p>For absolutely everyone:</p>
         <ul>
           <li>
@@ -53,7 +53,7 @@
           </li>
         </ul>
       </b-col>
-      <b-col>
+      <b-col sm="6">
         <p>
           For companies with Software Development Engineers (SDEs), large or small:
         </p>

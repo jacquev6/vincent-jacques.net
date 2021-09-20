@@ -27,7 +27,7 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col>
+      <b-col md="6">
         <vj-hdr id="proceed" lvl="2">
           How it works
         </vj-hdr>
@@ -50,7 +50,7 @@
           (It's not a secret though.)
         </vj-markdown>
       </b-col>
-      <b-col>
+      <b-col md="6">
         <vj-hdr id="apply" lvl="2">
           How to apply
         </vj-hdr>

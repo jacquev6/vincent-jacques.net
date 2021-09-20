@@ -12,14 +12,14 @@
     </b-row>
 
     <b-row>
-      <b-col>
+      <b-col md="6">
         <vj-markdown>
           For absolutely everyone:
 
           - custom software development
         </vj-markdown>
       </b-col>
-      <b-col>
+      <b-col md="6">
         <vj-markdown>
           For companies with Software Development Engineers (SDEs), large or small:
 
@@ -39,7 +39,7 @@
     </b-row>
 
     <b-row>
-      <b-col>
+      <b-col md="6">
         <vj-hdr id="custom-software-development" lvl="2">
           Custom software development
         </vj-hdr>
@@ -58,7 +58,6 @@
           <li>is easy to learn and use (because <em>you</em> envisioned it)</li>
           <li>does exactly what you want (and you can make it evolve the way you want)</li>
         </ul>
-        </p>
 
         <p>
           My contribution starts with understanding what you need, and giving you a price estimate.
@@ -91,7 +90,7 @@
         </p>
       </b-col>
 
-      <b-col>
+      <b-col md="6">
         <vj-hdr id="technical-interviews" lvl="2">
           Technical interviews
         </vj-hdr>
@@ -160,7 +159,7 @@
     </b-row>
 
     <b-row>
-      <b-col>
+      <b-col md="6">
         <vj-hdr id="base-rate" lvl="3">
           Base rate
         </vj-hdr>
@@ -174,7 +173,7 @@
         </p>
       </b-col>
 
-      <b-col>
+      <b-col md="6">
         <vj-hdr id="add-ons" lvl="3">
           Add-ons
         </vj-hdr>

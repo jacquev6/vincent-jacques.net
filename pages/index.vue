@@ -12,7 +12,7 @@
       <b-col md="6">
         <vj-markdown>
           I'm Vincent Jacques, alias [jacquev6] on the web.
-          I'm a 36 years old, French, passionate software development engineer.
+          I'm a 38 years old, French, passionate software development engineer.
           I started programming when I was 12 on a [Casio calculator],
           and I haven't stopped learning.
 
@@ -25,7 +25,7 @@
       </b-col>
       <b-col md="6">
         <vj-markdown>
-          After twelve years of professional software engineering, I value maintainable and evolutive source code
+          After fourteen years of professional software engineering, I value maintainable and evolutive source code
           and the use of tools and automation to create working, reliable software.
         </vj-markdown>
       </b-col>
